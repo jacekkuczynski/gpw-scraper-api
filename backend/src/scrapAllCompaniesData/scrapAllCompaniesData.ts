@@ -19,7 +19,7 @@ export const scrapAllCompaniesData = async () => {
         timeout: 0,
       });
       console.log(
-        "Scrapping all companies data (name, symbol, websiteSymbol)... 🚀"
+        "Scrapping all companies data (name, symbol, endpoint)... 🚀"
       );
       let scrapedData = [];
       await clickOnCookiesConsent(page);

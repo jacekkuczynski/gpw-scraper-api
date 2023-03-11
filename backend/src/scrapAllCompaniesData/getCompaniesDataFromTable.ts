@@ -15,9 +15,9 @@ export const getCompaniesDataFromTable = async (page: Page) => {
       str = str.slice(1, str.length - 1);
       return str;
     };
-    const parseWebsiteSymbol = (str: string) => {
-      const websiteSymbolLength = 8;
-      str = str.slice(-websiteSymbolLength);
+    const parseEndpoint = (str: string) => {
+      const endpointLength = 8;
+      str = str.slice(-endpointLength);
       return str;
     };
     return rows.map((row) => {
@@ -27,8 +27,8 @@ export const getCompaniesDataFromTable = async (page: Page) => {
       const href = linkElement.href;
       const name = parseName(nameElement.textContent);
       const symbol = parseSymbol(symbolElement.textContent);
-      const websiteSymbol = parseWebsiteSymbol(href);
-      return { name, symbol, websiteSymbol };
+      const endpoint = parseEndpoint(href);
+      return { name, symbol, endpoint };
     });
   });
   return companiesData;
