@@ -1,0 +1,2132 @@
+[
+  {
+    "name": "11 BIT STUDIOS SPÓŁKA AKCYJNA",
+    "symbol": "11B",
+    "endpoint": "BTS00015"
+  },
+  {
+    "name": "3R GAMES SPÓŁKA AKCYJNA",
+    "symbol": "3RG",
+    "endpoint": "NKT00019"
+  },
+  {
+    "name": "AB INTER RAO LIETUVA",
+    "symbol": "IRL",
+    "endpoint": "00128621"
+  },
+  {
+    "name": "AB NOVATURAS",
+    "symbol": "NTU",
+    "endpoint": "00131872"
+  },
+  {
+    "name": "AB SPÓŁKA AKCYJNA",
+    "symbol": "ABE",
+    "endpoint": "00000019"
+  },
+  {
+    "name": "AC SPÓŁKA AKCYJNA",
+    "symbol": "ACG",
+    "endpoint": "SA000014"
+  },
+  {
+    "name": "ACTION SPÓŁKA AKCYJNA",
+    "symbol": "ACT",
+    "endpoint": "TIN00018"
+  },
+  {
+    "name": "ADIUVO INVESTMENTS SPÓŁKA AKCYJNA",
+    "symbol": "ADV",
+    "endpoint": "VIV00015"
+  },
+  {
+    "name": "AGORA SPÓŁKA AKCYJNA",
+    "symbol": "AGO",
+    "endpoint": "ORA00067"
+  },
+  {
+    "name": "AGROTON PUBLIC LIMITED",
+    "symbol": "AGT",
+    "endpoint": "01062111"
+  },
+  {
+    "name": "AILLERON SPÓŁKA AKCYJNA",
+    "symbol": "ALL",
+    "endpoint": "DMB00010"
+  },
+  {
+    "name": "AIRWAY MEDIX SPÓŁKA AKCYJNA",
+    "symbol": "AWM",
+    "endpoint": "RWY00017"
+  },
+  {
+    "name": "ALIOR BANK SPÓŁKA AKCYJNA",
+    "symbol": "ALR",
+    "endpoint": "IOR00045"
+  },
+  {
+    "name": "ALL IN! GAMES SPÓŁKA AKCYJNA",
+    "symbol": "ALG",
+    "endpoint": "TFG00017"
+  },
+  {
+    "name": "ALLEGRO.EU S.A.",
+    "symbol": "ALE",
+    "endpoint": "37380790"
+  },
+  {
+    "name": "ALTA SPÓŁKA AKCYJNA",
+    "symbol": "AAT",
+    "endpoint": "NSU00013"
+  },
+  {
+    "name": "ALTUS SPÓŁKA AKCYJNA",
+    "symbol": "ALI",
+    "endpoint": "TFI00018"
+  },
+  {
+    "name": "ALUMETAL SPÓŁKA AKCYJNA",
+    "symbol": "AML",
+    "endpoint": "MTL00023"
+  },
+  {
+    "name": "AMBRA SPÓŁKA AKCYJNA",
+    "symbol": "AMB",
+    "endpoint": "BRA00013"
+  },
+  {
+    "name": "AMICA SPÓŁKA AKCYJNA",
+    "symbol": "AMC",
+    "endpoint": "ICA00010"
+  },
+  {
+    "name": "AILLERON SPÓŁKA AKCYJNA",
+    "symbol": "ALL",
+    "endpoint": "DMB00010"
+  },
+  {
+    "name": "AIRWAY MEDIX SPÓŁKA AKCYJNA",
+    "symbol": "AWM",
+    "endpoint": "RWY00017"
+  },
+  {
+    "name": "ALIOR BANK SPÓŁKA AKCYJNA",
+    "symbol": "ALR",
+    "endpoint": "IOR00045"
+  },
+  {
+    "name": "ALL IN! GAMES SPÓŁKA AKCYJNA",
+    "symbol": "ALG",
+    "endpoint": "TFG00017"
+  },
+  {
+    "name": "ALLEGRO.EU S.A.",
+    "symbol": "ALE",
+    "endpoint": "37380790"
+  },
+  {
+    "name": "ALTA SPÓŁKA AKCYJNA",
+    "symbol": "AAT",
+    "endpoint": "NSU00013"
+  },
+  {
+    "name": "ALTUS SPÓŁKA AKCYJNA",
+    "symbol": "ALI",
+    "endpoint": "TFI00018"
+  },
+  {
+    "name": "ALUMETAL SPÓŁKA AKCYJNA",
+    "symbol": "AML",
+    "endpoint": "MTL00023"
+  },
+  {
+    "name": "AMBRA SPÓŁKA AKCYJNA",
+    "symbol": "AMB",
+    "endpoint": "BRA00013"
+  },
+  {
+    "name": "AMICA SPÓŁKA AKCYJNA",
+    "symbol": "AMC",
+    "endpoint": "ICA00010"
+  },
+  {
+    "name": "AMPLI SPÓŁKA AKCYJNA",
+    "symbol": "APL",
+    "endpoint": "PLI00019"
+  },
+  {
+    "name": "AMREST HOLDINGS SE",
+    "symbol": "EAT",
+    "endpoint": "05375002"
+  },
+  {
+    "name": "ANSWEAR.COM SPÓŁKA AKCYJNA",
+    "symbol": "ANR",
+    "endpoint": "SWR00019"
+  },
+  {
+    "name": "APATOR SPÓŁKA AKCYJNA",
+    "symbol": "APT",
+    "endpoint": "ATR00018"
+  },
+  {
+    "name": "APLISENS SPÓŁKA AKCYJNA",
+    "symbol": "APN",
+    "endpoint": "LS000016"
+  },
+  {
+    "name": "APS ENERGIA SPÓŁKA AKCYJNA",
+    "symbol": "APE",
+    "endpoint": "SEN00011"
+  },
+  {
+    "name": "ARCHICOM SPÓŁKA AKCYJNA",
+    "symbol": "ARH",
+    "endpoint": "HCM00016"
+  },
+  {
+    "name": "ARCTIC PAPER SPÓŁKA AKCYJNA",
+    "symbol": "ATC",
+    "endpoint": "TPR00012"
+  },
+  {
+    "name": "ARTERIA SPÓŁKA AKCYJNA",
+    "symbol": "ARR",
+    "endpoint": "TER00016"
+  },
+  {
+    "name": "ARTIFEX MUNDI SPÓŁKA AKCYJNA",
+    "symbol": "ART",
+    "endpoint": "TFX00011"
+  },
+  {
+    "name": "AS SILVANO FASHION GROUP",
+    "symbol": "SFG",
+    "endpoint": "00001751"
+  },
+  {
+    "name": "ASBISC ENTERPRISES PLC",
+    "symbol": "ASB",
+    "endpoint": "00031710"
+  },
+  {
+    "name": "ASM GROUP SPÓŁKA AKCYJNA",
+    "symbol": "ASM",
+    "endpoint": "MGR00014"
+  },
+  {
+    "name": "ASSECO BUSINESS SOLUTIONS SPÓŁKA AKCYJNA",
+    "symbol": "ABS",
+    "endpoint": "S0000018"
+  },
+  {
+    "name": "ASSECO POLAND SPÓŁKA AKCYJNA",
+    "symbol": "ACP",
+    "endpoint": "FTB00016"
+  },
+  {
+    "name": "ASSECO SOUTH EASTERN EUROPE SPÓŁKA AKCYJNA",
+    "symbol": "ASE",
+    "endpoint": "SEE00014"
+  },
+  {
+    "name": "ASTARTA HOLDING PLC",
+    "symbol": "AST",
+    "endpoint": "00686509"
+  },
+  {
+    "name": "ATAL SPÓŁKA AKCYJNA",
+    "symbol": "1AT",
+    "endpoint": "AL000046"
+  },
+  {
+    "name": "ATENDE SPÓŁKA AKCYJNA",
+    "symbol": "ATD",
+    "endpoint": "MSI00016"
+  },
+  {
+    "name": "ATLANTA POLAND SPÓŁKA AKCYJNA",
+    "symbol": "ATP",
+    "endpoint": "LPL00018"
+  },
+  {
+    "name": "ATLANTIS SE",
+    "symbol": "ATS",
+    "endpoint": "00063686"
+  },
+  {
+    "name": "ATM GRUPA SPÓŁKA AKCYJNA",
+    "symbol": "ATG",
+    "endpoint": "M0000021"
+  },
+  {
+    "name": "ATREM SPÓŁKA AKCYJNA",
+    "symbol": "ATR",
+    "endpoint": "REM00017"
+  },
+  {
+    "name": "AUTO PARTNER SPÓŁKA AKCYJNA",
+    "symbol": "APR",
+    "endpoint": "PRT00018"
+  },
+  {
+    "name": "BALTIC BRIDGE SPÓŁKA AKCYJNA",
+    "symbol": "WIS",
+    "endpoint": "IEL00046"
+  },
+  {
+    "name": "BANCO SANTANDER S.A.",
+    "symbol": "SAN",
+    "endpoint": "13900J37"
+  },
+  {
+    "name": "BANK HANDLOWY W WARSZAWIE SPÓŁKA AKCYJNA",
+    "symbol": "BHW",
+    "endpoint": "00000012"
+  },
+  {
+    "name": "BANK MILLENNIUM SPÓŁKA AKCYJNA",
+    "symbol": "MIL",
+    "endpoint": "G0000016"
+  },
+  {
+    "name": "BANK OCHRONY ŚRODOWISKA SPÓŁKA AKCYJNA",
+    "symbol": "BOS",
+    "endpoint": "S0000019"
+  },
+  {
+    "name": "BANK POLSKA KASA OPIEKI SPÓŁKA AKCYJNA",
+    "symbol": "PEO",
+    "endpoint": "KAO00016"
+  },
+  {
+    "name": "BBI DEVELOPMENT SPÓŁKA AKCYJNA",
+    "symbol": "BBD",
+    "endpoint": "I1200018"
+  },
+  {
+    "name": "BENEFIT SYSTEMS SPÓŁKA AKCYJNA",
+    "symbol": "BFT",
+    "endpoint": "FTS00018"
+  },
+  {
+    "name": "BERLING SPÓŁKA AKCYJNA",
+    "symbol": "BRG",
+    "endpoint": "LNG00015"
+  },
+  {
+    "name": "BEST SPÓŁKA AKCYJNA",
+    "symbol": "BST",
+    "endpoint": "ST000010"
+  },
+  {
+    "name": "BETACOM SPÓŁKA AKCYJNA",
+    "symbol": "BCM",
+    "endpoint": "COM00016"
+  },
+  {
+    "name": "BIG CHEESE STUDIO SPÓŁKA AKCYJNA",
+    "symbol": "BCS",
+    "endpoint": "40200015"
+  },
+  {
+    "name": "BIO PLANET SPÓŁKA AKCYJNA",
+    "symbol": "BIP",
+    "endpoint": "OPL00013"
+  },
+  {
+    "name": "BIOCELTIX SPÓŁKA AKCYJNA",
+    "symbol": "BCX",
+    "endpoint": "LTX00019"
+  },
+  {
+    "name": "BIOMAXIMA SPÓŁKA AKCYJNA",
+    "symbol": "BMX",
+    "endpoint": "OMX00015"
+  },
+  {
+    "name": "BIOMED-LUBLIN WYTWÓRNIA SUROWIC I SZCZEPIONEK SPÓŁKA AKCYJNA",
+    "symbol": "BML",
+    "endpoint": "DLB00018"
+  },
+  {
+    "name": "BIOTON SPÓŁKA AKCYJNA",
+    "symbol": "BIO",
+    "endpoint": "OTN00029"
+  },
+  {
+    "name": "BLUGO SPÓŁKA AKCYJNA",
+    "symbol": "YOL",
+    "endpoint": "ESC00018"
+  },
+  {
+    "name": "BNP PARIBAS BANK POLSKA SPÓŁKA AKCYJNA",
+    "symbol": "BNP",
+    "endpoint": "Z0000010"
+  },
+  {
+    "name": "BOOMBIT SPÓŁKA AKCYJNA",
+    "symbol": "BBT",
+    "endpoint": "BIT00010"
+  },
+  {
+    "name": "BORYSZEW SPÓŁKA AKCYJNA",
+    "symbol": "BRS",
+    "endpoint": "SZW00011"
+  },
+  {
+    "name": "BOWIM SPÓŁKA AKCYJNA",
+    "symbol": "BOW",
+    "endpoint": "WM000019"
+  },
+  {
+    "name": "BRAND 24 SPÓŁKA AKCYJNA",
+    "symbol": "B24",
+    "endpoint": "N2400013"
+  },
+  {
+    "name": "BRASTER SPÓŁKA AKCYJNA",
+    "symbol": "BRA",
+    "endpoint": "STR00014"
+  },
+  {
+    "name": "BRITISH AUTOMOTIVE HOLDING SPÓŁKA AKCYJNA",
+    "symbol": "BAH",
+    "endpoint": "VPL00016"
+  },
+  {
+    "name": "BUDIMEX SPÓŁKA AKCYJNA",
+    "symbol": "BDX",
+    "endpoint": "DMX00013"
+  },
+  {
+    "name": "BUMECH SPÓŁKA AKCYJNA",
+    "symbol": "BMC",
+    "endpoint": "ECH00012"
+  },
+  {
+    "name": "CAPITAL PARK SPÓŁKA AKCYJNA",
+    "symbol": "CPG",
+    "endpoint": "PRK00037"
+  },
+  {
+    "name": "CAPITAL PARTNERS SPÓŁKA AKCYJNA",
+    "symbol": "CPA",
+    "endpoint": "TLP00015"
+  },
+  {
+    "name": "CAPITEA SPÓŁKA AKCYJNA",
+    "symbol": "GBK",
+    "endpoint": "BCK00297"
+  },
+  {
+    "name": "CAPTOR THERAPEUTICS SPÓŁKA AKCYJNA",
+    "symbol": "CTX",
+    "endpoint": "TRT00014"
+  },
+  {
+    "name": "CASPAR ASSET MANAGEMENT SPÓŁKA AKCYJNA",
+    "symbol": "CSR",
+    "endpoint": "PAM00017"
+  },
+  {
+    "name": "CAVATINA HOLDING SPÓŁKA AKCYJNA",
+    "symbol": "CAV",
+    "endpoint": "TNH00040"
+  },
+  {
+    "name": "CCC SPÓŁKA AKCYJNA",
+    "symbol": "CCC",
+    "endpoint": "C0000016"
+  },
+  {
+    "name": "CD PROJEKT SPÓŁKA AKCYJNA",
+    "symbol": "CDR",
+    "endpoint": "TTC00011"
+  },
+  {
+    "name": "CDRL SPÓŁKA AKCYJNA",
+    "symbol": "CDL",
+    "endpoint": "RL000043"
+  },
+  {
+    "name": "CELON PHARMA SPÓŁKA AKCYJNA",
+    "symbol": "CLN",
+    "endpoint": "NPH00015"
+  },
+  {
+    "name": "CENTRUM MEDYCZNE ENEL-MED SPÓŁKA AKCYJNA",
+    "symbol": "ENE",
+    "endpoint": "LMD00017"
+  },
+  {
+    "name": "CENTRUM NOWOCZESNYCH TECHNOLOGII SPÓŁKA AKCYJNA",
+    "symbol": "CNT",
+    "endpoint": "GPL00014"
+  },
+  {
+    "name": "ČEZ. A.S.",
+    "symbol": "CEZ",
+    "endpoint": "05112300"
+  },
+  {
+    "name": "CFI HOLDING SPÓŁKA AKCYJNA",
+    "symbol": "CFI",
+    "endpoint": "TKS00013"
+  },
+  {
+    "name": "CI GAMES SPÓŁKA AKCYJNA",
+    "symbol": "CIG",
+    "endpoint": "INT00018"
+  },
+  {
+    "name": "CIECH SPÓŁKA AKCYJNA",
+    "symbol": "CIE",
+    "endpoint": "ECH00018"
+  },
+  {
+    "name": "CITY SERVICE SE",
+    "symbol": "CTS",
+    "endpoint": "00126368"
+  },
+  {
+    "name": "CLEAN&CARBON ENERGY SPÓŁKA AKCYJNA",
+    "symbol": "CCE",
+    "endpoint": "REN00014"
+  },
+  {
+    "name": "CLOUD TECHNOLOGIES SPÓŁKA AKCYJNA",
+    "symbol": "CLD",
+    "endpoint": "DTC00019"
+  },
+  {
+    "name": "COAL ENERGY S.A.",
+    "symbol": "CLE",
+    "endpoint": "46112838"
+  },
+  {
+    "name": "COGNOR HOLDING SPÓŁKA AKCYJNA",
+    "symbol": "COG",
+    "endpoint": "TSL00014"
+  },
+  {
+    "name": "COMARCH SPÓŁKA AKCYJNA",
+    "symbol": "CMR",
+    "endpoint": "MAR00012"
+  },
+  {
+    "name": "COMP SPÓŁKA AKCYJNA",
+    "symbol": "CMP",
+    "endpoint": "P0000017"
+  },
+  {
+    "name": "COMPERIA.PL SPÓŁKA AKCYJNA",
+    "symbol": "CPL",
+    "endpoint": "MPR00010"
+  },
+  {
+    "name": "COMPREMUM SPÓŁKA AKCYJNA",
+    "symbol": "CPR",
+    "endpoint": "BDT00013"
+  },
+  {
+    "name": "CPD SPÓŁKA AKCYJNA",
+    "symbol": "CPD",
+    "endpoint": "LPD00013"
+  },
+  {
+    "name": "CPI FIM SA",
+    "symbol": "OPG",
+    "endpoint": "22624777"
+  },
+  {
+    "name": "CREEPY JAR SPÓŁKA AKCYJNA",
+    "symbol": "CRJ",
+    "endpoint": "PJR00019"
+  },
+  {
+    "name": "CREOTECH INSTRUMENTS SPÓŁKA AKCYJNA",
+    "symbol": "CRI",
+    "endpoint": "TCH00017"
+  },
+  {
+    "name": "CYFROWY POLSAT SPÓŁKA AKCYJNA",
+    "symbol": "CPS",
+    "endpoint": "RPT00013"
+  },
+  {
+    "name": "CZERWONA TOREBKA SPÓŁKA AKCYJNA",
+    "symbol": "CZT",
+    "endpoint": "WTR00022"
+  },
+  {
+    "name": "DADELO SPÓŁKA AKCYJNA",
+    "symbol": "DAD",
+    "endpoint": "DEL00013"
+  },
+  {
+    "name": "DATAWALK SPÓŁKA AKCYJNA",
+    "symbol": "DAT",
+    "endpoint": "LAB00012"
+  },
+  {
+    "name": "DECORA SPÓŁKA AKCYJNA",
+    "symbol": "DCR",
+    "endpoint": "COR00013"
+  },
+  {
+    "name": "DEKPOL SPÓŁKA AKCYJNA",
+    "symbol": "DEK",
+    "endpoint": "KPL00032"
+  },
+  {
+    "name": "DELKO SPÓŁKA AKCYJNA",
+    "symbol": "DEL",
+    "endpoint": "LKO00019"
+  },
+  {
+    "name": "DEVELIA SPÓŁKA AKCYJNA",
+    "symbol": "DVL",
+    "endpoint": "CRP00017"
+  },
+  {
+    "name": "DGA SPÓŁKA AKCYJNA",
+    "symbol": "DGA",
+    "endpoint": "A0000019"
+  },
+  {
+    "name": "DIGITAL NETWORK SPÓŁKA AKCYJNA",
+    "symbol": "DIG",
+    "endpoint": "NMD00013"
+  },
+  {
+    "name": "DIGITREE GROUP SPÓŁKA AKCYJNA",
+    "symbol": "DTR",
+    "endpoint": "RE000013"
+  },
+  {
+    "name": "DINO POLSKA SPÓŁKA AKCYJNA",
+    "symbol": "DNP",
+    "endpoint": "NPL00011"
+  },
+  {
+    "name": "DOM DEVELOPMENT SPÓŁKA AKCYJNA",
+    "symbol": "DOM",
+    "endpoint": "DVL00012"
+  },
+  {
+    "name": "DROZAPOL-PROFIL SPÓŁKA AKCYJNA",
+    "symbol": "DPL",
+    "endpoint": "ZPL00032"
+  },
+  {
+    "name": "ECHO INVESTMENT SPÓŁKA AKCYJNA",
+    "symbol": "ECH",
+    "endpoint": "HPS00019"
+  },
+  {
+    "name": "ED INVEST SPÓŁKA AKCYJNA",
+    "symbol": "EDI",
+    "endpoint": "INV00014"
+  },
+  {
+    "name": "EKO EXPORT SPÓŁKA AKCYJNA",
+    "symbol": "EEX",
+    "endpoint": "EP000019"
+  },
+  {
+    "name": "ELEKTROCIEPŁOWNIA BĘDZIN SPÓŁKA AKCYJNA",
+    "symbol": "BDZ",
+    "endpoint": "BDZ00013"
+  },
+  {
+    "name": "ELEKTROTIM SPÓŁKA AKCYJNA",
+    "symbol": "ELT",
+    "endpoint": "EKT00016"
+  },
+  {
+    "name": "ELKOP SE",
+    "symbol": "EKP",
+    "endpoint": "KOP00013"
+  },
+  {
+    "name": "EMC INSTYTUT MEDYCZNY SPÓŁKA AKCYJNA",
+    "symbol": "EMC",
+    "endpoint": "CIM00017"
+  },
+  {
+    "name": "ENEA SPÓŁKA AKCYJNA",
+    "symbol": "ENA",
+    "endpoint": "EA000013"
+  },
+  {
+    "name": "ENEFI VAGYONKEZELŐ NYRT.",
+    "symbol": "EST",
+    "endpoint": "00089198"
+  },
+  {
+    "name": "ENERGA SPÓŁKA AKCYJNA",
+    "symbol": "ENG",
+    "endpoint": "ERG00022"
+  },
+  {
+    "name": "ENERGOAPARATURA SPÓŁKA AKCYJNA",
+    "symbol": "ENP",
+    "endpoint": "AP000010"
+  },
+  {
+    "name": "ENERGOINSTAL SPÓŁKA AKCYJNA",
+    "symbol": "ENI",
+    "endpoint": "GIN00015"
+  },
+  {
+    "name": "ENTER AIR SPÓŁKA AKCYJNA",
+    "symbol": "ENT",
+    "endpoint": "TER00017"
+  },
+  {
+    "name": "ERBUD SPÓŁKA AKCYJNA",
+    "symbol": "ERB",
+    "endpoint": "BUD00012"
+  },
+  {
+    "name": "ERG SPÓŁKA AKCYJNA",
+    "symbol": "ERG",
+    "endpoint": "GZB00014"
+  },
+  {
+    "name": "ESOTIQ & HENDERSON SPÓŁKA AKCYJNA",
+    "symbol": "EAH",
+    "endpoint": "THN00018"
+  },
+  {
+    "name": "EUROCASH SPÓŁKA AKCYJNA",
+    "symbol": "EUR",
+    "endpoint": "RCH00011"
+  },
+  {
+    "name": "EUROHOLD BULGARIA AD",
+    "symbol": "EHG",
+    "endpoint": "00114062"
+  },
+  {
+    "name": "EUROPEJSKIE CENTRUM ODSZKODOWAŃ SPÓŁKA AKCYJNA W RESTRUKTURYZACJI",
+    "symbol": "EUC",
+    "endpoint": "PCO00017"
+  },
+  {
+    "name": "EUROTEL SPÓŁKA AKCYJNA",
+    "symbol": "ETL",
+    "endpoint": "TEL00011"
+  },
+  {
+    "name": "FABRYKA FARB I LAKIERÓW ŚNIEŻKA SPÓŁKA AKCYJNA",
+    "symbol": "SKA",
+    "endpoint": "ZKA00033"
+  },
+  {
+    "name": "FABRYKA OBRABIAREK RAFAMET SPÓŁKA AKCYJNA",
+    "symbol": "RAF",
+    "endpoint": "MET00016"
+  },
+  {
+    "name": "FABRYKI MEBLI FORTE SPÓŁKA AKCYJNA",
+    "symbol": "FTE",
+    "endpoint": "RTE00012"
+  },
+  {
+    "name": "FABRYKI SPRZĘTU I NARZĘDZI GÓRNICZYCH GRUPA KAPITAŁOWA FASING SPÓŁKA AKCYJNA",
+    "symbol": "FSG",
+    "endpoint": "ING00010"
+  },
+  {
+    "name": "FAMUR SPÓŁKA AKCYJNA",
+    "symbol": "FMF",
+    "endpoint": "MUR00012"
+  },
+  {
+    "name": "FAST FINANCE SPÓŁKA AKCYJNA",
+    "symbol": "FFI",
+    "endpoint": "TFC00012"
+  },
+  {
+    "name": "FEERUM SPÓŁKA AKCYJNA",
+    "symbol": "FEE",
+    "endpoint": "ERM00018"
+  },
+  {
+    "name": "FERRO SPÓŁKA AKCYJNA",
+    "symbol": "FRO",
+    "endpoint": "RRO00016"
+  },
+  {
+    "name": "FERRUM SPÓŁKA AKCYJNA",
+    "symbol": "FER",
+    "endpoint": "RUM00014"
+  },
+  {
+    "name": "FIRMA OPONIARSKA DĘBICA SPÓŁKA AKCYJNA",
+    "symbol": "DBC",
+    "endpoint": "BCA00016"
+  },
+  {
+    "name": "FON SE",
+    "symbol": "FON",
+    "endpoint": "00100835"
+  },
+  {
+    "name": "GAMES OPERATORS SPÓŁKA AKCYJNA",
+    "symbol": "GOP",
+    "endpoint": "SOP00019"
+  },
+  {
+    "name": "GAMING FACTORY SPÓŁKA AKCYJNA",
+    "symbol": "GIF",
+    "endpoint": "NGF00017"
+  },
+  {
+    "name": "GENOMTEC SPÓŁKA AKCYJNA",
+    "symbol": "GMT",
+    "endpoint": "MTC00017"
+  },
+  {
+    "name": "GETIN HOLDING SPÓŁKA AKCYJNA",
+    "symbol": "GTN",
+    "endpoint": "PR000014"
+  },
+  {
+    "name": "GI GROUP POLAND SPÓŁKA AKCYJNA",
+    "symbol": "GIG",
+    "endpoint": "KSR00019"
+  },
+  {
+    "name": "GIEŁDA PAPIERÓW WARTOŚCIOWYCH W WARSZAWIE SPÓŁKA AKCYJNA",
+    "symbol": "GPW",
+    "endpoint": "W0000017"
+  },
+  {
+    "name": "GIEŁDA PRAW MAJĄTKOWYCH VINDEXUS SPÓŁKA AKCYJNA",
+    "symbol": "VIN",
+    "endpoint": "DEX00013"
+  },
+  {
+    "name": "GLOBAL COSMED SPÓŁKA AKCYJNA",
+    "symbol": "GLC",
+    "endpoint": "BLC00011"
+  },
+  {
+    "name": "GLOBE TRADE CENTRE SPÓŁKA AKCYJNA",
+    "symbol": "GTC",
+    "endpoint": "C0000037"
+  },
+  {
+    "name": "GOBARTO SPÓŁKA AKCYJNA",
+    "symbol": "GOB",
+    "endpoint": "DA000016"
+  },
+  {
+    "name": "GREENX METALS LIMITED",
+    "symbol": "GRX",
+    "endpoint": "00198939"
+  },
+  {
+    "name": "GRODNO SPÓŁKA AKCYJNA",
+    "symbol": "GRN",
+    "endpoint": "ODN00015"
+  },
+  {
+    "name": "GRUPA AZOTY SPÓŁKA AKCYJNA",
+    "symbol": "ATT",
+    "endpoint": "TRM00012"
+  },
+  {
+    "name": "GRUPA AZOTY ZAKŁADY AZOTOWE PUŁAWY SPÓŁKA AKCYJNA",
+    "symbol": "ZAP",
+    "endpoint": "PUL00057"
+  },
+  {
+    "name": "GRUPA AZOTY ZAKŁADY CHEMICZNE POLICE SPÓŁKA AKCYJNA",
+    "symbol": "PCE",
+    "endpoint": "PLC00036"
+  },
+  {
+    "name": "GRUPA KAPITAŁOWA IMMOBILE SPÓŁKA AKCYJNA",
+    "symbol": "GKI",
+    "endpoint": "KRM00019"
+  },
+  {
+    "name": "GRUPA KĘTY SPÓŁKA AKCYJNA",
+    "symbol": "KTY",
+    "endpoint": "TY000011"
+  },
+  {
+    "name": "GRUPA PRACUJ SPÓŁKA AKCYJNA",
+    "symbol": "GPP",
+    "endpoint": "PRC00015"
+  },
+  {
+    "name": "GRUPA ŻYWIEC SPÓŁKA AKCYJNA",
+    "symbol": "ZWC",
+    "endpoint": "WIC00016"
+  },
+  {
+    "name": "HARPER HYGIENICS SPÓŁKA AKCYJNA",
+    "symbol": "HRP",
+    "endpoint": "PHG00023"
+  },
+  {
+    "name": "HELIO SPÓŁKA AKCYJNA",
+    "symbol": "HEL",
+    "endpoint": "LIO00014"
+  },
+  {
+    "name": "HERKULES SPÓŁKA AKCYJNA",
+    "symbol": "HRS",
+    "endpoint": "WZW00012"
+  },
+  {
+    "name": "HM INWEST SPÓŁKA AKCYJNA",
+    "symbol": "HMI",
+    "endpoint": "INW00016"
+  },
+  {
+    "name": "HOLLYWOOD SPÓŁKA AKCYJNA",
+    "symbol": "HLD",
+    "endpoint": "LWD00017"
+  },
+  {
+    "name": "HUUUGE. INC.",
+    "symbol": "HUG",
+    "endpoint": "853H1086"
+  },
+  {
+    "name": "IDM SPÓŁKA AKCYJNA",
+    "symbol": "IDM",
+    "endpoint": "MSA00044"
+  },
+  {
+    "name": "IFIRMA SPÓŁKA AKCYJNA",
+    "symbol": "IFI",
+    "endpoint": "RMD00011"
+  },
+  {
+    "name": "IMC S.A.",
+    "symbol": "IMC",
+    "endpoint": "07203980"
+  },
+  {
+    "name": "IMMOFINANZ AG",
+    "symbol": "IIA",
+    "endpoint": "00A21KS2"
+  },
+  {
+    "name": "IMPERIO ALTERNATYWNA SPÓŁKA INWESTYCYJNA SPÓŁKA AKCYJNA",
+    "symbol": "IMP",
+    "endpoint": "I0700018"
+  },
+  {
+    "name": "IMS SPÓŁKA AKCYJNA",
+    "symbol": "IMS",
+    "endpoint": "TMS00019"
+  },
+  {
+    "name": "INC SPÓŁKA AKCYJNA",
+    "symbol": "INC",
+    "endpoint": "CLT00015"
+  },
+  {
+    "name": "INDYGOTECH MINERALS SPÓŁKA AKCYJNA W LIKWIDACJI",
+    "symbol": "IDG",
+    "endpoint": "TIA00018"
+  },
+  {
+    "name": "ING BANK ŚLĄSKI SPÓŁKA AKCYJNA",
+    "symbol": "ING",
+    "endpoint": "K0000017"
+  },
+  {
+    "name": "INPRO SPÓŁKA AKCYJNA",
+    "symbol": "INP",
+    "endpoint": "PRO00015"
+  },
+  {
+    "name": "INSTAL KRAKÓW SPÓŁKA AKCYJNA",
+    "symbol": "INK",
+    "endpoint": "STK00013"
+  },
+  {
+    "name": "INTER CARS SPÓŁKA AKCYJNA",
+    "symbol": "CAR",
+    "endpoint": "TCS00010"
+  },
+  {
+    "name": "INTERBUD-LUBLIN SPÓŁKA AKCYJNA",
+    "symbol": "ITB",
+    "endpoint": "TBD00014"
+  },
+  {
+    "name": "INTERSPORT POLSKA SPÓŁKA AKCYJNA",
+    "symbol": "IPO",
+    "endpoint": "TSP00038"
+  },
+  {
+    "name": "INTROL SPÓŁKA AKCYJNA",
+    "symbol": "INL",
+    "endpoint": "TRL00013"
+  },
+  {
+    "name": "INVESTMENT FRIENDS CAPITAL SE",
+    "symbol": "IFC",
+    "endpoint": "00065392"
+  },
+  {
+    "name": "INVESTMENT FRIENDS SE",
+    "symbol": "IFR",
+    "endpoint": "00099391"
+  },
+  {
+    "name": "IPOPEMA SECURITIES SPÓŁKA AKCYJNA",
+    "symbol": "IPE",
+    "endpoint": "OPM00011"
+  },
+  {
+    "name": "IZOBLOK SPÓŁKA AKCYJNA",
+    "symbol": "IZB",
+    "endpoint": "BLK00010"
+  },
+  {
+    "name": "IZOLACJA-JAROCIN SPÓŁKA AKCYJNA",
+    "symbol": "IZO",
+    "endpoint": "CJR00017"
+  },
+  {
+    "name": "IZOSTAL SPÓŁKA AKCYJNA",
+    "symbol": "IZS",
+    "endpoint": "STL00015"
+  },
+  {
+    "name": "JASTRZĘBSKA SPÓŁKA WĘGLOWA SPÓŁKA AKCYJNA",
+    "symbol": "JSW",
+    "endpoint": "W0000015"
+  },
+  {
+    "name": "JWW INVEST SPÓŁKA AKCYJNA",
+    "symbol": "JWW",
+    "endpoint": "WNT00018"
+  },
+  {
+    "name": "K2 HOLDING SPÓŁKA AKCYJNA",
+    "symbol": "K2H",
+    "endpoint": "ITR00010"
+  },
+  {
+    "name": "KCI SPÓŁKA AKCYJNA",
+    "symbol": "KCI",
+    "endpoint": "NAR00012"
+  },
+  {
+    "name": "KDM SHIPPING PUBLIC LIMITED",
+    "symbol": "KDM",
+    "endpoint": "02492119"
+  },
+  {
+    "name": "KERNEL HOLDING S.A.",
+    "symbol": "KER",
+    "endpoint": "27357389"
+  },
+  {
+    "name": "KGHM POLSKA MIEDŹ SPÓŁKA AKCYJNA",
+    "symbol": "KGH",
+    "endpoint": "HM000017"
+  },
+  {
+    "name": "KGL SPÓŁKA AKCYJNA",
+    "symbol": "KGL",
+    "endpoint": "KGL00012"
+  },
+  {
+    "name": "KINO POLSKA TV SPÓŁKA AKCYJNA",
+    "symbol": "KPL",
+    "endpoint": "OPL00014"
+  },
+  {
+    "name": "KOMPUTRONIK SPÓŁKA AKCYJNA",
+    "symbol": "KOM",
+    "endpoint": "PTR00012"
+  },
+  {
+    "name": "KORPORACJA GOSPODARCZA EFEKT SPÓŁKA AKCYJNA",
+    "symbol": "EFK",
+    "endpoint": "EKT00018"
+  },
+  {
+    "name": "KOSZALIŃSKIE PRZEDSIĘBIORSTWO PRZEMYSŁU DRZEWNEGO SPÓŁKA AKCYJNA",
+    "symbol": "KPD",
+    "endpoint": "PD000017"
+  },
+  {
+    "name": "KRAKCHEMIA SPÓŁKA AKCYJNA",
+    "symbol": "KCH",
+    "endpoint": "KCH00019"
+  },
+  {
+    "name": "KREDYT INKASO SPÓŁKA AKCYJNA",
+    "symbol": "KRI",
+    "endpoint": "INK00014"
+  },
+  {
+    "name": "KRKA. TOVARNA ZDRAVIL. D.D.. NOVO MESTO",
+    "symbol": "KRK",
+    "endpoint": "31102120"
+  },
+  {
+    "name": "KRUK SPÓŁKA AKCYJNA",
+    "symbol": "KRU",
+    "endpoint": "K0000010"
+  },
+  {
+    "name": "KRYNICA VITAMIN SPÓŁKA AKCYJNA",
+    "symbol": "KVT",
+    "endpoint": "VTM00010"
+  },
+  {
+    "name": "KSG AGRO S.A.",
+    "symbol": "KSG",
+    "endpoint": "11262873"
+  },
+  {
+    "name": "LABO PRINT SPÓŁKA AKCYJNA",
+    "symbol": "LAB",
+    "endpoint": "PRT00013"
+  },
+  {
+    "name": "LARK.PL SPÓŁKA AKCYJNA",
+    "symbol": "LRK",
+    "endpoint": "WK000014"
+  },
+  {
+    "name": "LARQ SPÓŁKA AKCYJNA",
+    "symbol": "LRQ",
+    "endpoint": "MMD00032"
+  },
+  {
+    "name": "LENA LIGHTING SPÓŁKA AKCYJNA",
+    "symbol": "LEN",
+    "endpoint": "NAL00015"
+  },
+  {
+    "name": "LENTEX SPÓŁKA AKCYJNA",
+    "symbol": "LTX",
+    "endpoint": "NTX00010"
+  },
+  {
+    "name": "LESS SPÓŁKA AKCYJNA",
+    "symbol": "LES",
+    "endpoint": "TGR00013"
+  },
+  {
+    "name": "LIBET SPÓŁKA AKCYJNA",
+    "symbol": "LBT",
+    "endpoint": "T0000013"
+  },
+  {
+    "name": "LIVECHAT SOFTWARE SPÓŁKA AKCYJNA",
+    "symbol": "LVC",
+    "endpoint": "TSF00010"
+  },
+  {
+    "name": "LOKUM DEWELOPER SPÓŁKA AKCYJNA",
+    "symbol": "LKD",
+    "endpoint": "MDW00049"
+  },
+  {
+    "name": "LPP SPÓŁKA AKCYJNA",
+    "symbol": "LPP",
+    "endpoint": "P0000011"
+  },
+  {
+    "name": "LSI SOFTWARE SPÓŁKA AKCYJNA",
+    "symbol": "LSI",
+    "endpoint": "SFT00016"
+  },
+  {
+    "name": "LUBAWA SPÓŁKA AKCYJNA",
+    "symbol": "LBW",
+    "endpoint": "BAW00013"
+  },
+  {
+    "name": "LUBELSKI WĘGIEL BOGDANKA SPÓŁKA AKCYJNA",
+    "symbol": "LWB",
+    "endpoint": "BGD00016"
+  },
+  {
+    "name": "M.W. TRADE SPÓŁKA AKCYJNA",
+    "symbol": "MWT",
+    "endpoint": "TRD00013"
+  },
+  {
+    "name": "MABION SPÓŁKA AKCYJNA",
+    "symbol": "MAB",
+    "endpoint": "ION00016"
+  },
+  {
+    "name": "MAGNA POLONIA SPÓŁKA AKCYJNA",
+    "symbol": "06N",
+    "endpoint": "I0600010"
+  },
+  {
+    "name": "MAKARONY POLSKIE SPÓŁKA AKCYJNA",
+    "symbol": "MAK",
+    "endpoint": "RNP00015"
+  },
+  {
+    "name": "MANGATA HOLDING SPÓŁKA AKCYJNA",
+    "symbol": "MGT",
+    "endpoint": "KMA00017"
+  },
+  {
+    "name": "MANYDEV STUDIO SE",
+    "symbol": "MAN",
+    "endpoint": "DRG00015"
+  },
+  {
+    "name": "MARIE BRIZARD WINE & SPIRITS",
+    "symbol": "MBW",
+    "endpoint": "00060873"
+  },
+  {
+    "name": "MARVIPOL DEVELOPMENT SPÓŁKA AKCYJNA",
+    "symbol": "MVP",
+    "endpoint": "VDV00011"
+  },
+  {
+    "name": "MAXCOM SPÓŁKA AKCYJNA",
+    "symbol": "MXC",
+    "endpoint": "CMS00016"
+  },
+  {
+    "name": "MBANK SPÓŁKA AKCYJNA",
+    "symbol": "MBK",
+    "endpoint": "E0000012"
+  },
+  {
+    "name": "MCI CAPITAL ALTERNATYWNA SPÓŁKA INWESTYCYJNA SPÓŁKA AKCYJNA",
+    "symbol": "MCI",
+    "endpoint": "IMG00012"
+  },
+  {
+    "name": "MDI ENERGIA SPÓŁKA AKCYJNA",
+    "symbol": "MDI",
+    "endpoint": "I1000012"
+  },
+  {
+    "name": "MEDICALGORITHMICS SPÓŁKA AKCYJNA",
+    "symbol": "MDG",
+    "endpoint": "CLG00015"
+  },
+  {
+    "name": "MEDINICE SPÓŁKA AKCYJNA",
+    "symbol": "ICE",
+    "endpoint": "NCE00016"
+  },
+  {
+    "name": "MEGARON SPÓŁKA AKCYJNA",
+    "symbol": "MEG",
+    "endpoint": "RON00016"
+  },
+  {
+    "name": "MENNICA POLSKA SPÓŁKA AKCYJNA",
+    "symbol": "MNC",
+    "endpoint": "NCP00011"
+  },
+  {
+    "name": "MERCATOR MEDICAL SPÓŁKA AKCYJNA",
+    "symbol": "MRC",
+    "endpoint": "CTR00015"
+  },
+  {
+    "name": "MERCOR SPÓŁKA AKCYJNA",
+    "symbol": "MCR",
+    "endpoint": "COR00016"
+  },
+  {
+    "name": "MEX POLSKA SPÓŁKA AKCYJNA",
+    "symbol": "MEX",
+    "endpoint": "XPL00010"
+  },
+  {
+    "name": "MFO SPÓŁKA AKCYJNA",
+    "symbol": "MFO",
+    "endpoint": "O0000013"
+  },
+  {
+    "name": "MIRACULUM SPÓŁKA AKCYJNA",
+    "symbol": "MIR",
+    "endpoint": "STN00017"
+  },
+  {
+    "name": "MIRBUD SPÓŁKA AKCYJNA",
+    "symbol": "MRB",
+    "endpoint": "BUD00015"
+  },
+  {
+    "name": "ML SYSTEM SPÓŁKA AKCYJNA",
+    "symbol": "MLS",
+    "endpoint": "STM00015"
+  },
+  {
+    "name": "MLK FOODS PUBLIC COMPANY LTD",
+    "symbol": "MLK",
+    "endpoint": "09508712"
+  },
+  {
+    "name": "MLP GROUP SPÓŁKA AKCYJNA",
+    "symbol": "MLG",
+    "endpoint": "PGR00017"
+  },
+  {
+    "name": "MO-BRUK SPÓŁKA AKCYJNA",
+    "symbol": "MBR",
+    "endpoint": "BRK00013"
+  },
+  {
+    "name": "MOJ SPÓŁKA AKCYJNA",
+    "symbol": "MOJ",
+    "endpoint": "J0000015"
+  },
+  {
+    "name": "MOL MAGYAR OLAJ - ES GAZIPARI NYILVANOSAN MUKODO RESZVENYTARSASAG",
+    "symbol": "MOL",
+    "endpoint": "00153937"
+  },
+  {
+    "name": "MOLECURE SPÓŁKA AKCYJNA",
+    "symbol": "MOC",
+    "endpoint": "CTH00011"
+  },
+  {
+    "name": "MONNARI TRADE SPÓŁKA AKCYJNA",
+    "symbol": "MON",
+    "endpoint": "RTR00012"
+  },
+  {
+    "name": "MOSTOSTAL PŁOCK SPÓŁKA AKCYJNA",
+    "symbol": "MSP",
+    "endpoint": "TPL00018"
+  },
+  {
+    "name": "MOSTOSTAL WARSZAWA SPÓŁKA AKCYJNA",
+    "symbol": "MSW",
+    "endpoint": "TWS00019"
+  },
+  {
+    "name": "MOSTOSTAL ZABRZE SPÓŁKA AKCYJNA",
+    "symbol": "MSZ",
+    "endpoint": "TZB00018"
+  },
+  {
+    "name": "MOVIE GAMES SPÓŁKA AKCYJNA",
+    "symbol": "MOV",
+    "endpoint": "GMS00011"
+  },
+  {
+    "name": "MUZA SPÓŁKA AKCYJNA",
+    "symbol": "MZA",
+    "endpoint": "ZA000019"
+  },
+  {
+    "name": "NANOGROUP SPÓŁKA AKCYJNA",
+    "symbol": "NNG",
+    "endpoint": "GRP00011"
+  },
+  {
+    "name": "NEUCA SPÓŁKA AKCYJNA",
+    "symbol": "NEU",
+    "endpoint": "FRM00018"
+  },
+  {
+    "name": "NEW TECH CAPITAL SPÓŁKA AKCYJNA",
+    "symbol": "NTC",
+    "endpoint": "MNG00019"
+  },
+  {
+    "name": "NEWAG SPÓŁKA AKCYJNA",
+    "symbol": "NWG",
+    "endpoint": "WAG00012"
+  },
+  {
+    "name": "NEXITY GLOBAL SPÓŁKA AKCYJNA",
+    "symbol": "NXG",
+    "endpoint": "MCP00013"
+  },
+  {
+    "name": "NOVAVIS GROUP SPÓŁKA AKCYJNA",
+    "symbol": "NVG",
+    "endpoint": "I0500012"
+  },
+  {
+    "name": "NOVITA SPÓŁKA AKCYJNA",
+    "symbol": "NVT",
+    "endpoint": "ITA00018"
+  },
+  {
+    "name": "NPL NOVA SPÓŁKA AKCYJNA",
+    "symbol": "PRI",
+    "endpoint": "GNK00017"
+  },
+  {
+    "name": "NTT SYSTEM SPÓŁKA AKCYJNA",
+    "symbol": "NTT",
+    "endpoint": "SYS00013"
+  },
+  {
+    "name": "OCTAVA SPÓŁKA AKCYJNA",
+    "symbol": "08N",
+    "endpoint": "I0800016"
+  },
+  {
+    "name": "ODLEWNIE POLSKIE SPÓŁKA AKCYJNA",
+    "symbol": "ODL",
+    "endpoint": "LPL00013"
+  },
+  {
+    "name": "OEX SPÓŁKA AKCYJNA",
+    "symbol": "OEX",
+    "endpoint": "LL000023"
+  },
+  {
+    "name": "ONDE SPÓŁKA AKCYJNA",
+    "symbol": "OND",
+    "endpoint": "DE000018"
+  },
+  {
+    "name": "ONE SPÓŁKA AKCYJNA",
+    "symbol": "FMG",
+    "endpoint": "P0000011"
+  },
+  {
+    "name": "OPONEO.PL SPÓŁKA AKCYJNA",
+    "symbol": "OPN",
+    "endpoint": "NPL00013"
+  },
+  {
+    "name": "OPTEAM SPÓŁKA AKCYJNA",
+    "symbol": "OPM",
+    "endpoint": "TEM00012"
+  },
+  {
+    "name": "ORANGE POLSKA SPÓŁKA AKCYJNA",
+    "symbol": "OPL",
+    "endpoint": "KPL00017"
+  },
+  {
+    "name": "ORZEŁ BIAŁY SPÓŁKA AKCYJNA",
+    "symbol": "OBL",
+    "endpoint": "ZBL00013"
+  },
+  {
+    "name": "OT LOGISTICS SPÓŁKA AKCYJNA",
+    "symbol": "OTS",
+    "endpoint": "RTS00017"
+  },
+  {
+    "name": "OVOSTAR UNION PUBLIC COMPANY LIMITED",
+    "symbol": "OVO",
+    "endpoint": "09805613"
+  },
+  {
+    "name": "P.A. NOVA SPÓŁKA AKCYJNA",
+    "symbol": "NVA",
+    "endpoint": "NVA00013"
+  },
+  {
+    "name": "PAMAPOL SPÓŁKA AKCYJNA",
+    "symbol": "PMP",
+    "endpoint": "POL00031"
+  },
+  {
+    "name": "PASSUS SPÓŁKA AKCYJNA",
+    "symbol": "PAS",
+    "endpoint": "SUS00018"
+  },
+  {
+    "name": "PATENTUS SPÓŁKA AKCYJNA",
+    "symbol": "PAT",
+    "endpoint": "NTS00019"
+  },
+  {
+    "name": "PBG SPÓŁKA AKCYJNA W RESTRUKTURYZACJI I LIKWIDACJI Z SIEDZIBĄ W WYSOGOTOWIE",
+    "symbol": "PBG",
+    "endpoint": "G0000029"
+  },
+  {
+    "name": "PBS FINANSE SPÓŁKA AKCYJNA",
+    "symbol": "PBF",
+    "endpoint": "FSN00010"
+  },
+  {
+    "name": "PC GUARD SPÓŁKA AKCYJNA",
+    "symbol": "PCG",
+    "endpoint": "ARD00019"
+  },
+  {
+    "name": "PCC EXOL SPÓŁKA AKCYJNA",
+    "symbol": "PCX",
+    "endpoint": "CEX00010"
+  },
+  {
+    "name": "PCC ROKITA SPÓŁKA AKCYJNA",
+    "symbol": "PCR",
+    "endpoint": "CRK00076"
+  },
+  {
+    "name": "PCF GROUP SPÓŁKA AKCYJNA",
+    "symbol": "PCF",
+    "endpoint": "FGR00010"
+  },
+  {
+    "name": "PEPCO GROUP N.V.",
+    "symbol": "PCO",
+    "endpoint": "15000AU7"
+  },
+  {
+    "name": "PGE POLSKA GRUPA ENERGETYCZNA SPÓŁKA AKCYJNA",
+    "symbol": "PGE",
+    "endpoint": "ER000010"
+  },
+  {
+    "name": "PGF POLSKA GRUPA FOTOWOLTAICZNA SPÓŁKA AKCYJNA",
+    "symbol": "PGV",
+    "endpoint": "TAL00012"
+  },
+  {
+    "name": "PHARMENA SPÓŁKA AKCYJNA",
+    "symbol": "PHR",
+    "endpoint": "RMN00011"
+  },
+  {
+    "name": "PHOTON ENERGY N.V.",
+    "symbol": "PEN",
+    "endpoint": "10391108"
+  },
+  {
+    "name": "PJP MAKRUM SPÓŁKA AKCYJNA",
+    "symbol": "PJP",
+    "endpoint": "OJP00018"
+  },
+  {
+    "name": "PKP CARGO SPÓŁKA AKCYJNA",
+    "symbol": "PKP",
+    "endpoint": "PCR00011"
+  },
+  {
+    "name": "PLAYWAY SPÓŁKA AKCYJNA",
+    "symbol": "PLW",
+    "endpoint": "AYW00015"
+  },
+  {
+    "name": "PLAZA CENTERS N.V.",
+    "symbol": "PLZ",
+    "endpoint": "11882741"
+  },
+  {
+    "name": "PMPG POLSKIE MEDIA SPÓŁKA AKCYJNA",
+    "symbol": "PGM",
+    "endpoint": "KPL00010"
+  },
+  {
+    "name": "POLENERGIA SPÓŁKA AKCYJNA",
+    "symbol": "PEP",
+    "endpoint": "SEP00013"
+  },
+  {
+    "name": "POLIMEX MOSTOSTAL SPÓŁKA AKCYJNA",
+    "symbol": "PXM",
+    "endpoint": "TSD00019"
+  },
+  {
+    "name": "POLSKI HOLDING NIERUCHOMOŚCI SPÓŁKA AKCYJNA",
+    "symbol": "PHN",
+    "endpoint": "N0000014"
+  },
+  {
+    "name": "POLSKI KONCERN NAFTOWY ORLEN SPÓŁKA AKCYJNA",
+    "symbol": "PKN",
+    "endpoint": "N0000018"
+  },
+  {
+    "name": "POLTREG SPÓŁKA AKCYJNA",
+    "symbol": "PTG",
+    "endpoint": "TRG00038"
+  },
+  {
+    "name": "POLWAX SPÓŁKA AKCYJNA",
+    "symbol": "PWX",
+    "endpoint": "LWX00026"
+  },
+  {
+    "name": "POWSZECHNA KASA OSZCZĘDNOŚCI BANK POLSKI SPÓŁKA AKCYJNA",
+    "symbol": "PKO",
+    "endpoint": "O0000016"
+  },
+  {
+    "name": "POWSZECHNY ZAKŁAD UBEZPIECZEŃ SPÓŁKA AKCYJNA",
+    "symbol": "PZU",
+    "endpoint": "U0000011"
+  },
+  {
+    "name": "POZNAŃSKA KORPORACJA BUDOWLANA PEKABEX SPÓŁKA AKCYJNA",
+    "symbol": "PBX",
+    "endpoint": "BEX00072"
+  },
+  {
+    "name": "PRIMA MODA SPÓŁKA AKCYJNA",
+    "symbol": "PMA",
+    "endpoint": "MMD00012"
+  },
+  {
+    "name": "PRIMETECH SPÓŁKA AKCYJNA",
+    "symbol": "PTH",
+    "endpoint": "PEX00018"
+  },
+  {
+    "name": "PROCHEM SPÓŁKA AKCYJNA",
+    "symbol": "PRM",
+    "endpoint": "CHM00014"
+  },
+  {
+    "name": "PROTEKTOR SPÓŁKA AKCYJNA",
+    "symbol": "PRT",
+    "endpoint": "PSK00019"
+  },
+  {
+    "name": "PRZEDSIĘBIORSTWO HYDRAULIKI SIŁOWEJ HYDROTOR S.A.",
+    "symbol": "HDR",
+    "endpoint": "RTR00013"
+  },
+  {
+    "name": "PRZEDSIĘBIORSTWO PRODUKCYJNO HANDLOWE KOMPAP SPÓŁKA AKCYJNA",
+    "symbol": "KMP",
+    "endpoint": "MPP00017"
+  },
+  {
+    "name": "PRZEDSIĘBIORSTWO PRZEMYSŁU SPOŻYWCZEGO PEPEES SPÓŁKA AKCYJNA",
+    "symbol": "PPS",
+    "endpoint": "PES00018"
+  },
+  {
+    "name": "PURE BIOLOGICS SPÓŁKA AKCYJNA",
+    "symbol": "PUR",
+    "endpoint": "BLG00010"
+  },
+  {
+    "name": "PZ CORMAY SPÓŁKA AKCYJNA",
+    "symbol": "CRM",
+    "endpoint": "RAY00029"
+  },
+  {
+    "name": "QUANTUM SOFTWARE SPÓŁKA AKCYJNA",
+    "symbol": "QNT",
+    "endpoint": "TUM00018"
+  },
+  {
+    "name": "QUERCUS TOWARZYSTWO FUNDUSZY INWESTYCYJNYCH SPÓŁKA AKCYJNA",
+    "symbol": "QRS",
+    "endpoint": "CUS00012"
+  },
+  {
+    "name": "R22 SPÓŁKA  AKCYJNA",
+    "symbol": "R22",
+    "endpoint": "20000018"
+  },
+  {
+    "name": "RAEN SPÓŁKA AKCYJNA",
+    "symbol": "PUN",
+    "endpoint": "PRT00017"
+  },
+  {
+    "name": "RAFAKO SPÓŁKA AKCYJNA",
+    "symbol": "RFK",
+    "endpoint": "FAK00018"
+  },
+  {
+    "name": "RAINBOW TOURS SPÓŁKA AKCYJNA",
+    "symbol": "RBW",
+    "endpoint": "BWT00031"
+  },
+  {
+    "name": "RANK PROGRESS SPÓŁKA AKCYJNA",
+    "symbol": "RNK",
+    "endpoint": "KPR00014"
+  },
+  {
+    "name": "RAWLPLUG SPÓŁKA AKCYJNA",
+    "symbol": "RWL",
+    "endpoint": "NR000017"
+  },
+  {
+    "name": "REDAN SPÓŁKA AKCYJNA",
+    "symbol": "RDN",
+    "endpoint": "DAN00019"
+  },
+  {
+    "name": "REGNON SPÓŁKA AKCYJNA W LIKWIDACJI",
+    "symbol": "REG",
+    "endpoint": "NTC00017"
+  },
+  {
+    "name": "REINHOLD EUROPE AB",
+    "symbol": "RHD",
+    "endpoint": "01856519"
+  },
+  {
+    "name": "REINO CAPITAL SPÓŁKA AKCYJNA",
+    "symbol": "RNC",
+    "endpoint": "M0000029"
+  },
+  {
+    "name": "RELPOL SPÓŁKA AKCYJNA",
+    "symbol": "RLP",
+    "endpoint": "LPL00014"
+  },
+  {
+    "name": "REMAK-ENERGOMONTAŻ SPÓŁKA AKCYJNA",
+    "symbol": "RMK",
+    "endpoint": "MAK00016"
+  },
+  {
+    "name": "RESBUD SE",
+    "symbol": "RES",
+    "endpoint": "00142985"
+  },
+  {
+    "name": "RYVU THERAPEUTICS SPÓŁKA AKCYJNA",
+    "symbol": "RVU",
+    "endpoint": "LVT00013"
+  },
+  {
+    "name": "SADOVAYA GROUP S.A.",
+    "symbol": "SGR",
+    "endpoint": "64351582"
+  },
+  {
+    "name": "SANOK RUBBER COMPANY SPÓŁKA AKCYJNA",
+    "symbol": "SNK",
+    "endpoint": "LSK00016"
+  },
+  {
+    "name": "SANTANDER BANK POLSKA SPÓŁKA AKCYJNA",
+    "symbol": "SPL",
+    "endpoint": "00000044"
+  },
+  {
+    "name": "SANWIL HOLDING SPÓŁKA AKCYJNA",
+    "symbol": "SNW",
+    "endpoint": "NWL00012"
+  },
+  {
+    "name": "SATIS GROUP SPÓŁKA AKCYJNA",
+    "symbol": "STS",
+    "endpoint": "VPL00029"
+  },
+  {
+    "name": "SCOPE FLUIDICS SPÓŁKA AKCYJNA",
+    "symbol": "SCP",
+    "endpoint": "PFL00018"
+  },
+  {
+    "name": "SECO/WARWICK SPÓŁKA AKCYJNA",
+    "symbol": "SWG",
+    "endpoint": "WCK00013"
+  },
+  {
+    "name": "SEKO SPÓŁKA AKCYJNA",
+    "symbol": "SEK",
+    "endpoint": "KO000014"
+  },
+  {
+    "name": "SELENA FM SPÓŁKA AKCYJNA",
+    "symbol": "SEL",
+    "endpoint": "LNA00010"
+  },
+  {
+    "name": "SELVITA SPÓŁKA AKCYJNA",
+    "symbol": "SLV",
+    "endpoint": "VCR00029"
+  },
+  {
+    "name": "SERINUS ENERGY PLC",
+    "symbol": "SEN",
+    "endpoint": "BNNMKT29"
+  },
+  {
+    "name": "SESCOM SPÓŁKA AKCYJNA",
+    "symbol": "SES",
+    "endpoint": "SCM00013"
+  },
+  {
+    "name": "SFINKS POLSKA SPÓŁKA AKCYJNA",
+    "symbol": "SFS",
+    "endpoint": "NKS00011"
+  },
+  {
+    "name": "SHOPER SPÓŁKA AKCYJNA",
+    "symbol": "SHO",
+    "endpoint": "PR000021"
+  },
+  {
+    "name": "SILVAIR. INC.",
+    "symbol": "SVRS",
+    "endpoint": "27061099"
+  },
+  {
+    "name": "SIMFABRIC SPÓŁKA AKCYJNA",
+    "symbol": "SIM",
+    "endpoint": "FBC00016"
+  },
+  {
+    "name": "SKARBIEC HOLDING SPÓLKA AKCYJNA",
+    "symbol": "SKH",
+    "endpoint": "RBH00014"
+  },
+  {
+    "name": "SKOTAN SPÓŁKA AKCYJNA",
+    "symbol": "SKT",
+    "endpoint": "TAN00010"
+  },
+  {
+    "name": "SKYLINE INVESTMENT SPÓŁKA AKCYJNA",
+    "symbol": "SKL",
+    "endpoint": "LNW00011"
+  },
+  {
+    "name": "SLEEPZ AG",
+    "symbol": "SLZ",
+    "endpoint": "0A2E3772"
+  },
+  {
+    "name": "SOHO DEVELOPMENT SPÓŁKA AKCYJNA",
+    "symbol": "SHD",
+    "endpoint": "I0400015"
+  },
+  {
+    "name": "SOLAR COMPANY SPÓŁKA AKCYJNA",
+    "symbol": "SOL",
+    "endpoint": "RCP00021"
+  },
+  {
+    "name": "SONEL SPÓŁKA AKCYJNA",
+    "symbol": "SON",
+    "endpoint": "NEL00011"
+  },
+  {
+    "name": "SOPHARMA AD",
+    "symbol": "SPH",
+    "endpoint": "SOSOBT18"
+  },
+  {
+    "name": "SPYROSOFT SPÓŁKA AKCYJNA",
+    "symbol": "SPR",
+    "endpoint": "RSF00011"
+  },
+  {
+    "name": "STALEXPORT AUTOSTRADY SPÓŁKA AKCYJNA",
+    "symbol": "STX",
+    "endpoint": "LEX00019"
+  },
+  {
+    "name": "STALPRODUKT SPÓŁKA AKCYJNA",
+    "symbol": "STP",
+    "endpoint": "LPD00017"
+  },
+  {
+    "name": "STALPROFIL SPÓŁKA AKCYJNA",
+    "symbol": "STF",
+    "endpoint": "LPF00012"
+  },
+  {
+    "name": "STARHEDGE SPÓŁKA AKCYJNA",
+    "symbol": "SHG",
+    "endpoint": "DEX00021"
+  },
+  {
+    "name": "STS HOLDING SPÓŁKA AKCYJNA",
+    "symbol": "STH",
+    "endpoint": "SHL00012"
+  },
+  {
+    "name": "SUNEX SPÓŁKA AKCYJNA",
+    "symbol": "SNX",
+    "endpoint": "NEX00013"
+  },
+  {
+    "name": "SUWARY SPÓŁKA AKCYJNA",
+    "symbol": "SUW",
+    "endpoint": "WAR00014"
+  },
+  {
+    "name": "SYGNITY SPÓŁKA AKCYJNA",
+    "symbol": "SGN",
+    "endpoint": "PLD00016"
+  },
+  {
+    "name": "SYNEKTIK SPÓŁKA AKCYJNA",
+    "symbol": "SNT",
+    "endpoint": "KTK00019"
+  },
+  {
+    "name": "T-BULL SPÓŁKA AKCYJNA",
+    "symbol": "TBL",
+    "endpoint": "ULL00024"
+  },
+  {
+    "name": "TALEX SPÓŁKA AKCYJNA",
+    "symbol": "TLX",
+    "endpoint": "LEX00017"
+  },
+  {
+    "name": "TARCZYŃSKI SPÓŁKA AKCYJNA",
+    "symbol": "TAR",
+    "endpoint": "CZN00016"
+  },
+  {
+    "name": "TATRY MOUNTAIN RESORTS. A.S.",
+    "symbol": "TMR",
+    "endpoint": "20010287"
+  },
+  {
+    "name": "TAURON POLSKA ENERGIA SPÓŁKA AKCYJNA",
+    "symbol": "TPE",
+    "endpoint": "URN00011"
+  },
+  {
+    "name": "TEN SQUARE GAMES SPÓŁKA AKCYJNA",
+    "symbol": "TEN",
+    "endpoint": "QGM00016"
+  },
+  {
+    "name": "TENDERHUT SPÓŁKA AKCYJNA",
+    "symbol": "THG",
+    "endpoint": "DRH00012"
+  },
+  {
+    "name": "TERMO-REX SPÓŁKA AKCYJNA",
+    "symbol": "TRR",
+    "endpoint": "MRX00011"
+  },
+  {
+    "name": "TESGAS SPÓŁKA AKCYJNA",
+    "symbol": "TSG",
+    "endpoint": "GS000019"
+  },
+  {
+    "name": "TIM SPÓŁKA AKCYJNA",
+    "symbol": "TIM",
+    "endpoint": "M0000016"
+  },
+  {
+    "name": "TORPOL SPÓŁKA AKCYJNA",
+    "symbol": "TOR",
+    "endpoint": "RPL00016"
+  },
+  {
+    "name": "TOWER INVESTMENTS SPÓŁKA AKCYJNA",
+    "symbol": "TOW",
+    "endpoint": "RNV00013"
+  },
+  {
+    "name": "TOYA SPÓŁKA AKCYJNA",
+    "symbol": "TOA",
+    "endpoint": "YA000011"
+  },
+  {
+    "name": "TRAKCJA SPÓŁKA AKCYJNA",
+    "symbol": "TRK",
+    "endpoint": "KPL00014"
+  },
+  {
+    "name": "TRANS POLONIA SPÓŁKA AKCYJNA",
+    "symbol": "TRN",
+    "endpoint": "NSP00013"
+  },
+  {
+    "name": "TRITON DEVELOPMENT SPÓŁKA AKCYJNA",
+    "symbol": "TRI",
+    "endpoint": "MOT00030"
+  },
+  {
+    "name": "TXM SPÓŁKA AKCYJNA W UPADŁOŚCI",
+    "symbol": "TXM",
+    "endpoint": "M0000015"
+  },
+  {
+    "name": "ULMA CONSTRUCCION POLSKA SPÓŁKA AKCYJNA",
+    "symbol": "ULM",
+    "endpoint": "UMA00017"
+  },
+  {
+    "name": "ULTIMATE GAMES SPÓŁKA AKCYJNA",
+    "symbol": "ULG",
+    "endpoint": "TGM00013"
+  },
+  {
+    "name": "UNFOLD.VC ASI SPÓŁKA AKCYJNA",
+    "symbol": "UNF",
+    "endpoint": "TIN00011"
+  },
+  {
+    "name": "UNIBEP SPÓŁKA AKCYJNA",
+    "symbol": "UNI",
+    "endpoint": "BEP00015"
+  },
+  {
+    "name": "UNICREDIT S.P.A.",
+    "symbol": "UCG",
+    "endpoint": "05239360"
+  },
+  {
+    "name": "UNIMA 2000 SYSTEMY TELEINFORMATYCZNE SPÓŁKA AKCYJNA",
+    "symbol": "U2K",
+    "endpoint": "MST00014"
+  },
+  {
+    "name": "UNIMOT SPÓŁKA AKCYJNA",
+    "symbol": "UNT",
+    "endpoint": "MOT00013"
+  },
+  {
+    "name": "VERCOM SPÓŁKA AKCYJNA",
+    "symbol": "VRC",
+    "endpoint": "CM000016"
+  },
+  {
+    "name": "VIGO PHOTONICS SPÓŁKA AKCYJNA",
+    "symbol": "VGO",
+    "endpoint": "GOS00015"
+  },
+  {
+    "name": "VISTAL GDYNIA SPÓŁKA AKCYJNA",
+    "symbol": "VTL",
+    "endpoint": "LGD00010"
+  },
+  {
+    "name": "VIVID GAMES SPÓŁKA AKCYJNA",
+    "symbol": "VVD",
+    "endpoint": "DGM00014"
+  },
+  {
+    "name": "VOTUM SPÓŁKA AKCYJNA",
+    "symbol": "VOT",
+    "endpoint": "TUM00016"
+  },
+  {
+    "name": "VOXEL SPÓŁKA AKCYJNA",
+    "symbol": "VOX",
+    "endpoint": "XEL00014"
+  },
+  {
+    "name": "VRG SPÓŁKA AKCYJNA",
+    "symbol": "VRG",
+    "endpoint": "TLA00011"
+  },
+  {
+    "name": "WARIMPEX FINANZ- UND BETEILIGUNGS AG",
+    "symbol": "WXF",
+    "endpoint": "00827209"
+  },
+  {
+    "name": "WASKO SPÓŁKA AKCYJNA",
+    "symbol": "WAS",
+    "endpoint": "GA000041"
+  },
+  {
+    "name": "WAWEL SPÓŁKA AKCYJNA",
+    "symbol": "WWL",
+    "endpoint": "WEL00013"
+  },
+  {
+    "name": "WIELTON SPÓŁKA AKCYJNA",
+    "symbol": "WLT",
+    "endpoint": "LTN00012"
+  },
+  {
+    "name": "WIKANA SPÓŁKA AKCYJNA",
+    "symbol": "WIK",
+    "endpoint": "PO000016"
+  },
+  {
+    "name": "WIRTUALNA POLSKA HOLDING SPÓŁKA AKCYJNA",
+    "symbol": "WPL",
+    "endpoint": "TPL00027"
+  },
+  {
+    "name": "WISE FINANCE SPÓŁKA AKCYJNA",
+    "symbol": "IBS",
+    "endpoint": "PGR00010"
+  },
+  {
+    "name": "WITTCHEN SPÓŁKA AKCYJNA",
+    "symbol": "WTN",
+    "endpoint": "CHN00030"
+  },
+  {
+    "name": "WOJAS SPÓŁKA AKCYJNA",
+    "symbol": "WOJ",
+    "endpoint": "JAS00014"
+  },
+  {
+    "name": "XTB SPÓŁKA AKCYJNA",
+    "symbol": "XTB",
+    "endpoint": "RDM00011"
+  },
+  {
+    "name": "XTPL SPÓŁKA AKCYJNA",
+    "symbol": "XTP",
+    "endpoint": "PL000018"
+  },
+  {
+    "name": "ZAKŁAD BUDOWY MASZYN ZREMB-CHOJNICE SPÓŁKA AKCYJNA",
+    "symbol": "ZRE",
+    "endpoint": "MZC00019"
+  },
+  {
+    "name": "ZAKŁADY MAGNEZYTOWE ROPCZYCE SPÓŁKA AKCYJNA",
+    "symbol": "RPC",
+    "endpoint": "PCE00017"
+  },
+  {
+    "name": "ZAKŁADY PRZEMYSŁU CUKIERNICZEGO OTMUCHÓW SPÓŁKA AKCYJNA",
+    "symbol": "OTM",
+    "endpoint": "COT00018"
+  },
+  {
+    "name": "ZAKŁADY URZĄDZEŃ KOMPUTEROWYCH ELZAB SPÓŁKA AKCYJNA",
+    "symbol": "ELZ",
+    "endpoint": "ZAB00010"
+  },
+  {
+    "name": "ZAKŁADY URZĄDZEŃ KOTŁOWYCH STĄPORKÓW SPÓŁKA AKCYJNA",
+    "symbol": "ZUK",
+    "endpoint": "PRK00019"
+  },
+  {
+    "name": "ZAMET SPÓŁKA AKCYJNA",
+    "symbol": "ZMT",
+    "endpoint": "MET00010"
+  },
+  {
+    "name": "ZE PAK SPÓŁKA AKCYJNA",
+    "symbol": "ZEP",
+    "endpoint": "PAK00012"
+  },
+  {
+    "name": "ZESPÓŁ ELEKTROCIEPŁOWNI WROCŁAWSKICH KOGENERACJA SPÓŁKA AKCYJNA",
+    "symbol": "KGN",
+    "endpoint": "NRC00015"
+  },
+  {
+    "name": "ZUE SPÓŁKA AKCYJNA",
+    "symbol": "ZUE",
+    "endpoint": "E0000015"
+  }
+]
