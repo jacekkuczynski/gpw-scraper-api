@@ -1,10 +1,11 @@
 import puppeteer from "puppeteer-extra";
 import StealthPlugin from "puppeteer-extra-plugin-stealth";
 import { clickOnLoadMoreButton } from "./clickOnLoadMoreButton";
-import { clickOnCookiesConsent } from "./clickOnCookiesConsent";
+import { clickOnCookiesConsent } from "../../helpers/clickOnCookiesConsent";
 import { isLoadMoreButtonVisible } from "./isLoadMoreButtonVisible";
 import { loadingDataIntoTable } from "./loadingDataIntoTable";
 import { getCompaniesDataFromTable } from "./getCompaniesDataFromTable";
+import { removeDuplicates } from "../../helpers/helpers";
 
 export const scrapAllCompaniesData = async () => {
   return await puppeteer
@@ -32,7 +33,7 @@ export const scrapAllCompaniesData = async () => {
           await scrapData();
         } else {
           const data = await getCompaniesDataFromTable(page);
-          scrapedData = data;
+          scrapedData = removeDuplicates(data);
           console.log("All done! ✨");
           await browser.close();
           return;

@@ -1,5 +1,5 @@
 import { Page } from "puppeteer";
-import { companiesTableSelector } from "../selectors";
+import { companiesTableSelector } from "./selectors";
 
 export const getCompaniesDataFromTable = async (page: Page) => {
   const companiesTableDOM = await page.waitForSelector(companiesTableSelector);
@@ -16,7 +16,7 @@ export const getCompaniesDataFromTable = async (page: Page) => {
       return str;
     };
     const parseEndpoint = (str: string) => {
-      const endpointLength = 8;
+      const endpointLength = 12;
       str = str.slice(-endpointLength);
       return str;
     };

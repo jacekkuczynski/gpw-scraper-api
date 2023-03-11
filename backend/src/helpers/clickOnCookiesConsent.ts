@@ -1,5 +1,5 @@
 import { Page } from "puppeteer";
-import { acceptCookiesSelector } from "../selectors";
+import { acceptCookiesSelector } from "../scrapFunctions/scrapAllCompaniesData/selectors";
 
 export const clickOnCookiesConsent = async (page: Page) => {
   await page.waitForSelector(acceptCookiesSelector);
