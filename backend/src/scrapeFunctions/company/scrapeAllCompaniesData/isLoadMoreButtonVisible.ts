@@ -1,5 +1,5 @@
 import { Page } from "puppeteer";
-import { loadMoreButtonWrapper } from "../selectors";
+import { loadMoreButtonWrapper } from "./selectors";
 
 export const isLoadMoreButtonVisible = async (page: Page) => {
   await page.waitForSelector(loadMoreButtonWrapper);

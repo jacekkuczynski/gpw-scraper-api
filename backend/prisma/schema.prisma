@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Company {
+  id       Int    @id @default(autoincrement())
+  name     String @db.VarChar(255)
+  symbol   String @unique @db.VarChar(255)
+  endpoint String @db.VarChar(255)
+}
+
+model CompanyProfile {
+  id             Int    @id @default(autoincrement())
+  listedSince    String
+  numberOfStocks String
+  marketValue    String
+  name           String
+  symbol         String @unique
+  adress         String
+  district       String
+  ceoName        String
+  website        String
+  description    String
+  shareholders   String
+}
+
+model CompanyPriceHistory {
+  symbol String  @id @unique
+  price  Price[]
+}
+
+model Price {
+  id                        Int                  @id @default(autoincrement())
+  time                      String
+  open                      String
+  high                      String
+  low                       String
+  close                     String
+  CompanyPriceHistory       CompanyPriceHistory? @relation(fields: [companyPriceHistorySymbol], references: [symbol])
+  companyPriceHistorySymbol String?
+}
