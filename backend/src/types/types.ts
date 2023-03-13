@@ -1,14 +1,21 @@
+//  marketValue in milions pln
+
 export interface SingleCompanyProfileI {
   listedSince: string;
-  numberOfStocks: number;
-  marketValue: number;
+  numberOfStocks: string;
+  marketValue: string;
   name: string;
-  short: string;
-  fullName: string;
+  symbol: string;
   adress: string;
   district: string;
   ceoName: string;
-  phone: string;
   website: string;
-  email: string;
+  description: string;
+  shareholders: Shareholder[];
+}
+
+export interface Shareholder {
+  name: string;
+  stockAmount: string;
+  stockPercentage: number;
 }
