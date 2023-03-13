@@ -1,6 +1,5 @@
 // import AllCompaniesData from "@/components/AllCompaniesData/AllCompaniesData";
 import CompaniesScrollArea from "@/components/CompaniesScrollArea/CompaniesScrollArea";
-import CompanyPopover from "@/components/CompanyPopover/CompanyPopover";
 import { SingleCompanyStartingData } from "@/types/types";
 import axios from "axios";
 import styles from "./page.module.css";
