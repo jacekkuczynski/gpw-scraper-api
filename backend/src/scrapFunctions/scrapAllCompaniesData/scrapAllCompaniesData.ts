@@ -19,18 +19,18 @@ export const scrapAllCompaniesData = async () => {
         waitUntil: "networkidle0",
         timeout: 0,
       });
+      await clickOnCookiesConsent(page);
       console.log(
         "Scrapping all companies data (name, symbol, endpoint)... 🚀"
       );
-      let scrapedData = [];
-      await clickOnCookiesConsent(page);
 
-      const scrapData = async () => {
+      let scrapedData = [];
+      const scrapAllCompaniesData = async () => {
         let isLoadMoreButton = await isLoadMoreButtonVisible(page);
         if (isLoadMoreButton) {
           await clickOnLoadMoreButton(page);
           await loadingDataIntoTable(page);
-          await scrapData();
+          await scrapAllCompaniesData();
         } else {
           const data = await getCompaniesDataFromTable(page);
           scrapedData = removeDuplicates(data);
@@ -41,6 +41,6 @@ export const scrapAllCompaniesData = async () => {
         return scrapedData;
       };
 
-      return await scrapData();
+      return await scrapAllCompaniesData();
     });
 };
