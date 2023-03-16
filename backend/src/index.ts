@@ -2,6 +2,7 @@ import express from "express";
 import { readAllCompaniesData, saveAllCompaniesDataToDatabase } from "./prisma";
 
 import { allCompaniesDataExample } from "./scrapFunctions/scrapAllCompaniesData/allCompaniesDataExample";
+import { scrapCompanyInitialData } from "./scrapFunctions/scrapCompanyInitialData/scrapCompanyInitialData";
 // import { scrapCompanyInitialData } from "./scrapFunctions/scrapCompanyInitialData/scrapCompanyInitialData";
 
 const server = async () => {
@@ -13,10 +14,11 @@ const server = async () => {
 
   // await saveAllCompaniesDataToDatabase(allCompaniesData);
 
-  // const example = await scrapCompanyInitialData({
-  //   endpoint: "PL11BTS00015",
-  //   name: "11BIT",
-  // });
+  const example = await scrapCompanyInitialData({
+    endpoint: "PL11BTS00015",
+  });
+
+  console.log({ example });
 
   const app = express();
   const port = 3001;
@@ -24,9 +26,9 @@ const server = async () => {
     res.json(allCompaniesData);
   });
 
-  // app.get("/example", (req, res) => {
-  //   res.json(example);
-  // });
+  app.get("/example", (req, res) => {
+    res.json(example);
+  });
 
   app.listen(port, () => {
     console.log(`Server listening on port ${port}`);

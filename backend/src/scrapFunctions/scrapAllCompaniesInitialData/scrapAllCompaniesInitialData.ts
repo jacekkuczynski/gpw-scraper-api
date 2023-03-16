@@ -18,7 +18,6 @@ export const scrapAllCompaniesInitialData = async (
       iteration++;
       const profileData = await scrapCompanyInitialData({
         endpoint,
-        name,
       });
       allProfileData.push(profileData);
       console.log(allProfileData);

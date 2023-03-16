@@ -1,43 +1,28 @@
-import puppeteer from "puppeteer-extra";
-import StealthPlugin from "puppeteer-extra-plugin-stealth";
-import { clickOnCookiesConsent } from "../../../helpers/clickOnCookiesConsent";
+import { Page } from "puppeteer";
 import { parseData } from "./parseData";
 
-export const scrapCompanyProfile = async ({
-  endpoint,
-}: {
-  endpoint: string;
-}) => {
-  const pageUrl = `https://www.gpw.pl/spolka?isin=${endpoint}#infoTab`;
-  return await puppeteer
-    .use(StealthPlugin())
-    .launch({ headless: false })
-    .then(async (browser) => {
-      const page = await browser.newPage();
-      await page.goto(pageUrl, {
-        waitUntil: "networkidle0",
-        timeout: 0,
-      });
-      await clickOnCookiesConsent(page);
-      console.log("Scrapping company profile 🚀");
-      const companyProfileTableDOM = await page.waitForSelector(
-        "table.footable.table tbody"
-      );
-      const companyProfile = await companyProfileTableDOM.$$eval(
-        "tr",
-        async (rows) => {
-          const profile = rows.map((row) => {
-            const nameElement = row.querySelector("th");
-            const valueElement = row.querySelector("td");
-            const name = nameElement.textContent;
-            const value = valueElement.textContent;
-            return { name, value };
-          });
+export const scrapCompanyProfile = async ({ page }: { page: Page }) => {
+  await page.waitForNetworkIdle();
+  const companyProfileTabSelector = "li.infoTab";
+  await page.waitForSelector(companyProfileTabSelector);
+  console.log("Scrapping company profile 🚀");
+  await page.click(companyProfileTabSelector);
 
-          return profile;
-        }
-      );
-      await browser.close();
-      return parseData(companyProfile);
+  await page.waitForSelector("#infoTab");
+
+  const companyProfile = await page.evaluate(() => {
+    const companyProfileTable = document.querySelector("#infoTab table tbody");
+    const companyProfileRows = companyProfileTable.querySelectorAll("tr");
+
+    return Array.from(companyProfileRows).map((row) => {
+      console.log(row, "row");
+      const nameElement = row.querySelector("th");
+      const valueElement = row.querySelector("td");
+      const name = nameElement.textContent;
+      const value = valueElement.textContent;
+      return { name, value };
     });
+  });
+
+  return parseData(companyProfile);
 };
