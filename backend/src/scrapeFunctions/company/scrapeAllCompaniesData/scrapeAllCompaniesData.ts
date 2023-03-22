@@ -1,22 +1,26 @@
 import puppeteer from "puppeteer-extra";
 import StealthPlugin from "puppeteer-extra-plugin-stealth";
+import { clickOnCookiesConsent } from "../../../helpers/clickOnCookiesConsent";
+import {
+  interceptImageFontMediaRequest,
+  removeDuplicates,
+} from "../../../helpers/helpers";
+import { prisma } from "../../../index";
+import { saveAllCompaniesDataToDatabase } from "../../../prisma";
 import { clickOnLoadMoreButton } from "./clickOnLoadMoreButton";
-import { clickOnCookiesConsent } from "../../helpers/clickOnCookiesConsent";
-import { isLoadMoreButtonVisible } from "./isLoadMoreButtonVisible";
-import { loadingDataIntoTable } from "./loadingDataIntoTable";
 import { getCompaniesDataFromTable } from "./getCompaniesDataFromTable";
-import { removeDuplicates } from "../../helpers/helpers";
+import { isLoadMoreButtonVisible } from "./isLoadMoreButtonVisible";
+import { loadDataIntoTable } from "./loadDataIntoTable";
 
-export const scrapAllCompaniesData = async () => {
-  return await puppeteer
+export const scrapeAllCompaniesData = async () => {
+  const allCompaniesData = await puppeteer
     .use(StealthPlugin())
-    .launch({ headless: false })
+    .launch({ headless: true })
     .then(async (browser) => {
-      const pageUrl = "https://www.gpw.pl/spolki";
+      const url = "https://www.gpw.pl/spolki";
       const page = await browser.newPage();
-      console.log(`going to ${pageUrl}`);
-      await page.goto(pageUrl, {
-        waitUntil: "networkidle0",
+      await interceptImageFontMediaRequest(page);
+      await page.goto(url, {
         timeout: 0,
       });
       await clickOnCookiesConsent(page);
@@ -25,12 +29,12 @@ export const scrapAllCompaniesData = async () => {
       );
 
       let scrapedData = [];
-      const scrapAllCompaniesData = async () => {
+      const scrapeAllCompaniesData = async () => {
         let isLoadMoreButton = await isLoadMoreButtonVisible(page);
         if (isLoadMoreButton) {
           await clickOnLoadMoreButton(page);
-          await loadingDataIntoTable(page);
-          await scrapAllCompaniesData();
+          await loadDataIntoTable(page);
+          await scrapeAllCompaniesData();
         } else {
           const data = await getCompaniesDataFromTable(page);
           scrapedData = removeDuplicates(data);
@@ -41,6 +45,8 @@ export const scrapAllCompaniesData = async () => {
         return scrapedData;
       };
 
-      return await scrapAllCompaniesData();
+      return await scrapeAllCompaniesData();
     });
+
+  saveAllCompaniesDataToDatabase(allCompaniesData, prisma);
 };

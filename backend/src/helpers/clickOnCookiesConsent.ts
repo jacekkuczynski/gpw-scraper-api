@@ -1,7 +1,14 @@
 import { Page } from "puppeteer";
-import { acceptCookiesSelector } from "../scrapFunctions/scrapAllCompaniesData/selectors";
 
 export const clickOnCookiesConsent = async (page: Page) => {
-  await page.waitForSelector(acceptCookiesSelector);
-  await page.click(acceptCookiesSelector);
+  const selector = "#onetrust-accept-btn-handler";
+  await page.waitForSelector(selector);
+
+  await page.evaluate(() => {
+    const cookiesConsentBtn = document.querySelector(
+      "#onetrust-accept-btn-handler"
+    );
+
+    if (cookiesConsentBtn instanceof HTMLElement) cookiesConsentBtn.click();
+  });
 };

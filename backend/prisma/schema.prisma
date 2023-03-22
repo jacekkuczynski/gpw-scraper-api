@@ -13,21 +13,37 @@ datasource db {
 model Company {
   id       Int    @id @default(autoincrement())
   name     String @db.VarChar(255)
-  symbol   String @db.VarChar(255)
+  symbol   String @unique @db.VarChar(255)
   endpoint String @db.VarChar(255)
 }
 
-// model Profile {
-//   id     Int     @id @default(autoincrement())
-//   bio    String?
-//   userId Int     @unique
-//   User   User    @relation(fields: [userId], references: [id])
-// }
+model CompanyProfile {
+  id             Int    @id @default(autoincrement())
+  listedSince    String
+  numberOfStocks String
+  marketValue    String
+  name           String
+  symbol         String @unique
+  adress         String
+  district       String
+  ceoName        String
+  website        String
+  description    String
+  shareholders   String
+}
 
-// model User {
-//   id      Int      @id @default(autoincrement())
-//   name    String?  @db.VarChar(255)
-//   email   String   @unique @db.VarChar(255)
-//   Post    Post[]
-//   Profile Profile?
-// }
+model CompanyPriceHistory {
+  symbol String  @id @unique
+  price  Price[]
+}
+
+model Price {
+  id                        Int                  @id @default(autoincrement())
+  time                      String
+  open                      String
+  high                      String
+  low                       String
+  close                     String
+  CompanyPriceHistory       CompanyPriceHistory? @relation(fields: [companyPriceHistorySymbol], references: [symbol])
+  companyPriceHistorySymbol String?
+}

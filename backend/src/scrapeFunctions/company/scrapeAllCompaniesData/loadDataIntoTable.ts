@@ -1,6 +1,6 @@
 import { Page } from "puppeteer";
 
-export const loadingDataIntoTable = async (page: Page) => {
+export const loadDataIntoTable = async (page: Page) => {
   const element = await page.$("#preview-area");
 
   await page.waitForFunction(
