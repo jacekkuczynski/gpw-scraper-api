@@ -16,15 +16,9 @@ const ContextMenuApp = () => {
 
   return (
     <ContextMenu.Root>
-      <ContextMenu.Trigger className="ContextMenuTrigger">
-        Right click here.
-      </ContextMenu.Trigger>
+      <ContextMenu.Trigger className="ContextMenuTrigger"></ContextMenu.Trigger>
       <ContextMenu.Portal>
-        <ContextMenu.Content
-          className="ContextMenuContent"
-          sideOffset={5}
-          align="end"
-        >
+        <ContextMenu.Content className="ContextMenuContent">
           <ContextMenu.Item className="ContextMenuItem">
             Back <div className="RightSlot">⌘+[</div>
           </ContextMenu.Item>

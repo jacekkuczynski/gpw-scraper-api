@@ -2,7 +2,6 @@
 @import "@radix-ui/colors/mauve.css";
 @import "@radix-ui/colors/violet.css";
 
-/* reset */
 button,
 fieldset,
 input {
@@ -24,17 +23,9 @@ input {
   box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px,
     hsl(206 22% 7% / 20%) 0px 10px 20px -15px, 0 0 0 2px var(--violet7);
 }
-.PopoverContent[data-state="open"][data-side="top"] {
-  animation-name: slideDownAndFade;
-}
+
 .PopoverContent[data-state="open"][data-side="right"] {
   animation-name: slideLeftAndFade;
-}
-.PopoverContent[data-state="open"][data-side="bottom"] {
-  animation-name: slideUpAndFade;
-}
-.PopoverContent[data-state="open"][data-side="left"] {
-  animation-name: slideRightAndFade;
 }
 
 .PopoverArrow {
@@ -116,39 +107,6 @@ input {
   font-size: 15px;
   line-height: 19px;
   font-weight: 500;
-}
-
-@keyframes slideUpAndFade {
-  from {
-    opacity: 0;
-    transform: translateY(2px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideRightAndFade {
-  from {
-    opacity: 0;
-    transform: translateX(-2px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideDownAndFade {
-  from {
-    opacity: 0;
-    transform: translateY(-2px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @keyframes slideLeftAndFade {

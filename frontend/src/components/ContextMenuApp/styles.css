@@ -3,15 +3,12 @@
 @import "@radix-ui/colors/violet.css";
 
 .ContextMenuTrigger {
-  display: block;
-  border: 2px white dashed;
-  color: white;
-  border-radius: 4px;
-  font-size: 15px;
-  user-select: none;
-  padding: 45px 0;
-  width: 300px;
-  text-align: center;
+  background-color: transparent;
+  width: 100%;
+  position: absolute;
+  /* 32px - height of navbar */
+  top: 32px;
+  height: calc(100vh - 32px);
 }
 
 .ContextMenuContent,

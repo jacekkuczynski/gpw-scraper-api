@@ -1,6 +1,7 @@
 import "./globals.css";
 import { inter } from "./fonts";
 import NavMenu from "@/components/NavMenu/NavMenu";
+import ContextMenuApp from "@/components/ContextMenuApp/ContextMenuApp";
 
 export const metadata = {
   title: "Wirtualny portfel",
@@ -16,7 +17,6 @@ export default function RootLayout({
   return (
     <html lang="pl" className={inter.className}>
       <body>
-        <h1>Wirtualny portfel</h1>
         <NavMenu />
         {children}
       </body>
