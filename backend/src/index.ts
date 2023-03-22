@@ -1,6 +1,5 @@
 import { PrismaClient } from "@prisma/client";
 import express from "express";
-
 import { scrapeAllCompaniesInitialData } from "./scrapeFunctions/company/scrapeAllCompaniesInitialData/scrapeAllCompaniesInitialData";
 import { readAllCompaniesData, readCompanyProfile } from "./prisma";
 
