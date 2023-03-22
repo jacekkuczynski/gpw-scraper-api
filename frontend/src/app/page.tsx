@@ -1,5 +1,7 @@
 // import AllCompaniesData from "@/components/AllCompaniesData/AllCompaniesData";
 import CompaniesScrollArea from "@/components/CompaniesScrollArea/CompaniesScrollArea";
+import CompanyPopover from "@/components/CompanyPopover/CompanyPopover";
+import ContextMenuApp from "@/components/ContextMenuApp/ContextMenuApp";
 import { SingleCompanyStartingData } from "@/types/types";
 import axios from "axios";
 import styles from "./page.module.css";
@@ -23,17 +25,9 @@ export default async function Home() {
   const allCompaniesData = await getAllCompaniesData();
 
   return (
-    <div className={styles.container}>
-      <aside className={styles.scrollArea}>
-        <CompaniesScrollArea allCompaniesData={allCompaniesData} />
-      </aside>
-      <div>
-        <h1>Wirtualny portfel</h1>
-        <h2>
-          Wirtualny portfel spółek akcyjnych notowanych na Giełdzie Papierów
-          Wartościowych (GPW)
-        </h2>
-      </div>
+    <div className={styles.app}>
+      <CompaniesScrollArea allCompaniesData={allCompaniesData} />
+      <ContextMenuApp />
     </div>
   );
 }
