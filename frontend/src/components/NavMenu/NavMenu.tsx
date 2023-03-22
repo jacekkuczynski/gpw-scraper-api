@@ -2,15 +2,8 @@
 
 import React from "react";
 import * as Menubar from "@radix-ui/react-menubar";
-import {
-  CheckIcon,
-  ChevronRightIcon,
-  DotFilledIcon,
-} from "@radix-ui/react-icons";
+import { ChevronRightIcon } from "@radix-ui/react-icons";
 import "./styles.css";
-
-const RADIO_ITEMS = ["Andy", "Benoît", "Luis"];
-const CHECK_ITEMS = ["Always Show Bookmarks Bar", "Always Show Full URLs"];
 
 const NavMenu = () => {
   return (
