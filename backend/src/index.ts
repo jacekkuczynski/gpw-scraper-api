@@ -13,10 +13,14 @@ const server = async () => {
   await scrapeAllCompaniesInitialData();
 
   const app = express();
-  app.use(helmet());
+  app.use(
+    helmet({
+      crossOriginEmbedderPolicy: false,
+    })
+  );
   app.use(morgan("tiny")); //  log format ":method :url :status :res[content-length] - :response-time ms"
 
-  app.get("/all-companies-data", async (req, res) => {
+  app.get("/data", async (req, res) => {
     const allCompaniesData = await readAllCompaniesData(prisma);
     res.json(allCompaniesData);
   });

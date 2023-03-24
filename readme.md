@@ -1,8 +1,18 @@
 ## Installation
 
-Install my-project with npm
+To run project locally first run local backend server
 
 ```bash
-  npm install my-project
-  cd my-project
+  cd backend
+  npm install
+  npm run dev
+  cd ..
+```
+
+Then you can run:
+
+```bash
+  cd frontend
+  npm install
+  npm run dev
 ```

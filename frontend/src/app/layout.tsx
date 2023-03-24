@@ -1,7 +1,7 @@
 import "./globals.css";
 import { inter } from "./fonts";
-import NavMenu from "@/components/NavMenu/NavMenu";
-import ContextMenuApp from "@/components/ContextMenuApp/ContextMenuApp";
+import ReactQueryProvider from "@/components/ReactQueryProvider/ReactQueryProvider";
+import WalletApp from "@/components/WalletApp/WalletApp";
 
 export const metadata = {
   title: "Wirtualny portfel",
@@ -17,8 +17,9 @@ export default function RootLayout({
   return (
     <html lang="pl" className={inter.className}>
       <body>
-        <NavMenu />
-        {children}
+        <ReactQueryProvider>
+          <WalletApp>{children}</WalletApp>
+        </ReactQueryProvider>
       </body>
     </html>
   );

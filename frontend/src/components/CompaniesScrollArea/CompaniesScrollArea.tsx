@@ -1,60 +1,47 @@
 "use client";
 
-import { ChangeEvent, useState, useCallback } from "react";
+import { useState } from "react";
 import * as ScrollArea from "@radix-ui/react-scroll-area";
-import "./styles.css";
-import { SingleCompanyStartingData } from "@/types/types";
-import CompaniesScrollAreaCompaniesList from "./CompaniesScrollAreaCompaniesList";
+import CompaniesScrollAreaCompaniesList from "./CompaniesList/CompaniesList";
+import Searchbox from "./Searchbox/Searchbox";
+import styles from "./CompaniesScrollArea.module.css";
+import { useQuery } from "react-query";
+import { getAllCompaniesData } from "@/fetchers/getAllCompaniesData";
 
-interface CompaniesScrollAreaI {
-  allCompaniesData: SingleCompanyStartingData[];
-}
-
-const CompaniesScrollArea = ({ allCompaniesData }: CompaniesScrollAreaI) => {
+const CompaniesScrollArea = () => {
   const [input, setInput] = useState("");
 
-  const handleSearchInputChange = useCallback(
-    (event: ChangeEvent<HTMLInputElement>) => {
-      setInput(event.target.value);
-    },
-    []
-  );
+  const { error, data } = useQuery("allCompaniesData", getAllCompaniesData);
+
+  const onSearchboxChange = (input: string) => setInput(input);
+
+  if (error instanceof Error) {
+    console.log(error);
+  }
 
   return (
-    <div className="Wrapper">
-      <div className="Info">
-        <div className="Scroll-title">Spółki notowane na GPW:</div>
-        <div className="Search-input">
-          <label htmlFor="search-input">wyszukaj</label>
-          <input
-            onChange={handleSearchInputChange}
-            type="text"
-            name="search-input"
-          />
-        </div>
-      </div>
-      <ScrollArea.Root className="ScrollAreaRoot">
-        <ScrollArea.Viewport className="ScrollAreaViewport">
+    <div className={styles.companiesScrollArea}>
+      <Searchbox onSearchboxChange={onSearchboxChange} />
+      <ScrollArea.Root className={styles.scrollAreaRoot}>
+        <ScrollArea.Viewport className={styles.scrollAreaRoot}>
           <div>
-            <CompaniesScrollAreaCompaniesList
-              input={input}
-              allCompaniesData={allCompaniesData}
-            />
+            {data ? (
+              <CompaniesScrollAreaCompaniesList
+                input={input}
+                allCompaniesData={data}
+              />
+            ) : (
+              <div>loading</div>
+            )}
           </div>
         </ScrollArea.Viewport>
         <ScrollArea.Scrollbar
-          className="ScrollAreaScrollbar"
+          className={styles.scrollAreaScrollbar}
           orientation="vertical"
         >
-          <ScrollArea.Thumb className="ScrollAreaThumb" />
+          <ScrollArea.Thumb className={styles.scrollAreaThumb} />
         </ScrollArea.Scrollbar>
-        <ScrollArea.Scrollbar
-          className="ScrollAreaScrollbar"
-          orientation="horizontal"
-        >
-          <ScrollArea.Thumb className="ScrollAreaThumb" />
-        </ScrollArea.Scrollbar>
-        <ScrollArea.Corner className="ScrollAreaCorner" />
+        <ScrollArea.Corner className={styles.scrollAreaCorner} />
       </ScrollArea.Root>
     </div>
   );
