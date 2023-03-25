@@ -16,9 +16,12 @@ const server = async () => {
   app.use(helmet());
   app.use(morgan("tiny")); //  log format ":method :url :status :res[content-length] - :response-time ms"
 
-  app.get("/all-companies-data", async (req, res) => {
-    const allCompaniesData = await readAllCompaniesData(prisma);
-    res.json(allCompaniesData);
+  app.get("/data", async (req, res) => {
+    const isAll = req.query.all;
+    if (isAll) {
+      const allCompaniesData = await readAllCompaniesData(prisma);
+      res.json(allCompaniesData);
+    }
   });
 
   app.get("/profile", async (req, res) => {
