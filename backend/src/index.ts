@@ -7,12 +7,15 @@ import { readAllCompaniesData, readCompanyProfile } from "./prisma";
 export const prisma = new PrismaClient();
 
 // const helmet = require("helmet");
+const cors = require("cors");
 
 const server = async () => {
   await scrapeAllCompaniesInitialData();
 
   const app = express();
   // app.use(helmet());
+  app.use(cors());
+
   app.use(morgan("tiny")); //  log format ":method :url :status :res[content-length] - :response-time ms"
 
   app.get("/data", async (req, res) => {
