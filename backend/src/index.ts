@@ -13,6 +13,7 @@ const server = async () => {
   await scrapeAllCompaniesInitialData();
 
   const app = express();
+
   // app.use(helmet());
   app.use(cors());
 

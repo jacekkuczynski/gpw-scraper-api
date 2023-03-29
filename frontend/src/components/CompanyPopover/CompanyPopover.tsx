@@ -3,7 +3,8 @@
 import React from "react";
 import * as Popover from "@radix-ui/react-popover";
 import { Cross2Icon } from "@radix-ui/react-icons";
-import "./styles.css";
+import styles from "./CompanyPopover.module.css";
+import Link from "next/link";
 
 const CompanyPopover = ({
   name,
@@ -16,21 +17,27 @@ const CompanyPopover = ({
 }) => (
   <Popover.Root>
     <Popover.Trigger asChild>
-      <div>
+      <div className={styles.popoverTrigger}>
         {companyIndex}. {name} <b>{symbol}</b>
       </div>
     </Popover.Trigger>
     <Popover.Portal>
-      <Popover.Content className="PopoverContent" sideOffset={8} side={"right"}>
+      <Popover.Content
+        className={styles.popoverContent}
+        sideOffset={8}
+        side={"right"}
+      >
         <div>
-          <p className="Text">{name}</p>
-          <p className="Text">{symbol}</p>
-          <button>dodaj do watchlisty</button>
+          <p className={styles.text}>{name}</p>
+          <p className={styles.text}>{symbol}</p>
+          <button>
+            <Link href={`/wallet/profile/${symbol}`}>go to {name} profile</Link>
+          </button>
         </div>
-        <Popover.Close className="PopoverClose" aria-label="Close">
+        <Popover.Close className={styles.popoverClose} aria-label="Close">
           <Cross2Icon />
         </Popover.Close>
-        <Popover.Arrow className="PopoverArrow" />
+        <Popover.Arrow className={styles.popoverArrow} />
       </Popover.Content>
     </Popover.Portal>
   </Popover.Root>
