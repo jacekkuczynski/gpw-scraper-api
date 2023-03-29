@@ -6,23 +6,25 @@ import { readAllCompaniesData, readCompanyProfile } from "./prisma";
 
 export const prisma = new PrismaClient();
 
-//  helmet with ES6 export syntax breaks the app for now
-const helmet = require("helmet");
+// const helmet = require("helmet");
+const cors = require("cors");
 
 const server = async () => {
   await scrapeAllCompaniesInitialData();
 
   const app = express();
-  app.use(
-    helmet({
-      crossOriginEmbedderPolicy: false,
-    })
-  );
+
+  // app.use(helmet());
+  app.use(cors());
+
   app.use(morgan("tiny")); //  log format ":method :url :status :res[content-length] - :response-time ms"
 
   app.get("/data", async (req, res) => {
-    const allCompaniesData = await readAllCompaniesData(prisma);
-    res.json(allCompaniesData);
+    const isAll = req.query.all;
+    if (isAll) {
+      const allCompaniesData = await readAllCompaniesData(prisma);
+      res.json(allCompaniesData);
+    }
   });
 
   app.get("/profile", async (req, res) => {
