@@ -5,6 +5,7 @@ import { ShareholderI } from "@/types/types";
 import * as Separator from "@radix-ui/react-separator";
 import Link from "next/link";
 import { useQuery } from "react-query";
+import ProfileControlButtons from "../ProfileControlButtons/ProfileControlButtons";
 import styles from "./ProfileView.module.css";
 
 const ProfileView = ({ symbol }: { symbol: string }) => {
@@ -21,7 +22,7 @@ const ProfileView = ({ symbol }: { symbol: string }) => {
     );
   }
   return data ? (
-    <div className={styles.container}>
+    <div className="container">
       <div className={styles.profileView}>
         <div className={styles.titleContainer}>
           <div className={styles.name}>{data.name}</div>
@@ -59,6 +60,7 @@ const ProfileView = ({ symbol }: { symbol: string }) => {
           })}
         </div>
         <Separator.Root className={styles.separator} />
+        <ProfileControlButtons name={data.name} symbol={data.symbol} />
       </div>
     </div>
   ) : null;
