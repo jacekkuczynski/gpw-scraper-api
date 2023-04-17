@@ -3,6 +3,7 @@
 import { useAppStore } from "@/store/store";
 import Link from "next/link";
 import { useState } from "react";
+import styles from "./WatchlistView.module.css";
 
 const WatchlistView = () => {
   const [symbolToRemove, setSymbolToRemove] = useState("");
@@ -15,28 +16,25 @@ const WatchlistView = () => {
   };
 
   return (
-    <div className="container">
-      <div>
-        {watchlist.map((company) => {
-          return (
-            <div key={company.symbol}>
-              <Link href={`/profile/${company.symbol}`}>
-                <div>
-                  {company.name}
-                  {company.symbol}
-                </div>
-              </Link>
-              <button
-                onClick={() => {
-                  handleRemoveFromWatchlist(company.symbol);
-                }}
-              >
-                Usuń z listy
-              </button>
-            </div>
-          );
-        })}
-      </div>
+    <div>
+      {watchlist.map((company) => {
+        return (
+          <div key={company.symbol}>
+            <Link href={`/profile/${company.symbol}`}>
+              <div>
+                {company.name} {company.symbol}
+              </div>
+            </Link>
+            <button
+              onClick={() => {
+                handleRemoveFromWatchlist(company.symbol);
+              }}
+            >
+              Usuń z listy
+            </button>
+          </div>
+        );
+      })}
     </div>
   );
 };

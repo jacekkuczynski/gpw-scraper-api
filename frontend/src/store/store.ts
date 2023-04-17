@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
 type WatchlistItemType = {
   name: string;
@@ -11,12 +12,20 @@ interface BearStateI {
   removeFromWatchlist: (symbol: string) => void;
 }
 
-export const useAppStore = create<BearStateI>()((set) => ({
-  watchlist: [],
-  addToWatchlist: (company) =>
-    set((state) => ({ watchlist: [...state.watchlist, company] })),
-  removeFromWatchlist: (symbol) =>
-    set((state) => ({
-      watchlist: state.watchlist.filter((el) => el.symbol !== symbol),
-    })),
-}));
+export const useAppStore = create<BearStateI>()(
+  persist(
+    (set) => ({
+      watchlist: [],
+      addToWatchlist: (company) =>
+        set((state) => ({ watchlist: [...state.watchlist, company] })),
+      removeFromWatchlist: (symbol) =>
+        set((state) => ({
+          watchlist: state.watchlist.filter((el) => el.symbol !== symbol),
+        })),
+    }),
+    {
+      name: "watchlist",
+      skipHydration: false,
+    }
+  )
+);

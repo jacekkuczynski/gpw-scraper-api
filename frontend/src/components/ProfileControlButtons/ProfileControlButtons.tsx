@@ -1,6 +1,5 @@
 "use client";
 
-import { CompanyProfileI } from "@/types/types";
 import { useAppStore } from "@/store/store";
 import styles from "./ProfileControlButtons.module.css";
 
@@ -12,6 +11,7 @@ const ProfileControlButtons = ({
   symbol: string;
 }) => {
   const addToWatchlist = useAppStore((state) => state.addToWatchlist);
+  const watchlist = useAppStore((state) => state.watchlist);
 
   const handleAddToWatchlist = (e: React.MouseEvent<HTMLElement>) => {
     console.log("clicked");

@@ -1,8 +1,10 @@
+"use client";
+
 import React, { useState, useEffect, useCallback } from "react";
 import { SingleCompanyStartingData } from "@/types/types";
-import CompanyPopover from "@/components/CompanyPopover/CompanyPopover";
 import styles from "./CompaniesList.module.css";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 
 interface CompaniesListI {
   input: string;
@@ -14,6 +16,8 @@ const CompaniesList = ({ input, allCompaniesData }: CompaniesListI) => {
     []
   );
   const [isLoading, setIsLoading] = useState(false);
+
+  const { symbol } = useParams();
 
   const getFilteredList = useCallback(
     (input: string) => {
@@ -43,7 +47,14 @@ const CompaniesList = ({ input, allCompaniesData }: CompaniesListI) => {
       <>
         {allCompaniesData ? (
           allCompaniesData.map((company) => (
-            <div key={company.symbol} className={styles.Tag}>
+            <div
+              key={company.symbol}
+              className={
+                symbol == company.symbol
+                  ? `${styles.Active} ${styles.Tag} `
+                  : `${styles.Tag}`
+              }
+            >
               <Link href={`/profile/${company.symbol}`}>
                 {company.companyIndex}. {company.name}
               </Link>
@@ -66,7 +77,14 @@ const CompaniesList = ({ input, allCompaniesData }: CompaniesListI) => {
     return (
       <>
         {filteredList?.map((company) => (
-          <div key={company.symbol} className={styles.Tag}>
+          <div
+            key={company.symbol}
+            className={
+              symbol == company.symbol
+                ? `${styles.Active} ${styles.Tag} `
+                : `${styles.Tag}`
+            }
+          >
             <Link href={`/profile/${company.symbol}`}>
               {company.companyIndex}. {company.name}
             </Link>
