@@ -9,6 +9,8 @@ import {
 import { scrapeAllCompaniesData } from "../scrapeAllCompaniesData/scrapeAllCompaniesData";
 import { scrapeCompanyInitialData } from "../scrapeCompanyInitialData/scrapeCompanyInitialData";
 
+const allCompaniesCount = 410;
+
 export const scrapeAllCompaniesInitialData = async () => {
   let allCompaniesData: {
     name: string;

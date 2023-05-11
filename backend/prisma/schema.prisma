@@ -6,8 +6,9 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
 }
 
 model Company {
@@ -28,22 +29,14 @@ model CompanyProfile {
   district       String
   ceoName        String
   website        String
-  description    String
-  shareholders   String
-}
-
-model CompanyPriceHistory {
-  symbol String  @id @unique
-  price  Price[]
+  description    String @db.Text
+  shareholders   String @db.Text
 }
 
 model Price {
-  id                        Int                  @id @default(autoincrement())
-  time                      String
-  open                      String
-  high                      String
-  low                       String
-  close                     String
-  CompanyPriceHistory       CompanyPriceHistory? @relation(fields: [companyPriceHistorySymbol], references: [symbol])
-  companyPriceHistorySymbol String?
+  id     Int    @id @default(autoincrement())
+  name   String
+  symbol String
+  price  Float
+  date   String
 }

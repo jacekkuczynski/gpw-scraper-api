@@ -2,15 +2,7 @@ import puppeteer from "puppeteer-extra";
 import StealthPlugin from "puppeteer-extra-plugin-stealth";
 import { interceptImageFontMediaRequest } from "../../../helpers/helpers";
 
-export interface PriceI {
-  time: string;
-  open: string;
-  high: string;
-  low: string;
-  close: string;
-}
-
-export const scrapeCompanyPriceData = async ({ endpoint }): Promise<PriceI> => {
+export const scrapeCompanyPriceData = async ({ endpoint }): Promise<any> => {
   return await puppeteer
     .use(StealthPlugin())
     .launch()
@@ -23,43 +15,27 @@ export const scrapeCompanyPriceData = async ({ endpoint }): Promise<PriceI> => {
         timeout: 0,
       });
 
-      const time = new Date().toISOString().slice(0, 10);
-
-      const open = await page.evaluate(() => {
-        const openPriceDOM = document.querySelector(
-          ".row :first-child :nth-child(2) tbody :nth-child(2) :nth-child(2) "
-        );
-        const openPrice = openPriceDOM.textContent;
-        return openPrice;
-      });
-
-      const high = await page.evaluate(() => {
-        const minMaxDOM = document.querySelector(".max_min");
-        function parseMaxPrice(str) {
-          const cleanStr = str.replace(/\s/g, "");
-          const substrings = cleanStr.split(/min|max/g).filter(Boolean);
-          const max = substrings[1].replace(",", ".");
-          return max;
+      async function getPrice() {
+        try {
+          await page.waitForSelector("div.header span", {
+            visible: true,
+          });
+          const price = await page.evaluate(async () => {
+            const closePriceDOM = document.querySelector("div.header span");
+            return closePriceDOM?.textContent || "420,69";
+          });
+          return price;
+        } catch (e) {
+          if (e.message === "Navigation timeout") {
+            await page.reload();
+            getPrice();
+          }
         }
-        return parseMaxPrice(minMaxDOM.textContent);
-      });
+      }
 
-      const low = await page.evaluate(() => {
-        const minMaxDOM = document.querySelector(".max_min");
-        function parseMinPrice(str) {
-          const cleanStr = str.replace(/\s/g, "");
-          const substrings = cleanStr.split(/min|max/g).filter(Boolean);
-          const min = substrings[0].replace(",", ".");
-          return min;
-        }
-        return parseMinPrice(minMaxDOM.textContent);
-      });
+      const price = await getPrice();
 
-      const close = await page.evaluate(() => {
-        const closePriceDOM = document.querySelector("span.summary");
-        return closePriceDOM.textContent;
-      });
-
-      return { time, open, high, low, close };
+      await browser.close();
+      return price;
     });
 };

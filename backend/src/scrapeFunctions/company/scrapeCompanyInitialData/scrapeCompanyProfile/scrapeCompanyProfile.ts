@@ -10,7 +10,8 @@ export const scrapeCompanyProfile = async ({ page }: { page: Page }) => {
     const profileDOM = document.querySelector("#infoTab table tbody");
     const listedSince = profileDOM.querySelector(":first-child td").textContent;
     const numberOfStocks = parseNumberOfStocks(
-      profileDOM.querySelector(":nth-child(2) td").textContent
+      profileDOM.querySelector("#infoTab table tbody :nth-child(2) td")
+        .textContent
     );
     const marketValue = parseMarketValue(
       profileDOM.querySelector(":nth-child(3) td").textContent
