@@ -147,3 +147,26 @@ export const readCompanyProfile = async (
       process.exit(1);
     });
 };
+
+// TODO
+export const readCompanyPrice = async (
+  prisma: PrismaClient,
+  symbol: string
+) => {
+  async function main() {
+    return await prisma.companyProfile.findUnique({
+      where: { symbol: symbol },
+    });
+  }
+
+  return await main()
+    .then(async (data) => {
+      await prisma.$disconnect();
+      return data;
+    })
+    .catch(async (e) => {
+      console.error(e);
+      await prisma.$disconnect();
+      process.exit(1);
+    });
+};
