@@ -25,7 +25,7 @@ export const useAppStore = create<BearStateI>()(
     }),
     {
       name: "watchlist",
-      skipHydration: false,
+      skipHydration: true,
     }
   )
 );

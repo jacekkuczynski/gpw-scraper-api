@@ -71,8 +71,6 @@ const CompaniesList = ({ input, allCompaniesData }: CompaniesListI) => {
         Nie znaleziono żadnej spółki która pasuje do &quot;{input}&quot;
       </div>
     );
-  } else if (isLoading) {
-    return <div>Loading...</div>;
   } else {
     return (
       <>

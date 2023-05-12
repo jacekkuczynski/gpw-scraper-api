@@ -4,6 +4,7 @@ import { useAppStore } from "@/store/store";
 import Link from "next/link";
 import { useState } from "react";
 import styles from "./WatchlistView.module.css";
+import React from "react";
 
 const WatchlistView = () => {
   const [symbolToRemove, setSymbolToRemove] = useState("");
