@@ -11,6 +11,8 @@ export const prisma = new PrismaClient();
 const cors = require("cors");
 
 const server = async () => {
+  await scrapeAllCompaniesDailyPrice();
+
   await scrapeAllCompaniesInitialData();
   console.log(`end time: ${new Date().toISOString()}`);
 

@@ -36,7 +36,6 @@ export const scrapeAllCompaniesDailyPrice = async () => {
           await scrapeAllCompaniesData();
         } else {
           const data = await scrapeDailyPricesFromTable(page);
-          console.log(data);
           scrapedData = removeDuplicates(data);
           console.log("All done! ✨");
           await browser.close();

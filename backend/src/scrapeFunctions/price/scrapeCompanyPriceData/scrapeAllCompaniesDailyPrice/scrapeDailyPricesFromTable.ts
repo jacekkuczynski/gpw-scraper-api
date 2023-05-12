@@ -19,13 +19,11 @@ export const scrapeDailyPricesFromTable = async (page: Page) => {
       return str;
     };
     return rows.map((row) => {
-      const nameElement = row.querySelector(".name");
-      const name = parseName(nameElement.textContent);
       const price = parsePrice(row.querySelector(".summary").textContent);
       const symbolElement = row.querySelector("span.grey");
       const symbol = parseSymbol(symbolElement.textContent);
       const date = new Date().toISOString().slice(0, 10);
-      return { name, price, date, symbol };
+      return { price, date, symbol };
     });
   });
   return companiesData;

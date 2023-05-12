@@ -22,7 +22,7 @@ export const saveAllCompaniesDataToDatabase = async (
 };
 
 export const writeDailyPricesToDb = async (
-  priceData: { name: string; symbol: string; date: string; price: number }[],
+  priceData: { symbol: string; date: string; price: number }[],
   prisma: PrismaClient
 ) => {
   async function main() {
