@@ -1,19 +1,19 @@
 import puppeteer from "puppeteer-extra";
 import StealthPlugin from "puppeteer-extra-plugin-stealth";
-import { clickOnCookiesConsent } from "../../../helpers/clickOnCookiesConsent";
+import { clickOnCookiesConsent } from "../../../../helpers/clickOnCookiesConsent";
 import {
   interceptImageFontMediaRequest,
   removeDuplicates,
-} from "../../../helpers/helpers";
-import { prisma } from "../../../index";
-import { saveAllCompaniesDataToDatabase } from "../../../prisma";
-import { clickOnLoadMoreButton } from "./clickOnLoadMoreButton";
-import { getCompaniesDataFromTable } from "./getCompaniesDataFromTable";
-import { isLoadMoreButtonVisible } from "./isLoadMoreButtonVisible";
-import { loadDataIntoTable } from "./loadDataIntoTable";
+} from "../../../../helpers/helpers";
+import { prisma } from "../../../../index";
+import { writeDailyPricesToDb } from "../../../../prisma";
+import { clickOnLoadMoreButton } from "../../../company/scrapeAllCompaniesData/clickOnLoadMoreButton";
+import { isLoadMoreButtonVisible } from "../../../company/scrapeAllCompaniesData/isLoadMoreButtonVisible";
+import { loadDataIntoTable } from "../../../company/scrapeAllCompaniesData/loadDataIntoTable";
+import { scrapeDailyPricesFromTable } from "./scrapeDailyPricesFromTable";
 
-export const scrapeAllCompaniesData = async () => {
-  const allCompaniesData = await puppeteer
+export const scrapeAllCompaniesDailyPrice = async () => {
+  const allCompaniesDailyPrices = await puppeteer
     .use(StealthPlugin())
     .launch()
     .then(async (browser) => {
@@ -24,9 +24,8 @@ export const scrapeAllCompaniesData = async () => {
         timeout: 0,
       });
       await clickOnCookiesConsent(page);
-      console.log(
-        "Scrapping all companies data (name, symbol, endpoint)... 🚀"
-      );
+      console.log(new Date().toISOString());
+      console.log("Scrapping daily price of all companies🚀");
 
       let scrapedData = [];
       const scrapeAllCompaniesData = async () => {
@@ -36,7 +35,7 @@ export const scrapeAllCompaniesData = async () => {
           await loadDataIntoTable(page);
           await scrapeAllCompaniesData();
         } else {
-          const data = await getCompaniesDataFromTable(page);
+          const data = await scrapeDailyPricesFromTable(page);
           scrapedData = removeDuplicates(data);
           console.log("All done! ✨");
           await browser.close();
@@ -48,5 +47,5 @@ export const scrapeAllCompaniesData = async () => {
       return await scrapeAllCompaniesData();
     });
 
-  saveAllCompaniesDataToDatabase(allCompaniesData, prisma);
+  writeDailyPricesToDb(allCompaniesDailyPrices, prisma);
 };

@@ -11,6 +11,11 @@
   box-shadow: 0 2px 10px var(--blackA7);
 }
 
+.menubarTrigger,
+.menubarContent {
+  cursor: pointer;
+}
+
 .menubarTrigger {
   padding: 8px 12px;
   outline: none;

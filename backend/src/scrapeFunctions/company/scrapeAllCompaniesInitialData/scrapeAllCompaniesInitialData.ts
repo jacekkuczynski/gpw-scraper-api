@@ -9,6 +9,8 @@ import {
 import { scrapeAllCompaniesData } from "../scrapeAllCompaniesData/scrapeAllCompaniesData";
 import { scrapeCompanyInitialData } from "../scrapeCompanyInitialData/scrapeCompanyInitialData";
 
+const allCompaniesCount = 410;
+
 export const scrapeAllCompaniesInitialData = async () => {
   let allCompaniesData: {
     name: string;
@@ -25,7 +27,7 @@ export const scrapeAllCompaniesInitialData = async () => {
 
   await puppeteer
     .use(StealthPlugin())
-    .launch({ headless: true, devtools: false })
+    .launch()
     .then(async (browser) => {
       const page = await browser.newPage();
       await page.setViewport({

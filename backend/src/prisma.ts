@@ -21,6 +21,25 @@ export const saveAllCompaniesDataToDatabase = async (
     });
 };
 
+export const writeDailyPricesToDb = async (
+  priceData: { symbol: string; date: string; price: number }[],
+  prisma: PrismaClient
+) => {
+  async function main() {
+    await prisma.price.createMany({ data: priceData });
+  }
+
+  await main()
+    .then(async () => {
+      await prisma.$disconnect();
+    })
+    .catch(async (e) => {
+      console.error(e);
+      await prisma.$disconnect();
+      process.exit(1);
+    });
+};
+
 export const readAllCompaniesData = async (prisma: PrismaClient) => {
   async function main() {
     const allCompaniesData = await prisma.company.findMany();
@@ -108,6 +127,29 @@ export const readCompaniesInitialData = async (prisma: PrismaClient) => {
 };
 
 export const readCompanyProfile = async (
+  prisma: PrismaClient,
+  symbol: string
+) => {
+  async function main() {
+    return await prisma.companyProfile.findUnique({
+      where: { symbol: symbol },
+    });
+  }
+
+  return await main()
+    .then(async (data) => {
+      await prisma.$disconnect();
+      return data;
+    })
+    .catch(async (e) => {
+      console.error(e);
+      await prisma.$disconnect();
+      process.exit(1);
+    });
+};
+
+// TODO
+export const readCompanyPrice = async (
   prisma: PrismaClient,
   symbol: string
 ) => {

@@ -31,7 +31,7 @@ const CompaniesScrollArea = () => {
                 allCompaniesData={data}
               />
             ) : (
-              <div>loading</div>
+              <div className={styles.scrollAreaLoader}>loading</div>
             )}
           </div>
         </ScrollArea.Viewport>
