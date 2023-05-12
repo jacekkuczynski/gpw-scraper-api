@@ -3,8 +3,7 @@ import express from "express";
 import morgan from "morgan";
 import { scrapeAllCompaniesInitialData } from "./scrapeFunctions/company/scrapeAllCompaniesInitialData/scrapeAllCompaniesInitialData";
 import { readAllCompaniesData, readCompanyProfile } from "./prisma";
-import { scrapeCompanyPriceData } from "./scrapeFunctions/price/scrapeCompanyPriceData/scrapeCompanyPriceData";
-import { scrapeAllCompaniesPriceData } from "./scrapeFunctions/price/scrapeCompanyPriceData/scrapeAllCompaniesPriceData";
+import { scrapeAllCompaniesDailyPrice } from "./scrapeFunctions/price/scrapeCompanyPriceData/scrapeAllCompaniesDailyPrice/scrapeAllCompaniesDailyPrice";
 
 export const prisma = new PrismaClient();
 
@@ -13,11 +12,8 @@ const cors = require("cors");
 
 const server = async () => {
   await scrapeAllCompaniesInitialData();
-  const price = await scrapeCompanyPriceData({ endpoint: "PLAGORA00067" });
-  console.log(price);
-  const allCompanies = await scrapeAllCompaniesPriceData();
   console.log(`end time: ${new Date().toISOString()}`);
-  // console.log(allCompanies);
+
   const app = express();
 
   // app.use(helmet());

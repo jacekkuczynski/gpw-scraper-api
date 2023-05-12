@@ -21,12 +21,12 @@ export const saveAllCompaniesDataToDatabase = async (
     });
 };
 
-export const writeCompanyPriceDataToDatabase = async (
-  priceData: { name: string; symbol: string; date: string; price: number },
+export const writeDailyPricesToDb = async (
+  priceData: { name: string; symbol: string; date: string; price: number }[],
   prisma: PrismaClient
 ) => {
   async function main() {
-    await prisma.price.create({ data: priceData });
+    await prisma.price.createMany({ data: priceData });
   }
 
   await main()
@@ -90,8 +90,6 @@ export const saveCompanyInitialDataToDB = async (
   prisma: PrismaClient
 ) => {
   companyProfile.shareholders = JSON.stringify(companyProfile.shareholders);
-
-  console.log({ companyProfile });
 
   async function main() {
     await prisma.companyProfile.create({

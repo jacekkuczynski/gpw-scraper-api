@@ -27,7 +27,7 @@ export const scrapeAllCompaniesInitialData = async () => {
 
   await puppeteer
     .use(StealthPlugin())
-    .launch({ headless: true, devtools: false })
+    .launch()
     .then(async (browser) => {
       const page = await browser.newPage();
       await page.setViewport({
