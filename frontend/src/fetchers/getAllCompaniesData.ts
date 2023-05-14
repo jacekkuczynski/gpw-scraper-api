@@ -4,7 +4,7 @@ import axios from "axios";
 export const getAllCompaniesData = async () => {
   const serverAdress = process.env.NEXT_PUBLIC_SERVER_ADRESS;
   const data: SingleCompanyStartingData[] = await axios
-    .get(`${serverAdress}/data?all=true`)
+    .get(`${serverAdress}/companies?all=true`)
     .then((res) => {
       // move to backend
       res.data.forEach((company: SingleCompanyStartingData, index: number) => {

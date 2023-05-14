@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useQuery } from "react-query";
 import ProfileControlButtons from "../ProfileControlButtons/ProfileControlButtons";
 import styles from "./ProfileView.module.css";
+import { PriceChart } from "../PriceChart/PriceChart";
 
 const ProfileView = ({ symbol }: { symbol: string }) => {
   const { data, isLoading } = useQuery(
@@ -58,8 +59,31 @@ const ProfileView = ({ symbol }: { symbol: string }) => {
       </div>
       <Separator.Root className={styles.separator} />
       <ProfileControlButtons name={data.name} symbol={data.symbol} />
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%",
+        }}
+      >
+        <PriceChart data={initialData} />
+      </div>
     </div>
   ) : null;
 };
 
 export default ProfileView;
+
+const initialData = [
+  { time: "2018-12-22", value: 32.51 },
+  { time: "2018-12-23", value: 31.11 },
+  { time: "2018-12-24", value: 27.02 },
+  { time: "2018-12-25", value: 27.32 },
+  { time: "2018-12-26", value: 25.17 },
+  { time: "2018-12-27", value: 28.89 },
+  { time: "2018-12-28", value: 25.46 },
+  { time: "2018-12-29", value: 23.92 },
+  { time: "2018-12-30", value: 22.68 },
+  { time: "2018-12-31", value: 22.67 },
+];
