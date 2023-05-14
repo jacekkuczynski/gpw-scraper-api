@@ -148,15 +148,23 @@ export const readCompanyProfile = async (
     });
 };
 
-// TODO
 export const readCompanyPrice = async (
   prisma: PrismaClient,
-  symbol: string
+  symbol: string,
+  period: number
 ) => {
+  if (typeof period !== "number") return;
+
   async function main() {
-    return await prisma.companyProfile.findUnique({
+    const rawData = await prisma.price.findMany({
+      take: period,
       where: { symbol: symbol },
     });
+
+    const parsedData = rawData.map((record) => {
+      return { date: record.date, price: record.price };
+    });
+    return parsedData;
   }
 
   return await main()

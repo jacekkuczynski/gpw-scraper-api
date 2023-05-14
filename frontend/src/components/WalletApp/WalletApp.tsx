@@ -7,11 +7,11 @@ import NavMenu from "../NavMenu/NavMenu";
 import styles from "./WalletApp.module.css";
 
 const WalletApp = ({ children }: { children: React.ReactNode }) => {
-  const { userActive } = useLoadScreen();
+  // const { userActive } = useLoadScreen();
 
   return (
     <div className="app">
-      {!userActive ? <Loader /> : null}
+      {/* {!userActive ? <Loader /> : null} */}
       <NavMenu />
       <CompaniesScrollArea />
       <div className={styles.container}> {children}</div>
