@@ -24,12 +24,6 @@ const server = async () => {
 
   app.use("/", router);
 
-  app.get("/test", async (req, res) => {
-    console.log("let's go");
-    await scrapeAllCompaniesDailyPrice();
-    res.send("Hello World!");
-  });
-
   app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
   });
