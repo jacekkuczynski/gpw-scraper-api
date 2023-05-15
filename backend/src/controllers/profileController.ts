@@ -3,6 +3,7 @@ import { readCompanyProfile } from "../prisma";
 
 export const getCompanyProfile = async (req, res) => {
   const everySymbolLength = 3 || 4;
+
   try {
     const symbol = req.query.symbol.toString().toUpperCase();
     if (symbol.length === everySymbolLength) {
