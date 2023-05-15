@@ -2,12 +2,13 @@
 
 import { createChart, ColorType } from "lightweight-charts";
 import React, { useEffect, useRef } from "react";
+import styles from "./PriceChart.module.css";
 
 export const PriceChart = (props: any) => {
   const {
     data,
     colors: {
-      backgroundColor = "black",
+      backgroundColor = "var(--violet7)",
       lineColor = "#2962FF",
       textColor = "white",
       areaTopColor = "#2962FF",

@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import * as Menubar from "@radix-ui/react-menubar";
-import { ChevronRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import styles from "./NavMenu.module.css";
 
