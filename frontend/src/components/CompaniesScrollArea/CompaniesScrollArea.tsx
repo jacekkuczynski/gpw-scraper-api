@@ -5,19 +5,16 @@ import * as ScrollArea from "@radix-ui/react-scroll-area";
 import CompaniesScrollAreaCompaniesList from "./CompaniesList/CompaniesList";
 import Searchbox from "./Searchbox/Searchbox";
 import styles from "./CompaniesScrollArea.module.css";
-import { useQuery } from "react-query";
-import { getAllCompaniesData } from "@/fetchers/getAllCompaniesData";
+import { SingleCompanyStartingData } from "@/types/types";
 
-const CompaniesScrollArea = () => {
+const CompaniesScrollArea = ({
+  companiesScrollAreaData,
+}: {
+  companiesScrollAreaData: SingleCompanyStartingData[];
+}) => {
   const [input, setInput] = useState("");
 
-  const { error, data } = useQuery("allCompaniesData", getAllCompaniesData);
-
   const onSearchboxChange = (input: string) => setInput(input);
-
-  if (error instanceof Error) {
-    console.log(error);
-  }
 
   return (
     <div className={styles.companiesScrollArea}>
@@ -25,14 +22,10 @@ const CompaniesScrollArea = () => {
       <ScrollArea.Root className={styles.scrollAreaRoot}>
         <ScrollArea.Viewport className={styles.scrollAreaRoot}>
           <div>
-            {data ? (
-              <CompaniesScrollAreaCompaniesList
-                input={input}
-                allCompaniesData={data}
-              />
-            ) : (
-              <div className={styles.scrollAreaLoader}>loading</div>
-            )}
+            <CompaniesScrollAreaCompaniesList
+              input={input}
+              allCompaniesData={companiesScrollAreaData}
+            />
           </div>
         </ScrollArea.Viewport>
         <ScrollArea.Scrollbar
