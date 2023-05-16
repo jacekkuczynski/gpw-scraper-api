@@ -8,8 +8,6 @@ const ProfileView = ({ profile }: { profile: any }) => {
       <div className={styles.titleContainer}>
         <div className={styles.name}>{profile.name}</div>
         <div className={styles.description}>{profile.description}</div>
-
-        {/* component 1 */}
         <Link
           href={`//${profile.website}`}
           target="_blank"
@@ -19,14 +17,13 @@ const ProfileView = ({ profile }: { profile: any }) => {
           {profile.website}
         </Link>
       </div>
-      {/* <Separator.Root className={styles.separator} /> */}
+      <hr className={styles.separator} />
       <div className={styles.data}>
         <div>listed since: {profile.listedSince}</div>
         <div>number of stocks {profile.numberOfStocks}</div>
         <div>market value {profile.marketValue} mln PLN</div>
       </div>
-      {/* <Separator.Root className={styles.separator} /> */}
-      {/* component 2 */}
+      <hr className={styles.separator} />
       <p>Nawięksi akcjonariusze:</p>
       <div className={styles.shareholdersContainer}>
         {JSON.parse(profile.shareholders).map((shareholder: ShareholderI) => {
@@ -41,15 +38,7 @@ const ProfileView = ({ profile }: { profile: any }) => {
           );
         })}
       </div>
-      {/* <Separator.Root className={styles.separator} /> */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          width: "100%",
-        }}
-      ></div>
+      <hr className={styles.separator} />
     </>
   );
 };

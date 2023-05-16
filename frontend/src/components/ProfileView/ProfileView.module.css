@@ -1,13 +1,3 @@
-.profileView {
-  height: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-  padding: 4rem;
-  overflow-y: auto;
-}
-
 .titleContainer,
 .description,
 .data {
@@ -63,37 +53,4 @@
 
 .shareholderTitle {
   font-weight: 600;
-}
-
-.controlButtons {
-  display: flex;
-  gap: 1rem;
-}
-
-.btn {
-  background-color: var(--blue10);
-  border-radius: 8px;
-  border-style: none;
-  box-sizing: border-box;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-block;
-
-  font-size: 14px;
-  font-weight: 500;
-  height: 40px;
-  line-height: 20px;
-
-  margin: 0;
-  outline: none;
-  padding: 10px 16px;
-
-  text-align: center;
-  text-decoration: none;
-  transition: color 100ms;
-}
-
-.btn:hover,
-.btn:focus {
-  background-color: var(--blue11);
 }

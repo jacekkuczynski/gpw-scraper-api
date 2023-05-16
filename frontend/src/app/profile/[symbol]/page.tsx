@@ -5,6 +5,8 @@ import { getCompanyProfile } from "@/fetchers/getCompanyProfile";
 import { PriceChart } from "@/components/PriceChart/PriceChart";
 import ProfileControlButtons from "@/components/ProfileControlButtons/ProfileControlButtons";
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const allCompaniesData = await getAllCompaniesData();
 
