@@ -27,7 +27,9 @@ export const scrapeAllCompaniesInitialData = async () => {
 
   await puppeteer
     .use(StealthPlugin())
-    .launch()
+    .launch({
+      args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    })
     .then(async (browser) => {
       const page = await browser.newPage();
       await page.setViewport({

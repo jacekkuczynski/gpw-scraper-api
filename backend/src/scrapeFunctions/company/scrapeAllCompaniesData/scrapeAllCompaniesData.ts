@@ -15,7 +15,9 @@ import { loadDataIntoTable } from "./loadDataIntoTable";
 export const scrapeAllCompaniesData = async () => {
   const allCompaniesData = await puppeteer
     .use(StealthPlugin())
-    .launch()
+    .launch({
+      args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    })
     .then(async (browser) => {
       const url = "https://www.gpw.pl/spolki";
       const page = await browser.newPage();
