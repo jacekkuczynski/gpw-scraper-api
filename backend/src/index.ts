@@ -14,6 +14,7 @@ const port = process.env.PORT;
 const server = async () => {
   await scrapeAllCompaniesInitialData();
   scheduleDailyPricesScrape();
+  // ("");
 
   const app = express();
 
