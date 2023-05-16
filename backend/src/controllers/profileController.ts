@@ -2,7 +2,7 @@ import { prisma } from "..";
 import { readCompanyProfile } from "../prisma";
 
 export const getCompanyProfile = async (req, res) => {
-  const everySymbolLength = 3 || 4;
+  const everySymbolLength = 3;
 
   try {
     const symbol = req.query.symbol.toString().toUpperCase();
