@@ -170,7 +170,7 @@ export const readCompanyPrice = async (
     });
 
     const parsedData = rawData.map((record) => {
-      return { time: record.time, value: record.time };
+      return { time: record.time, value: record.value };
     });
     return parsedData;
   }
