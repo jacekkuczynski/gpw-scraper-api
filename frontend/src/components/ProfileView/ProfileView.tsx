@@ -1,12 +1,14 @@
 import { ShareholderI } from "@/types/types";
 import Link from "next/link";
 import styles from "./ProfileView.module.css";
+import CurrentCompanyPrice from "../CurrentCompanyPrice/CurrentCompanyPrice";
 
 const ProfileView = ({ profile }: { profile: any }) => {
   return (
     <>
       <div className={styles.titleContainer}>
         <div className={styles.name}>{profile.name}</div>
+        <CurrentCompanyPrice symbol={profile.symbol} />
         <div className={styles.description}>{profile.description}</div>
         <Link
           href={`//${profile.website}`}
