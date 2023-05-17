@@ -6,13 +6,13 @@ type WatchlistItemType = {
   symbol: string;
 };
 
-interface BearStateI {
+interface StateI {
   watchlist: WatchlistItemType[];
   addToWatchlist: (company: WatchlistItemType) => void;
   removeFromWatchlist: (symbol: string) => void;
 }
 
-export const useAppStore = create<BearStateI>()(
+export const useAppStore = create<StateI>()(
   persist(
     (set) => ({
       watchlist: [],

@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import { getCompanyProfile } from "@/fetchers/getCompanyProfile";
 import { PriceChart } from "@/components/PriceChart/PriceChart";
 import ProfileControlButtons from "@/components/ProfileControlButtons/ProfileControlButtons";
+import { Suspense } from "react";
 
 export const dynamicParams = false;
 
@@ -23,7 +24,24 @@ export default async function Home({ params }: { params: { symbol: string } }) {
     <div className={styles.profileView}>
       <ProfileView profile={profile} />
       <ProfileControlButtons name={profile.name} symbol={profile.symbol} />
-      <PriceChart data={initialData} />
+      <Suspense
+        fallback={
+          <div
+            style={{
+              display: "flex",
+              justifyItems: "center",
+              alignItems: "center",
+              width: "100%",
+              maxWidth: "screen",
+              margin: "16px",
+            }}
+          >
+            Loading chart...
+          </div>
+        }
+      >
+        <PriceChart data={initialData} />
+      </Suspense>
     </div>
   );
 }

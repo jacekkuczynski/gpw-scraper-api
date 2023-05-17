@@ -2,6 +2,7 @@
 
 import { useAppStore } from "@/store/store";
 import styles from "./ProfileControlButtons.module.css";
+import toast, { Toaster, useToaster } from "react-hot-toast";
 
 const ProfileControlButtons = ({
   name,
@@ -14,13 +15,31 @@ const ProfileControlButtons = ({
   const watchlist = useAppStore((state) => state.watchlist);
 
   const handleAddToWatchlist = (e: React.MouseEvent<HTMLElement>) => {
-    console.log("clicked");
     e.preventDefault();
-    addToWatchlist({ name, symbol });
+
+    if (watchlist.find((company) => symbol === company.symbol)) {
+      toast.error(
+        `${name} (${symbol}) obecnie znajduje się na liście obserwowanych`,
+        {
+          duration: 3000,
+          id: "watchlist_succes",
+        }
+      );
+    } else {
+      toast.success(
+        `${name} (${symbol}) została dodana do listy obserwowanych`,
+        {
+          duration: 3000,
+          id: "watchlist_error",
+        }
+      );
+      addToWatchlist({ name, symbol });
+    }
   };
 
   return (
     <div className={styles.profileButtons}>
+      <Toaster position="bottom-right" reverseOrder={false} />
       <button
         onClick={handleAddToWatchlist}
         type="button"
