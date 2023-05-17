@@ -4,10 +4,11 @@ import React, { useState } from "react";
 import * as Menubar from "@radix-ui/react-menubar";
 import Link from "next/link";
 import styles from "./NavMenu.module.css";
+import { useHydrateLocalStorage } from "@/hooks/useHydrateLocalStorage";
 
 const NavMenu = () => {
   const [value, setValue] = useState("");
-
+  useHydrateLocalStorage();
   const closeNavMenu = () => setValue("");
 
   const mainLinks = [

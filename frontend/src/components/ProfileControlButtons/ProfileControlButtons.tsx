@@ -2,7 +2,7 @@
 
 import { useAppStore } from "@/store/store";
 import styles from "./ProfileControlButtons.module.css";
-import toast, { Toaster, useToaster } from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 
 const ProfileControlButtons = ({
   name,
