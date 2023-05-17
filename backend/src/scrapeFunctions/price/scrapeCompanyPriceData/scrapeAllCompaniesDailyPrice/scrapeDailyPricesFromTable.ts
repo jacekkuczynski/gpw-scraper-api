@@ -4,12 +4,6 @@ import { companiesTableSelector } from "../../../company/scrapeAllCompaniesData/
 export const scrapeDailyPricesFromTable = async (page: Page) => {
   const companiesTableDOM = await page.waitForSelector(companiesTableSelector);
   const companiesData = await companiesTableDOM.$$eval("tr", (rows) => {
-    const parseName = (str: string) => {
-      str = str.replace(/\n/g, "");
-      str = str.replace(/\([^)]*\)/g, "");
-      str = str.trim();
-      return str;
-    };
     const parsePrice = (str: string) => {
       if (typeof str == "string") return parseFloat(str.replace(",", "."));
     };
@@ -19,11 +13,14 @@ export const scrapeDailyPricesFromTable = async (page: Page) => {
       return str;
     };
     return rows.map((row) => {
-      const price = parsePrice(row.querySelector(".summary").textContent);
+      const value = parsePrice(row.querySelector(".summary").textContent);
       const symbolElement = row.querySelector("span.grey");
       const symbol = parseSymbol(symbolElement.textContent);
-      const date = new Date().toISOString().slice(0, 10);
-      return { price, date, symbol };
+      const time = new Date()
+        .toLocaleDateString("en-US")
+        .toString()
+        .replaceAll("/", "-");
+      return { value, time, symbol };
     });
   });
   return companiesData;

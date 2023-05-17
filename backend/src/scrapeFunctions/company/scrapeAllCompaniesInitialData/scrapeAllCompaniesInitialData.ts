@@ -21,6 +21,7 @@ export const scrapeAllCompaniesInitialData = async () => {
     await scrapeAllCompaniesData();
     allCompaniesData = await readAllCompaniesData(prisma);
   }
+
   if ((await readCompaniesInitialData(prisma)).length > 1) return;
 
   await puppeteer

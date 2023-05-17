@@ -22,11 +22,16 @@ export const saveAllCompaniesDataToDatabase = async (
 };
 
 export const writeDailyPricesToDb = async (
-  priceData: { symbol: string; date: string; price: number }[],
+  priceData: { symbol: string; time: string; value: number }[],
   prisma: PrismaClient
 ) => {
   async function main() {
+    console.log(
+      "🏋️ saving daily prices 🏋️",
+      new Date().toLocaleTimeString("pl-PL")
+    );
     await prisma.price.createMany({ data: priceData });
+    console.log("Data saved 💾", new Date().toLocaleTimeString("pl-PL"));
   }
 
   await main()
@@ -165,7 +170,7 @@ export const readCompanyPrice = async (
     });
 
     const parsedData = rawData.map((record) => {
-      return { date: record.date, price: record.price };
+      return { time: record.time, price: record.time };
     });
     return parsedData;
   }

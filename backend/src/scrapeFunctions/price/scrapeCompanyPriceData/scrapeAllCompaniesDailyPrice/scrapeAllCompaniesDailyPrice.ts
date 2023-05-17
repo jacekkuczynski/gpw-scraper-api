@@ -16,7 +16,7 @@ export const scrapeAllCompaniesDailyPrice = async () => {
   const allCompaniesDailyPrices = await puppeteer
     .use(StealthPlugin())
     .launch({
-      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+      args: ["--no-sandbox", "--disable-setuid-sandbox"],
     })
     .then(async (browser) => {
       const url = "https://www.gpw.pl/spolki";
@@ -27,26 +27,32 @@ export const scrapeAllCompaniesDailyPrice = async () => {
       });
       await clickOnCookiesConsent(page);
       console.log(new Date().toISOString());
-      console.log("Scrapping daily price of all companies🚀");
+      console.log(
+        "Scrapping daily price of all companies started 🚀",
+        new Date().toLocaleTimeString("pl-PL")
+      );
 
       let scrapedData = [];
-      const scrapeAllCompaniesData = async () => {
+      const scrapeDailyPrices = async () => {
         let isLoadMoreButton = await isLoadMoreButtonVisible(page);
         if (isLoadMoreButton) {
           await clickOnLoadMoreButton(page);
           await loadDataIntoTable(page);
-          await scrapeAllCompaniesData();
+          await scrapeDailyPrices();
+          let i = ".";
+          i += ".";
+          console.log(`loading.${i}`);
         } else {
+          console.log(`scraping data...`);
           const data = await scrapeDailyPricesFromTable(page);
           scrapedData = removeDuplicates(data);
-          console.log("All done! ✨");
           await browser.close();
           return;
         }
         return scrapedData;
       };
 
-      return await scrapeAllCompaniesData();
+      return await scrapeDailyPrices();
     });
 
   writeDailyPricesToDb(allCompaniesDailyPrices, prisma);
