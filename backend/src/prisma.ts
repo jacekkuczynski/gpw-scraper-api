@@ -159,6 +159,9 @@ export const readCompanyPrice = async (
     const rawData = await prisma.price.findMany({
       take: period,
       where: { symbol: symbol },
+      orderBy: {
+        id: "asc",
+      },
     });
 
     const parsedData = rawData.map((record) => {
