@@ -1,38 +1,47 @@
 .watchlistCard {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  text-align: center;
   align-items: center;
-  justify-content: center;
-  border: 1px solid var(--gray8);
-  height: 25rem;
+  justify-content: flex-start;
+  text-align: center;
+  height: 15rem;
   width: 15rem;
-  padding: 2rem;
-  background-color: white;
+  background-color: #fcfffc;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.avatar {
+.symbol {
+  height: 33%;
+  width: 100%;
+  font-size: 4rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100%;
-  height: 4rem;
-  width: 4rem;
-  background-color: var(--violet4);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
-    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .link {
   color: var(--blue11);
   cursor: pointer;
-  margin-top: 0.5rem;
-  font-size: larger;
+  font-size: 1rem;
 }
 
 .link:hover {
   text-decoration: underline;
+}
+
+.name {
+  width: 100%;
+  height: 40%;
+
+  font-size: 0.875rem;
+}
+
+.priceCss {
+  font-size: 2.25rem;
+}
+
+.removeButton {
+  cursor: pointer;
+  color: #e29797;
 }
