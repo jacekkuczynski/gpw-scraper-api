@@ -1,9 +1,11 @@
-import { ShareholderI } from "@/types/types";
+import { CompanyProfileI, ShareholderI } from "@/types/types";
 import Link from "next/link";
 import styles from "./ProfileView.module.css";
 import CurrentCompanyPrice from "../CurrentCompanyPrice/CurrentCompanyPrice";
+import MarketValue from "../MarketValue/MarketValue";
+import ShareholdersAccordion from "../ShareholdersAccordion/ShareholdersAccordion";
 
-const ProfileView = ({ profile }: { profile: any }) => {
+const ProfileView = ({ profile }: { profile: CompanyProfileI }) => {
   return (
     <>
       <div className={styles.titleContainer}>
@@ -21,24 +23,17 @@ const ProfileView = ({ profile }: { profile: any }) => {
       </div>
       <hr className={styles.separator} />
       <div className={styles.data}>
-        <div>listed since: {profile.listedSince}</div>
-        <div>number of stocks {profile.numberOfStocks}</div>
-        <div>market value {profile.marketValue} mln PLN</div>
+        <div>na giełdzie od: {profile.listedSince}</div>
+        <div>liczba akcji (tys):{parseInt(profile.numberOfStocks) / 1000}</div>
+        <MarketValue
+          numberOfStocks={profile.numberOfStocks}
+          symbol={profile.symbol}
+        />
       </div>
       <hr className={styles.separator} />
       <p>Nawięksi akcjonariusze:</p>
       <div className={styles.shareholdersContainer}>
-        {JSON.parse(profile.shareholders).map((shareholder: ShareholderI) => {
-          return (
-            <div key={shareholder.name}>
-              <div className={styles.shareholderTitle}>{shareholder.name}</div>
-              <div>liczba akcji: {shareholder.stockAmount}</div>
-              <div>
-                procent wszystkich akcji: {shareholder.stockPercentage}%
-              </div>
-            </div>
-          );
-        })}
+        <ShareholdersAccordion shareholders={profile.shareholders} />
       </div>
       <hr className={styles.separator} />
     </>

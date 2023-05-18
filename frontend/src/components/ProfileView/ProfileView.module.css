@@ -9,7 +9,12 @@
 }
 
 .description {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 1rem;
   color: var(--gray10);
+  height: 8rem;
+  font-size: medium;
 }
 
 .name {
@@ -24,12 +29,14 @@
   align-items: flex-start;
   display: flex;
   width: 100%;
+  font-size: larger;
 }
 
 .link {
   color: var(--blue11);
   cursor: pointer;
   margin-top: 0.5rem;
+  font-size: larger;
 }
 
 .link:hover {

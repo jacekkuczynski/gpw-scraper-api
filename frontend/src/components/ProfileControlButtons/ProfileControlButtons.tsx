@@ -18,11 +18,12 @@ const ProfileControlButtons = ({
     e.preventDefault();
 
     if (watchlist.find((company) => symbol === company.symbol)) {
-      toast.error(
+      toast(
         `${name} (${symbol}) obecnie znajduje się na liście obserwowanych`,
         {
           duration: 3000,
           id: "watchlist_succes",
+          icon: "📋",
         }
       );
     } else {

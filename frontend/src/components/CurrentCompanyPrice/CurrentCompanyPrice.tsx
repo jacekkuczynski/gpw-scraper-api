@@ -5,7 +5,7 @@ import { useQuery } from "react-query";
 import styles from "./CurrentCompanyPrice.module.css";
 
 const CurrentCompanyPrice = ({ symbol }: { symbol: string }) => {
-  const { data } = useQuery(["companyProfile", symbol], getCurrentCompanyPrice);
+  const { data } = useQuery(["companyPrice", symbol], getCurrentCompanyPrice);
 
   return (
     <div className={styles.currentCompanyPriceContainer}>
