@@ -26,10 +26,6 @@ const NavMenu = () => {
         { name: "Nowy portfel", href: "/" },
       ],
     },
-    {
-      name: "Obserwowane",
-      sublinks: [{ name: "Lista obserwowanych", href: "/watchlist" }],
-    },
   ];
 
   return (
@@ -69,31 +65,19 @@ const NavMenu = () => {
           </Menubar.Menu>
         );
       })}
-      {/* <Menubar.Menu>
-        <Menubar.Trigger className={styles.menubarTrigger}>
-          Plik
-        </Menubar.Trigger>
+      <Menubar.Menu>
+        <Link href={"/watchlist"} className={styles.menubarTrigger}>
+          Lista obserwowanych
+        </Link>
         <Menubar.Portal>
           <Menubar.Content
             className={styles.menubarContent}
             align="start"
             sideOffset={5}
             alignOffset={-3}
-          >
-            {fileLinks.map((link) => {
-              return (
-                <Menubar.Item key={link.name} className={styles.menubarItem}>
-                  <Link href={link.href} onClick={closeNavMenu}>
-                    {link.name}{" "}
-                  </Link>
-                </Menubar.Item>
-              );
-            })}
-            <Menubar.Separator className={styles.menubarSeparator} />
-            <Menubar.Item className={styles.menubarItem}>About</Menubar.Item>
-          </Menubar.Content>
+          ></Menubar.Content>
         </Menubar.Portal>
-      </Menubar.Menu> */}
+      </Menubar.Menu>
     </Menubar.Root>
   );
 };

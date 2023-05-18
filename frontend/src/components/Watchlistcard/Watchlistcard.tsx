@@ -11,12 +11,11 @@ const Watchlistcard = ({ name, symbol }: { name: string; symbol: string }) => {
   };
   return (
     <div className={styles.watchlistCard}>
-      <div className={styles.avatar} />
+      <div className={styles.avatar}> {symbol}</div>
       <Link href={`/profile/${symbol}`} className={styles.link}>
         <div>zobacz profil</div>
       </Link>
       {name}
-      {symbol}
       <button
         onClick={() => {
           handleRemoveFromWatchlist(symbol);
