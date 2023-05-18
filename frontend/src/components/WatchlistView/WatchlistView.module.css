@@ -1,0 +1,7 @@
+.watchlist {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  overflow-y: auto;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+}

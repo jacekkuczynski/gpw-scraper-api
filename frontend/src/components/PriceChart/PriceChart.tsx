@@ -52,10 +52,10 @@ export const PriceChart = ({ symbol }: { symbol: string }) => {
   ]);
 
   return data ? (
-    <div ref={chartContainerRef} className={styles.chartContainer}>
-      {isLoading && "loading"}
-    </div>
+    <div ref={chartContainerRef} className={styles.chartContainer} />
   ) : (
-    <div className={styles.chartContainer}>{isLoading && "loading"}</div>
+    <div className={styles.chartContainer}>
+      {isLoading && "wczytuje wykres"}
+    </div>
   );
 };

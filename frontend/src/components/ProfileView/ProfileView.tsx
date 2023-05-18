@@ -1,4 +1,4 @@
-import { CompanyProfileI, ShareholderI } from "@/types/types";
+import { CompanyProfileI } from "@/types/types";
 import Link from "next/link";
 import styles from "./ProfileView.module.css";
 import CurrentCompanyPrice from "../CurrentCompanyPrice/CurrentCompanyPrice";
