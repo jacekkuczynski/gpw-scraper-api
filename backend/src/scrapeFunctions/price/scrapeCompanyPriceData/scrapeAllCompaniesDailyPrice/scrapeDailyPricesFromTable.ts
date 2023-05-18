@@ -16,10 +16,7 @@ export const scrapeDailyPricesFromTable = async (page: Page) => {
       const value = parsePrice(row.querySelector(".summary").textContent);
       const symbolElement = row.querySelector("span.grey");
       const symbol = parseSymbol(symbolElement.textContent);
-      const time = new Date()
-        .toLocaleDateString("en-US")
-        .toString()
-        .replaceAll("/", "-");
+      const time = new Date().toISOString().split("T")[0];
       return { value, time, symbol };
     });
   });
