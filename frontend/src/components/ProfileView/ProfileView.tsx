@@ -24,7 +24,7 @@ const ProfileView = ({ profile }: { profile: CompanyProfileI }) => {
       <hr className={styles.separator} />
       <div className={styles.data}>
         <div>na giełdzie od: {profile.listedSince}</div>
-        <div>liczba akcji (tys):{parseInt(profile.numberOfStocks) / 1000}</div>
+        <div>liczba akcji (tys): {parseInt(profile.numberOfStocks) / 1000}</div>
         <MarketValue
           numberOfStocks={profile.numberOfStocks}
           symbol={profile.symbol}

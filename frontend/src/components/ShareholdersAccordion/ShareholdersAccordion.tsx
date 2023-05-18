@@ -23,9 +23,9 @@ const ShareholdersAccordion = ({ shareholders }: any) => {
                   <span>{shareholder.name}</span>
                 </AccordionTrigger>
                 <AccordionContent>
-                  ilość akcji:{shareholder.stockAmount}
+                  ilość akcji: {shareholder.stockAmount}
                   <br />
-                  procent akcji:{shareholder.stockPercentage}%
+                  procent akcji: {shareholder.stockPercentage} %
                 </AccordionContent>
               </Accordion.Item>
             ))

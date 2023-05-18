@@ -186,3 +186,7 @@ export const readCompanyPrice = async (
       process.exit(1);
     });
 };
+
+export const deletePriceTable = async (prisma: PrismaClient) => {
+  await prisma.price.deleteMany({});
+};

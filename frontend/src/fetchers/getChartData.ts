@@ -5,8 +5,8 @@ export const getChartData = async ({ queryKey }: any) => {
   const serverAdress = process.env.NEXT_PUBLIC_SERVER_ADRESS;
   const url = `${serverAdress}/price?symbol=${symbol}&period=30`;
   const data: {
-    date: string;
-    price: number;
+    time: string;
+    value: number;
   }[] = await axios.get(url).then((res) => {
     return res.data;
   });

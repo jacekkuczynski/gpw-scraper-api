@@ -13,47 +13,49 @@ export const PriceChart = ({ symbol }: { symbol: string }) => {
   const areaTopColor = "gray";
   const areaBottomColor = "#6D56CE";
 
-  const { data } = useQuery(["chartData", symbol], getChartData);
+  const { data, isLoading } = useQuery(["chartData", symbol], getChartData);
 
   const chartContainerRef = useRef(null);
 
-  // useEffect(() => {
-  //   console.log(data), [data];
-  // });
+  useEffect(() => {
+    if (data) {
+      if (chartContainerRef.current) {
+        const chart = createChart(chartContainerRef.current, {
+          layout: {
+            background: { type: ColorType.Solid, color: backgroundColor },
+            textColor,
+          },
+          width: 1200,
+          height: 300,
+        });
+        chart.timeScale().fitContent();
 
-  // useEffect(() => {
-  //   if (data) {
-  //     if (chartContainerRef.current) {
-  //       const chart = createChart(chartContainerRef.current, {
-  //         layout: {
-  //           background: { type: ColorType.Solid, color: backgroundColor },
-  //           textColor,
-  //         },
-  //         width: 1200,
-  //         height: 300,
-  //       });
-  //       chart.timeScale().fitContent();
+        const newSeries = chart.addAreaSeries({
+          lineColor,
+          topColor: areaTopColor,
+          bottomColor: areaBottomColor,
+        });
+        newSeries.setData(data);
 
-  //       const newSeries = chart.addAreaSeries({
-  //         lineColor,
-  //         topColor: areaTopColor,
-  //         bottomColor: areaBottomColor,
-  //       });
-  //       newSeries.setData(data);
+        return () => {
+          chart.remove();
+        };
+      }
+    }
+  }, [
+    data,
+    backgroundColor,
+    lineColor,
+    textColor,
+    areaTopColor,
+    areaBottomColor,
+  ]);
 
-  //       return () => {
-  //         chart.remove();
-  //       };
-  //     }
-  //   }
-  // }, [
-  //   data,
-  //   backgroundColor,
-  //   lineColor,
-  //   textColor,
-  //   areaTopColor,
-  //   areaBottomColor,
-  // ]);
-
-  return <div ref={chartContainerRef} className={styles.chartContainer} />;
+  return data ? (
+    <div ref={chartContainerRef} className={styles.chartContainer}>
+      {isLoading && "loading"}
+    </div>
+  ) : (
+    <div className={styles.chartContainer}>{isLoading && "loading"}</div>
+  );
 };
