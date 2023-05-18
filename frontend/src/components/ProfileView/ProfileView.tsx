@@ -7,7 +7,7 @@ import ShareholdersAccordion from "../ShareholdersAccordion/ShareholdersAccordio
 
 const ProfileView = ({ profile }: { profile: CompanyProfileI }) => {
   return (
-    <>
+    <div className={styles.profileView}>
       <div className={styles.titleContainer}>
         <div className={styles.name}>{profile.name}</div>
         <CurrentCompanyPrice symbol={profile.symbol} />
@@ -31,12 +31,13 @@ const ProfileView = ({ profile }: { profile: CompanyProfileI }) => {
         />
       </div>
       <hr className={styles.separator} />
-      <p>Nawięksi akcjonariusze:</p>
+
       <div className={styles.shareholdersContainer}>
+        <p>Nawięksi akcjonariusze:</p>
         <ShareholdersAccordion shareholders={profile.shareholders} />
       </div>
       <hr className={styles.separator} />
-    </>
+    </div>
   );
 };
 

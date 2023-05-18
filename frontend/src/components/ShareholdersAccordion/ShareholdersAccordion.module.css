@@ -1,6 +1,10 @@
+.shareholdersContainer {
+  width: 100%;
+}
+
 .AccordionRoot {
   border-radius: 6px;
-  width: 300px;
+  width: 32rem;
   background-color: var(--mauve6);
   box-shadow: 0 2px 10px var(--blackA4);
 }

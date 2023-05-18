@@ -1,3 +1,7 @@
+.profileView {
+  width: 100%;
+}
+
 .titleContainer,
 .description,
 .data {
@@ -44,11 +48,9 @@
 }
 
 .shareholdersContainer {
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 2rem;
-  grid-row-gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .separator {
