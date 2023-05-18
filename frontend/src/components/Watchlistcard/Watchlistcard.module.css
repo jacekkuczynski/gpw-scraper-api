@@ -1,0 +1,31 @@
+.watchlistCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid red;
+  height: 20rem;
+  width: 20rem;
+  padding: 2rem;
+}
+
+.avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 100%;
+  height: 5rem;
+  width: 5rem;
+  background-color: red;
+}
+
+.link {
+  color: var(--blue11);
+  cursor: pointer;
+  margin-top: 0.5rem;
+  font-size: larger;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

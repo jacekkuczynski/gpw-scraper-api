@@ -8,6 +8,7 @@ import { scheduleDailyPricesScrape } from "./schedule/scheduleDailyPricesScrap";
 
 import router from "./routes";
 import { scrapeAllCompaniesDailyPrice } from "./scrapeFunctions/price/scrapeCompanyPriceData/scrapeAllCompaniesDailyPrice/scrapeAllCompaniesDailyPrice";
+import { deletePriceTable } from "./prisma";
 
 export const prisma = new PrismaClient();
 const port = process.env.PORT;
@@ -15,6 +16,9 @@ const port = process.env.PORT;
 const server = async () => {
   await scrapeAllCompaniesInitialData();
   scheduleDailyPricesScrape();
+
+  await deletePriceTable(prisma);
+  await scrapeAllCompaniesDailyPrice();
 
   const app = express();
 

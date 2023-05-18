@@ -1,7 +1,10 @@
 import puppeteer from "puppeteer-extra";
 import StealthPlugin from "puppeteer-extra-plugin-stealth";
 import { clickOnCookiesConsent } from "../../../../helpers/clickOnCookiesConsent";
-import { interceptImageFontMediaRequest } from "../../../../helpers/helpers";
+import {
+  interceptImageFontMediaRequest,
+  removeDuplicates,
+} from "../../../../helpers/helpers";
 import { prisma } from "../../../../index";
 import { writeDailyPricesToDb } from "../../../../prisma";
 import { clickOnLoadMoreButton } from "../../../company/scrapeAllCompaniesData/clickOnLoadMoreButton";
@@ -36,13 +39,10 @@ export const scrapeAllCompaniesDailyPrice = async () => {
           await clickOnLoadMoreButton(page);
           await loadDataIntoTable(page);
           await scrapeDailyPrices();
-          let i = ".";
-          i += ".";
-          console.log(`loading.${i}`);
         } else {
           console.log(`scraping data...`);
           const data = await scrapeDailyPricesFromTable(page);
-          scrapedData = data;
+          scrapedData = removeDuplicates(data);
           await browser.close();
           return;
         }

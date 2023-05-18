@@ -3,6 +3,7 @@
 import styles from "./ProfileControlButtons.module.css";
 import { Toaster } from "react-hot-toast";
 import { useProfileControlButtons } from "./useProfileControlButtons";
+import Link from "next/link";
 
 const ProfileControlButtons = ({
   name,
@@ -29,7 +30,6 @@ const ProfileControlButtons = ({
           >
             Usuń z obserwowanych
           </button>
-          ⭐
         </>
       ) : (
         <button
@@ -40,6 +40,11 @@ const ProfileControlButtons = ({
           Dodaj do obserwowanych
         </button>
       )}
+      <Link href={"/watchlist"}>
+        <button type="button" className={styles.button}>
+          Przejdź do obserwowanych
+        </button>
+      </Link>
     </div>
   );
 };
