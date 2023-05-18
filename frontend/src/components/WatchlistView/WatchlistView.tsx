@@ -13,9 +13,11 @@ const WatchlistView = () => {
       {watchlist
         ? watchlist.map((company) => {
             return (
-              <div key={company.symbol}>
-                <Watchlistcard name={company.name} symbol={company.symbol} />
-              </div>
+              <Watchlistcard
+                key={company.symbol}
+                name={company.name}
+                symbol={company.symbol}
+              />
             );
           })
         : "loading"}
