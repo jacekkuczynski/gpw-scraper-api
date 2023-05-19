@@ -5,7 +5,8 @@ export const scrapeDailyPricesFromTable = async (page: Page) => {
   const companiesTableDOM = await page.waitForSelector(companiesTableSelector);
   const companiesData = await companiesTableDOM.$$eval("tr", (rows) => {
     const parsePrice = (str: string) => {
-      if (typeof str == "string") return parseFloat(str.replace(",", "."));
+      if (typeof str == "string")
+        return parseFloat(str.replace(/\s/g, "").replace(",", "."));
     };
     const parseSymbol = (str: string) => {
       str = str.trim();
