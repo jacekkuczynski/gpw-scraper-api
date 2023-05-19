@@ -165,7 +165,7 @@ export const readCompanyPrice = async (
       take: period,
       where: { symbol: symbol },
       orderBy: {
-        id: "asc",
+        id: "desc",
       },
     });
 
