@@ -1,7 +1,7 @@
 import { prisma } from "..";
-import { readCompanyPrice } from "../prisma";
+import { readPriceChartData } from "../prisma";
 
-export const getCompanyPrice = async (req, res) => {
+export const getChartPrices = async (req, res) => {
   try {
     if (req.query.period === undefined) {
       res.status(418).json({ error: "period undefined" });
@@ -10,7 +10,7 @@ export const getCompanyPrice = async (req, res) => {
     } else {
       const period = parseInt(req.query.period.toString(), 10);
       const symbol = req.query.symbol.toString().toUpperCase();
-      const companyPrices = await readCompanyPrice(prisma, symbol, period);
+      const companyPrices = await readPriceChartData(prisma, symbol, period);
       res.json(companyPrices);
     }
   } catch (error) {

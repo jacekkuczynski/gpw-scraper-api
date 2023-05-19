@@ -153,7 +153,7 @@ export const readCompanyProfile = async (
     });
 };
 
-export const readCompanyPrice = async (
+export const readPriceChartData = async (
   prisma: PrismaClient,
   symbol: string,
   period: number
@@ -163,6 +163,37 @@ export const readCompanyPrice = async (
   async function main() {
     const rawData = await prisma.price.findMany({
       take: period,
+      where: { symbol: symbol },
+      orderBy: {
+        id: "asc",
+      },
+    });
+
+    const parsedData = rawData.map((record) => {
+      return { time: record.time, value: record.value };
+    });
+    return parsedData;
+  }
+
+  return await main()
+    .then(async (data) => {
+      await prisma.$disconnect();
+      return data;
+    })
+    .catch(async (e) => {
+      console.error(e);
+      await prisma.$disconnect();
+      process.exit(1);
+    });
+};
+
+export const readCurrentPrice = async (
+  prisma: PrismaClient,
+  symbol: string
+) => {
+  async function main() {
+    const rawData = await prisma.price.findMany({
+      take: 1,
       where: { symbol: symbol },
       orderBy: {
         id: "desc",
