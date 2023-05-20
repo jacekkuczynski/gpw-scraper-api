@@ -24,10 +24,12 @@ export default async function RootLayout({
         <ReactQueryProvider>
           <div className="app">
             <NavMenu />
-            <CompaniesScrollArea
-              companiesScrollAreaData={companiesScrollAreaData}
-            />
-            <div className="container">{children}</div>
+            <div className="container">
+              <CompaniesScrollArea
+                companiesScrollAreaData={companiesScrollAreaData}
+              />
+              {children}
+            </div>
           </div>
         </ReactQueryProvider>
       </body>

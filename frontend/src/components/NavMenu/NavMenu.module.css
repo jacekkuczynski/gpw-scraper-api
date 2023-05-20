@@ -1,8 +1,6 @@
 .menubarRoot {
-  position: absolute;
-  /* 100% -- padding left -- padding right */
-  width: calc(100vw - 2rem);
-  height: 32px;
+  width: 100%;
+  height: 2rem;
   display: flex;
   background-color: white;
   padding: 3px;
@@ -47,6 +45,8 @@
   animation-duration: 400ms;
   animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform, opacity;
+  z-index: 420;
+  position: relative;
 }
 
 .menubarItem,

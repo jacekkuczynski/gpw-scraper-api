@@ -18,7 +18,9 @@ const Watchlistcard = ({ name, symbol }: { name: string; symbol: string }) => {
     <div className={styles.watchlistCard}>
       <div className={styles.symbol}>
         <div className={monofett.className}> {symbol}</div>
+        <span>1 akcja</span>
       </div>
+
       <div className={styles.name}>{name}</div>
       <div className={styles.priceCss}>
         <div className={monoton.className}>

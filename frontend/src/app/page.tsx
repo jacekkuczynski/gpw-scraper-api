@@ -1,15 +1,12 @@
+import DialogCreateWallet from "@/components/DialogCreateWallet/DialogCreateWallet";
+import SelectWallet from "@/components/SelectWallet/SelectWallet";
+
 export default function Home() {
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "100%",
-        width: "100%",
-      }}
-    >
+    <div>
       Hello world
+      <DialogCreateWallet />
+      <SelectWallet />
     </div>
   );
 }

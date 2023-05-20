@@ -1,20 +1,51 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
-type WatchlistItemType = {
+type WatchlistItemT = {
   name: string;
   symbol: string;
 };
 
+type WalletT = {
+  size: number;
+  name: string;
+  id: number;
+  items: WalletItemT[];
+};
+
+type WalletItemT = {
+  name: string;
+  symbol: string;
+  openPrice: number;
+  count: number;
+  openDate: Date;
+  averageOpenPrice: number;
+};
+
 interface StateI {
-  watchlist: WatchlistItemType[];
-  addToWatchlist: (company: WatchlistItemType) => void;
+  wallets: WalletT[];
+  createWallet: (wallet: WalletT) => void;
+  modifyWallet: () => void;
+  addWalletItem: () => void;
+  modifyWalletItem: () => void;
+
+  watchlist: WatchlistItemT[];
+  addToWatchlist: (company: WatchlistItemT) => void;
   removeFromWatchlist: (symbol: string) => void;
 }
 
 export const useAppStore = create<StateI>()(
   persist(
     (set) => ({
+      // wallets
+      wallets: [],
+      createWallet: (newWallet) =>
+        set((state) => ({ wallets: [...state.wallets, newWallet] })),
+      modifyWallet: () => set((state) => ({})),
+      addWalletItem: () => set((state) => ({})),
+      modifyWalletItem: () => set((state) => ({})),
+
+      // watchlist
       watchlist: [],
       addToWatchlist: (company) =>
         set((state) => ({ watchlist: [...state.watchlist, company] })),

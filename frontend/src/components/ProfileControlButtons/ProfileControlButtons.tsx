@@ -15,10 +15,16 @@ const ProfileControlButtons = ({
   const { isInWatchlist, handleRemoveFromWatchlist, handleAddToWatchlist } =
     useProfileControlButtons({ name, symbol });
 
+  const handleAddToWallet = () => {};
+
   return (
     <div className={styles.profileButtons}>
       <Toaster position="bottom-right" reverseOrder={false} />
-      <button type="button" className={styles.button}>
+      <button
+        onClick={handleAddToWallet}
+        type="button"
+        className={styles.button}
+      >
         Dodaj do portfela
       </button>
       {isInWatchlist ? (
