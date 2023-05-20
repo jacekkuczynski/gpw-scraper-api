@@ -3,7 +3,7 @@ import SelectWallet from "@/components/SelectWallet/SelectWallet";
 
 export default function Home() {
   return (
-    <div>
+    <div style={{ width: "100%" }}>
       Hello world
       <DialogCreateWallet />
       <SelectWallet />

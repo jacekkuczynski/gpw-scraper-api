@@ -9,7 +9,9 @@ const ProfileView = ({ profile }: { profile: CompanyProfileI }) => {
   return (
     <div className={styles.profileView}>
       <div className={styles.titleContainer}>
-        <div className={styles.name}>{profile.name}</div>
+        <div className={styles.name}>
+          {profile.name} ({profile.symbol})
+        </div>
         <CurrentCompanyPrice symbol={profile.symbol} />
         <div className={styles.description}>{profile.description}</div>
         <Link
