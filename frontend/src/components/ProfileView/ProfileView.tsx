@@ -4,6 +4,7 @@ import styles from "./ProfileView.module.css";
 import CurrentCompanyPrice from "../CurrentCompanyPrice/CurrentCompanyPrice";
 import MarketValue from "../MarketValue/MarketValue";
 import ShareholdersAccordion from "../ShareholdersAccordion/ShareholdersAccordion";
+import { capitalizeFirstLetter } from "@/helpers";
 
 const ProfileView = ({ profile }: { profile: CompanyProfileI }) => {
   return (
@@ -32,8 +33,11 @@ const ProfileView = ({ profile }: { profile: CompanyProfileI }) => {
           symbol={profile.symbol}
         />
       </div>
+      <br />
+      <div>prezes: {profile.ceoName}</div>
+      <div>województwo: {profile.district}</div>
+      <div>adres: {capitalizeFirstLetter(profile.adress)}</div>
       <hr className={styles.separator} />
-
       <div className={styles.shareholdersContainer}>
         <p>Nawięksi akcjonariusze:</p>
         <ShareholdersAccordion shareholders={profile.shareholders} />

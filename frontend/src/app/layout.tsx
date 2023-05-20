@@ -4,6 +4,7 @@ import ReactQueryProvider from "@/components/ReactQueryProvider/ReactQueryProvid
 import CompaniesScrollArea from "@/components/CompaniesScrollArea/CompaniesScrollArea";
 import NavMenu from "@/components/NavMenu/NavMenu";
 import { getAllCompaniesData } from "@/fetchers/getAllCompaniesData";
+import DialogCreateWallet from "@/components/DialogCreateWallet/DialogCreateWallet";
 
 export const metadata = {
   title: "Wirtualny portfel",
@@ -23,6 +24,7 @@ export default async function RootLayout({
       <body>
         <ReactQueryProvider>
           <div className="app">
+            <DialogCreateWallet />
             <NavMenu />
             <div className="container">
               <CompaniesScrollArea

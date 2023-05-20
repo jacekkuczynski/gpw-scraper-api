@@ -23,6 +23,8 @@ type WalletItemT = {
 };
 
 interface StateI {
+  isDialogOpen: boolean;
+  changeDialogVisibility: (isDialogOpen: boolean) => void;
   wallets: WalletT[];
   createWallet: (wallet: WalletT) => void;
   modifyWallet: () => void;
@@ -37,6 +39,9 @@ interface StateI {
 export const useAppStore = create<StateI>()(
   persist(
     (set) => ({
+      isDialogOpen: false,
+      changeDialogVisibility: (boolean) =>
+        set((state) => ({ isDialogOpen: boolean })),
       // wallets
       wallets: [],
       createWallet: (newWallet) =>

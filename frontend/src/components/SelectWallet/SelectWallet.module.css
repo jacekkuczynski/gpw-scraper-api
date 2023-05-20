@@ -1,3 +1,8 @@
+.selectWallet {
+  position: relative;
+  z-index: 1000 !important;
+}
+
 .SelectTrigger {
   display: inline-flex;
   align-items: center;
@@ -15,9 +20,7 @@
 .SelectTrigger:hover {
   background-color: var(--mauve3);
 }
-.SelectTrigger:focus {
-  box-shadow: 0 0 0 2px black;
-}
+
 .SelectTrigger[data-placeholder] {
   color: var(--violet9);
 }
@@ -27,11 +30,10 @@
 }
 
 .SelectContent {
+  z-index: 420;
   overflow: hidden;
   background-color: white;
   border-radius: 6px;
-  box-shadow: 0px 10px 38px -10px rgba(22, 23, 24, 0.35),
-    0px 10px 20px -15px rgba(22, 23, 24, 0.2);
 }
 
 .SelectViewport {
