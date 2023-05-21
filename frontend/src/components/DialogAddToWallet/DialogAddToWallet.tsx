@@ -1,180 +1,128 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
-import * as Switch from "@radix-ui/react-switch";
-import styles from "./DialogCreateWallet.module.css";
+import styles from "./DialogAddToWallet.module.css";
 import { useAppStore } from "@/store/store";
-import { Toaster } from "react-hot-toast";
-import { SingleCompanyStartingData } from "@/types/types";
-import SelectCompany from "../SelectCompany/SelectCompany";
+
 import SelectWallet from "../SelectWallet/SelectWallet";
+import { useQuery } from "react-query";
+import { getCurrentCompanyPrice } from "@/fetchers/getCurrentCompanyPrice";
+import toast from "react-hot-toast";
 
-const DialogCreateWallet = ({
-  allCompaniesStartingData,
+const DialogAddToWallet = ({
+  symbol,
+  name,
 }: {
-  allCompaniesStartingData: SingleCompanyStartingData[];
+  symbol: string;
+  name: string;
 }) => {
-  // const [isChecked, setIsChecked] = useState(false);
-  // const [walletName, setWalletName] = useState(self.crypto.randomUUID());
-  // const [stockCount, setStockCount] = useState(0);
+  const [walletName, setWalletName] = useState(self.crypto.randomUUID());
+  const [stockCount, setStockCount] = useState(0);
 
-  // const isDialogOpen = useAppStore((state) => state.isDialogOpen);
-  // const changeDialogVisibility = useAppStore(
-  //   (state) => state.changeDialogVisibility
-  // );
-  // const createWallet = useAppStore((state) => state.createWallet);
+  const { data } = useQuery(["companyPrice", symbol], getCurrentCompanyPrice);
 
-  // useEffect(() => {}, []);
+  const isAddToWalletDialogOpen = useAppStore(
+    (state) => state.isAddToWalletDialogOpen
+  );
+  const changeAddToWalletDialogVisibility = useAppStore(
+    (state) => state.changeAddToWalletDialogVisibility
+  );
 
-  // const handleCreateWallet = () => {
-  //   createWallet({
-  //     name: walletName,
-  //     items: [],
-  //     createdAt: new Date(),
-  //   });
-  //   changeDialogVisibility(false);
-  //   setWalletName(self.crypto.randomUUID());
-  //   setIsChecked(false);
-  // };
+  const addWalletItem = useAppStore((state) => state.addWalletItem);
 
-  // const handleCheckChange = () => {
-  //   setIsChecked(!isChecked);
-  // };
+  const handleWalletNameChange = (name: string) => {
+    setWalletName(name);
+  };
 
-  // const handleWalletNameInputChange = (
-  //   e: React.ChangeEvent<HTMLInputElement>
-  // ) => {
-  //   setWalletName(e.target.value);
-  // };
+  const handleStockCountInputChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setStockCount(parseInt(e.target.value));
+  };
 
-  // const handleStockCountInputChange = (
-  //   e: React.ChangeEvent<HTMLInputElement>
-  // ) => {
-  //   setStockCount(parseInt(e.target.value));
-  // };
+  const handleAddWalletItem = () => {
+    if (data) {
+      addWalletItem({
+        stockCount,
+        walletName,
+        stockName: name,
+        openDate: new Date(),
+        openPrice: data,
+        symbol,
+      });
+      toast.success(
+        `Do portfela o nazwie ${walletName} dodano ${stockCount} akcji ${name} (${symbol})  po cenie ${data} za sztukę. Łączna wartość transakcji: ${
+          stockCount * data
+        }`,
+        {
+          duration: 3000,
+          id: "watchlist_error",
+        }
+      );
+      changeAddToWalletDialogVisibility(false);
+    }
+  };
 
-  return <></>;
+  return (
+    <>
+      <Dialog.Root
+        open={isAddToWalletDialogOpen}
+        onOpenChange={() => {
+          changeAddToWalletDialogVisibility(!isAddToWalletDialogOpen);
+        }}
+      >
+        <Dialog.Portal>
+          <Dialog.Overlay className={styles.DialogOverlay} />
+          <Dialog.Content className={styles.DialogContent}>
+            <Dialog.Title className={styles.DialogTitle}>
+              Dodaj do istniejącego
+            </Dialog.Title>
+            <Dialog.Description className={styles.DialogDescription}>
+              Dodaj spółkę do istniejącego portfela
+            </Dialog.Description>
+
+            <div className={styles.DialogTitle}>dodaj do istniejącego</div>
+
+            {data && (
+              <form className={styles.walletForm}>
+                <fieldset className={styles.Fieldset}>
+                  <label className={styles.Label}>Wybierz portfel</label>
+                  <SelectWallet onNameChange={handleWalletNameChange} />
+                </fieldset>
+                <fieldset className={styles.Fieldset}>
+                  <label className={styles.Label} htmlFor="count">
+                    Ile akcji chcesz dodać do portfela?
+                  </label>
+                  <input
+                    type="number"
+                    min="0"
+                    step="1"
+                    className={styles.Input}
+                    id="count"
+                    defaultValue={walletName}
+                    onChange={handleStockCountInputChange}
+                  />
+                </fieldset>
+                <div className={styles.container}>
+                  suma: {data && stockCount * data} PLN
+                </div>
+                <div className={styles.container}>
+                  <button
+                    onClick={handleAddWalletItem}
+                    type="button"
+                    className="button"
+                  >
+                    Dodaj do portfela
+                  </button>
+                </div>
+              </form>
+            )}
+          </Dialog.Content>
+        </Dialog.Portal>
+      </Dialog.Root>
+    </>
+  );
 };
 
-export default DialogCreateWallet;
-
-{
-  /* <Toaster position="bottom-right" reverseOrder={false} />{" "}
-<Dialog.Root
-  open={isDialogOpen}
-  onOpenChange={() => {
-    changeDialogVisibility(!isDialogOpen);
-  }}
->
-  <Dialog.Portal>
-    <Dialog.Overlay className={styles.DialogOverlay} />
-    <Dialog.Content className={styles.DialogContent}>
-      <Dialog.Title className={styles.DialogTitle}>
-        Nowy portfel / dodaj do istniejącego{" "}
-      </Dialog.Title>
-      <Dialog.Description className={styles.DialogDescription}>
-        Utwórz nowy portfel lub dodaj spółkę do istniejącego
-      </Dialog.Description>
-      <div className={styles.switchContainer}>
-        <label className={styles.Label} htmlFor="new-wallet">
-          Nowy potfel
-        </label>
-        <Switch.Root
-          checked={isChecked}
-          onCheckedChange={handleCheckChange}
-          className={styles.SwitchRoot}
-          id="new-wallet"
-        >
-          <Switch.Thumb className={styles.SwitchThumb} />
-        </Switch.Root>
-      </div>
-
-      <form className={styles.walletForm}>
-        <fieldset className={styles.Fieldset} disabled={!isChecked}>
-          <label className={styles.Label} htmlFor="walletName">
-            Nazwij nowy portfel
-          </label>
-          <input
-            type="text"
-            className={styles.Input}
-            id="walletName"
-            defaultValue={walletName}
-            onChange={handleWalletNameInputChange}
-          />
-        </fieldset>
-        <fieldset className={styles.Fieldset} disabled={!isChecked}>
-          <label className={styles.Label}>Wybierz spółkę</label>
-          <SelectCompany
-            allCompaniesStartingData={allCompaniesStartingData}
-          />
-        </fieldset>
-
-        <fieldset className={styles.Fieldset} disabled={!isChecked}>
-          <label className={styles.Label} htmlFor="count">
-            Ile akcji chcesz dodać do portfela?
-          </label>
-          <input
-            type="number"
-            className={styles.Input}
-            id="count"
-            defaultValue={walletName}
-            onChange={handleStockCountInputChange}
-          />
-        </fieldset>
-        <div className={styles.container}>
-          <button
-            onClick={handleCreateWallet}
-            disabled={!isChecked}
-            type="button"
-            className="button"
-          >
-            Utwórz nowy portfel i dodaj
-          </button>
-        </div>
-      </form>
-
-      <div className={styles.DialogTitle}>dodaj do istniejącego</div>
-
-      <form className={styles.walletForm}>
-        <fieldset className={styles.Fieldset} disabled={isChecked}>
-          <label className={styles.Label}>Wybierz spółkę</label>
-          <SelectCompany
-            allCompaniesStartingData={allCompaniesStartingData}
-          />
-        </fieldset>
-        <div className={styles.container}>aktualna cena: {}</div>
-        <fieldset className={styles.Fieldset} disabled={isChecked}>
-          <label className={styles.Label}>Wybierz portfel</label>
-          <SelectWallet />
-        </fieldset>
-        <fieldset className={styles.Fieldset} disabled={isChecked}>
-          <label className={styles.Label} htmlFor="count">
-            Ile akcji chcesz dodać do portfela?
-          </label>
-          <input
-            type="number"
-            min="0"
-            step="1"
-            className={styles.Input}
-            id="count"
-            defaultValue={walletName}
-            onChange={handleStockCountInputChange}
-          />
-        </fieldset>
-        <div className={styles.container}>suma: {}</div>
-        <div className={styles.container}>
-          <button
-            // onClick={}
-            disabled={isChecked}
-            type="button"
-            className="button"
-          >
-            Dodaj do portfela
-          </button>
-        </div>
-      </form>
-    </Dialog.Content>
-  </Dialog.Portal>
-</Dialog.Root> */
-}
+export default DialogAddToWallet;

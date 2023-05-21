@@ -5,6 +5,7 @@ import CompaniesScrollArea from "@/components/CompaniesScrollArea/CompaniesScrol
 import NavMenu from "@/components/NavMenu/NavMenu";
 import { getAllCompaniesData } from "@/fetchers/getAllCompaniesData";
 import DialogCreateWallet from "@/components/DialogCreateWallet/DialogCreateWallet";
+import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   title: "Wirtualny portfel",
@@ -23,10 +24,9 @@ export default async function RootLayout({
     <html lang="pl" className={inter.className}>
       <body>
         <ReactQueryProvider>
+          <Toaster position="bottom-right" reverseOrder={false} />
           <div className="app">
-            <DialogCreateWallet
-              allCompaniesStartingData={allCompaniesStartingData}
-            />
+            <DialogCreateWallet />
             <NavMenu />
             <div className="container">
               <CompaniesScrollArea

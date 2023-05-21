@@ -1,10 +1,10 @@
 "use client";
 
 import styles from "./ProfileControlButtons.module.css";
-import { Toaster } from "react-hot-toast";
 import { useProfileControlButtons } from "./useProfileControlButtons";
 import Link from "next/link";
 import { useAppStore } from "@/store/store";
+import DialogAddToWallet from "../DialogAddToWallet/DialogAddToWallet";
 
 const ProfileControlButtons = ({
   name,
@@ -13,49 +13,57 @@ const ProfileControlButtons = ({
   name: string;
   symbol: string;
 }) => {
-  const changeDialogVisibility = useAppStore(
-    (state) => state.changeDialogVisibility
+  const changeAddToWalletDialogVisibility = useAppStore(
+    (state) => state.changeAddToWalletDialogVisibility
   );
 
-  const isDialogOpen = useAppStore((state) => state.isDialogOpen);
+  const isAddToWalletDialogOpen = useAppStore(
+    (state) => state.isAddToWalletDialogOpen
+  );
 
   const { isInWatchlist, handleRemoveFromWatchlist, handleAddToWatchlist } =
     useProfileControlButtons({ name, symbol });
 
   return (
-    <div className={styles.profileButtons}>
-      <Toaster position="bottom-right" reverseOrder={false} />
-      <button
-        onClick={() => {
-          changeDialogVisibility(true);
-          console.log("clicked");
-        }}
-        type="button"
-        className="button"
-      >
-        Dodaj do portfela
-      </button>
-      {isInWatchlist ? (
-        <>
+    <>
+      <DialogAddToWallet symbol={symbol} name={name} />
+      <div className={styles.profileButtons}>
+        <button
+          onClick={() => {
+            changeAddToWalletDialogVisibility(true);
+            console.log("clicked");
+          }}
+          type="button"
+          className="button"
+        >
+          Dodaj do portfela
+        </button>
+        {isInWatchlist ? (
+          <>
+            <button
+              onClick={handleRemoveFromWatchlist}
+              type="button"
+              className="button"
+            >
+              Usuń z obserwowanych
+            </button>
+          </>
+        ) : (
           <button
-            onClick={handleRemoveFromWatchlist}
+            onClick={handleAddToWatchlist}
             type="button"
             className="button"
           >
-            Usuń z obserwowanych
+            Dodaj do obserwowanych
           </button>
-        </>
-      ) : (
-        <button onClick={handleAddToWatchlist} type="button" className="button">
-          Dodaj do obserwowanych
-        </button>
-      )}
-      <Link href={"/watchlist"}>
-        <button type="button" className="button">
-          Przejdź do obserwowanych
-        </button>
-      </Link>
-    </div>
+        )}
+        <Link href={"/watchlist"}>
+          <button type="button" className="button">
+            Przejdź do obserwowanych
+          </button>
+        </Link>
+      </div>
+    </>
   );
 };
 

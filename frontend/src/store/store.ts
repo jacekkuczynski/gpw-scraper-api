@@ -13,23 +13,23 @@ type WalletT = {
 };
 
 type WalletItemT = {
-  name: string;
+  walletName: string;
+  stockName: string;
   symbol: string;
   openPrice: number;
   count: number;
   openDate: Date;
-  averageOpenPrice: number;
 };
 
 interface StateI {
   isCreateWalletDialogOpen: boolean;
-  dialogCompanySymbol: string;
-  setDialogCompanySymbol: (symbol: string) => void;
   changeCreateWalletDialogVisibility: (isDialogOpen: boolean) => void;
+  isAddToWalletDialogOpen: boolean;
+  changeAddToWalletDialogVisibility: (isDialogOpen: boolean) => void;
   wallets: WalletT[];
   createWallet: (wallet: WalletT) => void;
   modifyWallet: () => void;
-  addWalletItem: () => void;
+  addWalletItem: (item: WalletItemT) => void;
   modifyWalletItem: () => void;
 
   watchlist: WatchlistItemT[];
@@ -41,11 +41,11 @@ export const useAppStore = create<StateI>()(
   persist(
     (set) => ({
       isCreateWalletDialogOpen: false,
-      dialogCompanySymbol: "",
-      setDialogCompanySymbol: (symbol) =>
-        set(() => ({ dialogCompanySymbol: symbol })),
       changeCreateWalletDialogVisibility: (boolean) =>
         set((state) => ({ isCreateWalletDialogOpen: boolean })),
+      isAddToWalletDialogOpen: false,
+      changeAddToWalletDialogVisibility: (boolean) =>
+        set((state) => ({ isAddToWalletDialogOpen: boolean })),
       // wallets
       wallets: [],
       createWallet: (newWallet) =>

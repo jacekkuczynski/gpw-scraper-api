@@ -3,7 +3,6 @@
 import React from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import styles from "./DialogCreateWallet.module.css";
-import { Toaster } from "react-hot-toast";
 import { useDialogCreateWallet } from "./useDialogCreateWallet";
 
 const DialogCreateWallet = () => {
@@ -16,7 +15,6 @@ const DialogCreateWallet = () => {
   } = useDialogCreateWallet();
   return (
     <>
-      <Toaster position="bottom-right" reverseOrder={false} />{" "}
       <Dialog.Root
         open={isDialogOpen}
         onOpenChange={() => {

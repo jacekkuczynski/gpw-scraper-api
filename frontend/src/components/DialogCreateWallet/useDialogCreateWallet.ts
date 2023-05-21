@@ -21,7 +21,7 @@ export const useDialogCreateWallet = () => {
     });
     changeCreateWalletDialogVisibility(false);
     setWalletName(self.crypto.randomUUID());
-    toast.success(`Portfel o nazwie ${walletName}) został utworzony`, {
+    toast.success(`Portfel o nazwie ${walletName} został utworzony`, {
       duration: 3000,
       id: "watchlist_error",
     });
