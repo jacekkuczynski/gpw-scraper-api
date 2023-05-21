@@ -7,9 +7,9 @@ export default function Home() {
 
   return (
     <div>
-      {wallets.map((wallet, index) => {
+      {wallets.map((wallet) => {
         return (
-          <p key={index}>
+          <p key={wallet.name + wallet.createdAt}>
             {wallet.name} {new Date(wallet.createdAt).toLocaleDateString()}/
             {new Date(wallet.createdAt).toLocaleTimeString()}
           </p>

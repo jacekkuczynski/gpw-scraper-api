@@ -11,8 +11,8 @@ const NavMenu = () => {
   const [value, setValue] = useState("");
   useHydrateLocalStorage();
   const closeNavMenu = () => setValue("");
-  const changeDialogVisibility = useAppStore(
-    (state) => state.changeDialogVisibility
+  const changeCreateWalletDialogVisibility = useAppStore(
+    (state) => state.changeCreateWalletDialogVisibility
   );
 
   const mainLinks = [
@@ -65,7 +65,7 @@ const NavMenu = () => {
                   <span
                     onClick={() => {
                       closeNavMenu;
-                      changeDialogVisibility(true);
+                      changeCreateWalletDialogVisibility(true);
                     }}
                   >
                     Nowy Portfel
