@@ -12,12 +12,12 @@ type WalletT = {
   createdAt: Date;
 };
 
-type WalletItemT = {
+export type WalletItemT = {
   walletName: string;
   stockName: string;
   symbol: string;
   openPrice: number;
-  count: number;
+  stockCount: number;
   openDate: Date;
 };
 

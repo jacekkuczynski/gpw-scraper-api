@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 
 export const useDialogCreateWallet = () => {
-  const [walletName, setWalletName] = useState(self.crypto.randomUUID());
+  const [walletName, setWalletName] = useState(crypto.randomUUID());
 
   const isDialogOpen = useAppStore((state) => state.isCreateWalletDialogOpen);
   const changeCreateWalletDialogVisibility = useAppStore(
@@ -20,7 +20,7 @@ export const useDialogCreateWallet = () => {
       createdAt: new Date(),
     });
     changeCreateWalletDialogVisibility(false);
-    setWalletName(self.crypto.randomUUID());
+    setWalletName(crypto.randomUUID());
     toast.success(`Portfel o nazwie ${walletName} został utworzony`, {
       duration: 3000,
       id: "watchlist_error",

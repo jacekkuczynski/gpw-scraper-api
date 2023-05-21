@@ -1,14 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import styles from "./DialogAddToWallet.module.css";
-import { useAppStore } from "@/store/store";
-
 import SelectWallet from "../SelectWallet/SelectWallet";
-import { useQuery } from "react-query";
-import { getCurrentCompanyPrice } from "@/fetchers/getCurrentCompanyPrice";
-import toast from "react-hot-toast";
+import { useDialogAddToWallet } from "./useDialogAddToWallet";
 
 const DialogAddToWallet = ({
   symbol,
@@ -17,52 +13,16 @@ const DialogAddToWallet = ({
   symbol: string;
   name: string;
 }) => {
-  const [walletName, setWalletName] = useState(self.crypto.randomUUID());
-  const [stockCount, setStockCount] = useState(0);
-
-  const { data } = useQuery(["companyPrice", symbol], getCurrentCompanyPrice);
-
-  const isAddToWalletDialogOpen = useAppStore(
-    (state) => state.isAddToWalletDialogOpen
-  );
-  const changeAddToWalletDialogVisibility = useAppStore(
-    (state) => state.changeAddToWalletDialogVisibility
-  );
-
-  const addWalletItem = useAppStore((state) => state.addWalletItem);
-
-  const handleWalletNameChange = (name: string) => {
-    setWalletName(name);
-  };
-
-  const handleStockCountInputChange = (
-    e: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setStockCount(parseInt(e.target.value));
-  };
-
-  const handleAddWalletItem = () => {
-    if (data) {
-      addWalletItem({
-        stockCount,
-        walletName,
-        stockName: name,
-        openDate: new Date(),
-        openPrice: data,
-        symbol,
-      });
-      toast.success(
-        `Do portfela o nazwie ${walletName} dodano ${stockCount} akcji ${name} (${symbol})  po cenie ${data} za sztukę. Łączna wartość transakcji: ${
-          stockCount * data
-        }`,
-        {
-          duration: 3000,
-          id: "watchlist_error",
-        }
-      );
-      changeAddToWalletDialogVisibility(false);
-    }
-  };
+  const {
+    isAddToWalletDialogOpen,
+    changeAddToWalletDialogVisibility,
+    data,
+    handleWalletNameChange,
+    walletName,
+    handleStockCountInputChange,
+    stockCount,
+    handleAddWalletItem,
+  } = useDialogAddToWallet({ name, symbol });
 
   return (
     <>
