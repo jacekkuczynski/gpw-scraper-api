@@ -4,15 +4,21 @@ import React, { ReactNode } from "react";
 import * as Select from "@radix-ui/react-select";
 import styles from "./SelectWallet.module.css";
 import classnames from "classnames";
+import { SingleCompanyStartingData } from "@/types/types";
+import { formatCompanyName } from "@/helpers";
 
 // import "./styles.css";
 // import { SelectItem } from "@radix-ui/react-select";
 
-const SelectWallet = () => (
+const SelectWallet = ({
+  allCompaniesStartingData,
+}: {
+  allCompaniesStartingData: SingleCompanyStartingData[];
+}) => (
   <div className={styles.selectWallet}>
     <Select.Root>
       <Select.Trigger className={styles.SelectTrigger} aria-label="Food">
-        <Select.Value placeholder="Select a fruit…" />
+        <Select.Value placeholder="wybierz spółkę" />
         <Select.Icon className={styles.SelectIcon}></Select.Icon>
       </Select.Trigger>
       <Select.Portal>
@@ -22,38 +28,17 @@ const SelectWallet = () => (
           ></Select.ScrollUpButton>
           <Select.Viewport className={styles.SelectViewport}>
             <Select.Group>
-              <Select.Label className={styles.SelectLabel}>Fruits</Select.Label>
-              <SelectItem value="apple">Apple</SelectItem>
-              <SelectItem value="banana">Banana</SelectItem>
-              <SelectItem value="blueberry">Blueberry</SelectItem>
-              <SelectItem value="grapes">Grapes</SelectItem>
-              <SelectItem value="pineapple">Pineapple</SelectItem>
+              {allCompaniesStartingData.map((company) => (
+                <SelectItem
+                  key={company.symbol}
+                  value={`${company.name} (${company.symbol})`}
+                >
+                  {`${formatCompanyName(company.name)} (${company.symbol})`}
+                </SelectItem>
+              ))}
             </Select.Group>
 
             <Select.Separator className={styles.SelectSeparator} />
-
-            <Select.Group>
-              <Select.Label className={styles.SelectLabel}>
-                Vegetables
-              </Select.Label>
-              <SelectItem value="aubergine">Aubergine</SelectItem>
-              <SelectItem value="broccoli">Broccoli</SelectItem>
-              <SelectItem value="carrot" disabled>
-                Carrot
-              </SelectItem>
-              <SelectItem value="courgette">Courgette</SelectItem>
-              <SelectItem value="leek">Leek</SelectItem>
-            </Select.Group>
-
-            <Select.Separator className={styles.SelectSeparator} />
-
-            <Select.Group>
-              <Select.Label className={styles.SelectLabel}>Meat</Select.Label>
-              <SelectItem value="beef">Beef</SelectItem>
-              <SelectItem value="chicken">Chicken</SelectItem>
-              <SelectItem value="lamb">Lamb</SelectItem>
-              <SelectItem value="pork">Pork</SelectItem>
-            </Select.Group>
           </Select.Viewport>
           <Select.ScrollDownButton
             className={styles.SelectScrollButton}

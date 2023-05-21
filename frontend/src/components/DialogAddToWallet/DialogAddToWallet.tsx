@@ -3,13 +3,13 @@
 import React, { useEffect, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import * as Switch from "@radix-ui/react-switch";
-import styles from "./DialogCreateWallet.module.css";
+import styles from "./DialogAddToWallet.module.css";
 import { useAppStore } from "@/store/store";
 import SelectWallet from "../SelectWallet/SelectWallet";
 import { Toaster } from "react-hot-toast";
 import { SingleCompanyStartingData } from "@/types/types";
 
-const DialogCreateWallet = ({
+const DialogAddToWallet = ({
   allCompaniesStartingData,
 }: {
   allCompaniesStartingData: SingleCompanyStartingData[];
@@ -151,4 +151,4 @@ const DialogCreateWallet = ({
   );
 };
 
-export default DialogCreateWallet;
+export default DialogAddToWallet;

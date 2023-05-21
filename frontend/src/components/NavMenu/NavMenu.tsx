@@ -5,11 +5,15 @@ import * as Menubar from "@radix-ui/react-menubar";
 import Link from "next/link";
 import styles from "./NavMenu.module.css";
 import { useHydrateLocalStorage } from "@/hooks/useHydrateLocalStorage";
+import { useAppStore } from "@/store/store";
 
 const NavMenu = () => {
   const [value, setValue] = useState("");
   useHydrateLocalStorage();
   const closeNavMenu = () => setValue("");
+  const changeDialogVisibility = useAppStore(
+    (state) => state.changeDialogVisibility
+  );
 
   const mainLinks = [
     {
@@ -21,10 +25,7 @@ const NavMenu = () => {
     },
     {
       name: "Portfel",
-      sublinks: [
-        { name: "Lista portfeli", href: "/" },
-        { name: "Nowy portfel", href: "/" },
-      ],
+      sublinks: [{ name: "Lista portfeli", href: "/wallet" }],
     },
   ];
 
@@ -54,12 +55,23 @@ const NavMenu = () => {
                       className={styles.menubarItem}
                     >
                       <Link href={link.href} onClick={closeNavMenu}>
-                        {link.name}{" "}
+                        {link.name}
                       </Link>
                       <Menubar.Separator className={styles.menubarSeparator} />
                     </Menubar.Item>
                   );
                 })}
+                <Menubar.Item className={styles.menubarItem}>
+                  <span
+                    onClick={() => {
+                      closeNavMenu;
+                      changeDialogVisibility(true);
+                    }}
+                  >
+                    Nowy Portfel
+                  </span>
+                  <Menubar.Separator className={styles.menubarSeparator} />
+                </Menubar.Item>
               </Menubar.Content>
             </Menubar.Portal>
           </Menubar.Menu>

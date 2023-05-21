@@ -31,7 +31,7 @@ const ProfileControlButtons = ({
           console.log("clicked");
         }}
         type="button"
-        className={styles.button}
+        className="button"
       >
         Dodaj do portfela
       </button>
@@ -40,22 +40,18 @@ const ProfileControlButtons = ({
           <button
             onClick={handleRemoveFromWatchlist}
             type="button"
-            className={styles.button}
+            className="button"
           >
             Usuń z obserwowanych
           </button>
         </>
       ) : (
-        <button
-          onClick={handleAddToWatchlist}
-          type="button"
-          className={styles.button}
-        >
+        <button onClick={handleAddToWatchlist} type="button" className="button">
           Dodaj do obserwowanych
         </button>
       )}
       <Link href={"/watchlist"}>
-        <button type="button" className={styles.button}>
+        <button type="button" className="button">
           Przejdź do obserwowanych
         </button>
       </Link>

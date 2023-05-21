@@ -17,18 +17,20 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const companiesScrollAreaData = await getAllCompaniesData();
+  const allCompaniesStartingData = await getAllCompaniesData();
 
   return (
     <html lang="pl" className={inter.className}>
       <body>
         <ReactQueryProvider>
           <div className="app">
-            <DialogCreateWallet />
+            <DialogCreateWallet
+              allCompaniesStartingData={allCompaniesStartingData}
+            />
             <NavMenu />
             <div className="container">
               <CompaniesScrollArea
-                companiesScrollAreaData={companiesScrollAreaData}
+                allCompaniesStartingData={allCompaniesStartingData}
               />
               {children}
             </div>

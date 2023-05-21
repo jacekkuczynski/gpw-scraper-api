@@ -8,9 +8,9 @@ import styles from "./CompaniesScrollArea.module.css";
 import { SingleCompanyStartingData } from "@/types/types";
 
 const CompaniesScrollArea = ({
-  companiesScrollAreaData,
+  allCompaniesStartingData,
 }: {
-  companiesScrollAreaData: SingleCompanyStartingData[];
+  allCompaniesStartingData: SingleCompanyStartingData[];
 }) => {
   const [input, setInput] = useState("");
 
@@ -24,7 +24,7 @@ const CompaniesScrollArea = ({
           <div>
             <CompaniesScrollAreaCompaniesList
               input={input}
-              allCompaniesData={companiesScrollAreaData}
+              allCompaniesData={allCompaniesStartingData}
             />
           </div>
         </ScrollArea.Viewport>

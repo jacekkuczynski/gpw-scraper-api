@@ -7,3 +7,14 @@ export const capitalizeFirstLetter = (str: string) => {
 
   return arr.join(" ");
 };
+
+export const formatCompanyName = (str: string) => {
+  const ending = "SPÓŁKA AKCYJNA";
+  const trimmedStr = str.trim();
+
+  if (trimmedStr.endsWith(ending)) {
+    return trimmedStr.slice(0, trimmedStr.length - ending.length).trim();
+  }
+
+  return trimmedStr;
+};

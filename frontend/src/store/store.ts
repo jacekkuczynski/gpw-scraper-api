@@ -7,10 +7,9 @@ type WatchlistItemT = {
 };
 
 type WalletT = {
-  size: number;
   name: string;
-  id: number;
   items: WalletItemT[];
+  createdAt: Date;
 };
 
 type WalletItemT = {
@@ -24,6 +23,8 @@ type WalletItemT = {
 
 interface StateI {
   isDialogOpen: boolean;
+  dialogCompanySymbol: string;
+  setDialogCompanySymbol: (symbol: string) => void;
   changeDialogVisibility: (isDialogOpen: boolean) => void;
   wallets: WalletT[];
   createWallet: (wallet: WalletT) => void;
@@ -40,6 +41,9 @@ export const useAppStore = create<StateI>()(
   persist(
     (set) => ({
       isDialogOpen: false,
+      dialogCompanySymbol: "",
+      setDialogCompanySymbol: (symbol) =>
+        set(() => ({ dialogCompanySymbol: symbol })),
       changeDialogVisibility: (boolean) =>
         set((state) => ({ isDialogOpen: boolean })),
       // wallets
