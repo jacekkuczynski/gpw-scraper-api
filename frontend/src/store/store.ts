@@ -29,7 +29,7 @@ interface StateI {
   wallets: WalletT[];
   createWallet: (wallet: WalletT) => void;
   modifyWallet: () => void;
-  addWalletItem: (item: WalletItemT) => void;
+  addWalletItem: (walletItem: WalletItemT) => void;
   modifyWalletItem: () => void;
 
   watchlist: WatchlistItemT[];
@@ -51,7 +51,16 @@ export const useAppStore = create<StateI>()(
       createWallet: (newWallet) =>
         set((state) => ({ wallets: [...state.wallets, newWallet] })),
       modifyWallet: () => set((state) => ({})),
-      addWalletItem: () => set((state) => ({})),
+      addWalletItem: (walletItem) =>
+        set((state) => {
+          const walletToModify = state.wallets.find(
+            (wallet) => wallet.name === walletItem.walletName
+          );
+          walletToModify?.items.push(walletItem);
+          return {
+            wallets: [...state.wallets],
+          };
+        }),
       modifyWalletItem: () => set((state) => ({})),
 
       // watchlist
