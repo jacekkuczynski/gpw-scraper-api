@@ -55,6 +55,7 @@ export const useDialogAddToWallet = ({
         }
       );
       changeAddToWalletDialogVisibility(false);
+      setStockCount(0);
     }
   };
 

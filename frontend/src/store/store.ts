@@ -40,6 +40,7 @@ interface StateI {
 export const useAppStore = create<StateI>()(
   persist(
     (set) => ({
+      // dialogs
       isCreateWalletDialogOpen: false,
       changeCreateWalletDialogVisibility: (boolean) =>
         set((state) => ({ isCreateWalletDialogOpen: boolean })),
@@ -62,7 +63,6 @@ export const useAppStore = create<StateI>()(
           };
         }),
       modifyWalletItem: () => set((state) => ({})),
-
       // watchlist
       watchlist: [],
       addToWatchlist: (company) =>

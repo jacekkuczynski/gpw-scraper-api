@@ -65,7 +65,7 @@ const DialogAddToWallet = ({
                   />
                 </fieldset>
                 <div className={styles.container}>
-                  suma: {data && stockCount * data} PLN
+                  suma: {data && (stockCount * data).toFixed(2)} PLN
                 </div>
                 <div className={styles.container}>
                   <button
