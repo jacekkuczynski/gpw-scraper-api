@@ -218,6 +218,38 @@ export const readCurrentPrice = async (
     });
 };
 
+export const readMultipleCurrentPrice = async (
+  prisma: PrismaClient,
+  symbols: string[]
+) => {
+  async function main() {
+    const data = await prisma.price.findMany({
+      where: {
+        symbol: {
+          in: symbols,
+        },
+      },
+      orderBy: {
+        id: "desc",
+      },
+      distinct: ["symbol"],
+    });
+
+    return data;
+  }
+
+  return await main()
+    .then(async (data) => {
+      await prisma.$disconnect();
+      return data;
+    })
+    .catch(async (e) => {
+      console.error(e);
+      await prisma.$disconnect();
+      process.exit(1);
+    });
+};
+
 export const deletePriceTable = async (prisma: PrismaClient) => {
   await prisma.price.deleteMany({});
 };

@@ -5,7 +5,6 @@ import { scrapeAllCompaniesInitialData } from "./scrapeFunctions/company/scrapeA
 import cors from "cors";
 import helmet from "helmet";
 import { scheduleDailyPricesScrape } from "./schedule/scheduleDailyPricesScrap";
-
 import router from "./routes";
 
 export const prisma = new PrismaClient();
