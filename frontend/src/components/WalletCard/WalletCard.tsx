@@ -2,6 +2,7 @@ import { WalletItemT } from "@/store/store";
 import styles from "./WalletCard.module.css";
 import { formatCompanyName } from "@/helpers";
 import CurrentCompanyPrice from "../CurrentCompanyPrice/CurrentCompanyPrice";
+import CurrentWalletValue from "../CurrentWalletValue/CurrentWalletValue";
 
 const WalletCard = ({
   name,
@@ -17,14 +18,14 @@ const WalletCard = ({
       <div>nazwa: {name}</div>
       <div>data utworzenia: {new Date(createdAt).toDateString()}</div>
       <div>
-        zainwestowano :{" "}
+        zainwestowano :
         {items
           .map((company) => company.openPrice * company.stockCount)
           .reduce((acc, val) => acc + val, 0)
           .toFixed(2)}{" "}
         PLN
       </div>
-      <div>obecna wartość : {} PLN</div>
+      <div>obecna wartość : {<CurrentWalletValue items={items} />} PLN</div>
       <div>
         {items?.map((company) => {
           return (
