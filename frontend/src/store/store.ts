@@ -51,17 +51,27 @@ export const useAppStore = create<StateI>()(
       wallets: [],
       createWallet: (newWallet) =>
         set((state) => ({ wallets: [...state.wallets, newWallet] })),
-      modifyWallet: () => set((state) => ({})),
       addWalletItem: (walletItem) =>
         set((state) => {
           const walletToModify = state.wallets.find(
             (wallet) => wallet.name === walletItem.walletName
           );
-          walletToModify?.items.push(walletItem);
+          const walletItemToModify = walletToModify?.items.find(
+            (item) => item.stockName == walletItem.stockName
+          );
+          if (
+            walletItemToModify?.stockName === walletItem.stockName &&
+            walletItemToModify.openPrice === walletItem.openPrice
+          ) {
+            walletItemToModify.stockCount += walletItem.stockCount;
+          } else {
+            walletToModify?.items.push(walletItem);
+          }
           return {
             wallets: [...state.wallets],
           };
         }),
+      modifyWallet: () => set((state) => ({})),
       modifyWalletItem: () => set((state) => ({})),
       // watchlist
       watchlist: [],
