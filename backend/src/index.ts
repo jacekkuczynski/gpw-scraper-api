@@ -6,13 +6,11 @@ import cors from "cors";
 import helmet from "helmet";
 import { scheduleDailyPricesScrape } from "./schedule/scheduleDailyPricesScrap";
 import router from "./routes";
-import { scrapeAllCompaniesDailyPrice } from "./scrapeFunctions/price/scrapeCompanyPriceData/scrapeAllCompaniesDailyPrice/scrapeAllCompaniesDailyPrice";
 
 export const prisma = new PrismaClient();
 const port = process.env.PORT;
 
 const server = async () => {
-  await scrapeAllCompaniesDailyPrice();
   await scrapeAllCompaniesInitialData();
   scheduleDailyPricesScrape();
 
