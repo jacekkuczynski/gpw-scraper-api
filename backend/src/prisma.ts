@@ -1,4 +1,4 @@
-import { Prisma, PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 
 export const saveAllCompaniesDataToDatabase = async (
   allCompaniesDataArray: any[],
@@ -79,9 +79,8 @@ export const saveAllCompaniesInitialData = async (
   }
 
   return await main()
-    .then(async (data) => {
+    .then(async () => {
       await prisma.$disconnect();
-      return data;
     })
     .catch(async (e) => {
       console.error(e);
@@ -103,9 +102,8 @@ export const saveCompanyInitialDataToDB = async (
   }
 
   return await main()
-    .then(async (data) => {
+    .then(async () => {
       await prisma.$disconnect();
-      return data;
     })
     .catch(async (e) => {
       console.error(e);
@@ -248,8 +246,4 @@ export const readMultipleCurrentPrice = async (
       await prisma.$disconnect();
       process.exit(1);
     });
-};
-
-export const deletePriceTable = async (prisma: PrismaClient) => {
-  await prisma.price.deleteMany({});
 };
