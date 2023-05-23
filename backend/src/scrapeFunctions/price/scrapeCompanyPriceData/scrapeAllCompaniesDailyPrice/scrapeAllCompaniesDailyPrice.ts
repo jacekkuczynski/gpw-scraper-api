@@ -16,7 +16,6 @@ export const scrapeAllCompaniesDailyPrice = async () => {
   const allCompaniesDailyPrices = await puppeteer
     .use(StealthPlugin())
     .launch({
-      headless: false,
       args: ["--no-sandbox", "--disable-setuid-sandbox"],
     })
     .then(async (browser) => {
