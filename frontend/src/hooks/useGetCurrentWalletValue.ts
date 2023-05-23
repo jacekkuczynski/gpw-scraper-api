@@ -1,5 +1,4 @@
 import { getMultipleCompaniesPrice } from "@/fetchers/getMultipleCompaniesPrice";
-import { parsePriceToLocaleString } from "@/helpers";
 import { WalletItemT } from "@/store/store";
 import { useEffect, useState } from "react";
 import { useQuery } from "react-query";
@@ -26,5 +25,5 @@ export const useGetCurrentWalletValue = (items: WalletItemT[]) => {
     }
   }, [data, items]);
 
-  return parsePriceToLocaleString(walletValue);
+  return walletValue;
 };

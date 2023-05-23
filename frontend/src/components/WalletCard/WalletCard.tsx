@@ -18,13 +18,21 @@ const WalletCard = ({
     .map((company) => company.openPrice * company.stockCount)
     .reduce((acc, val) => acc + val, 0);
 
+  const profitPercents =
+    ((currentWalletValue - investedSum) / investedSum) * 100;
+
+  const profitValue = currentWalletValue - investedSum;
+
   return (
     <div className={styles.walletCard}>
       <div>nazwa: {name}</div>
       <div>data utworzenia: {new Date(createdAt).toDateString()}</div>
       <div>zainwestowano : {parsePriceToLocaleString(investedSum)}</div>
-      <div>obecna wartość : {currentWalletValue}</div>
+      <div>obecna wartość : {parsePriceToLocaleString(currentWalletValue)}</div>
+      <div>zysk/strata: {isNaN(profitPercents) ? "n/d" : profitPercents} %</div>
+      <div>zysk: {parsePriceToLocaleString(profitValue)}</div>
       <div>
+        Portfel składa się z:
         {items?.map((company) => (
           <WalletCardItem
             key={company.symbol + company.openDate}

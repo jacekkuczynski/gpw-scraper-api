@@ -42,8 +42,6 @@ const DialogAddToWallet = ({
               Dodaj spółkę do istniejącego portfela
             </Dialog.Description>
 
-            <div className={styles.DialogTitle}>dodaj do istniejącego</div>
-
             {data && (
               <form className={styles.walletForm}>
                 <fieldset className={styles.Fieldset}>
