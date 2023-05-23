@@ -4,7 +4,7 @@ import { WalletItemT } from "@/store/store";
 import { useEffect, useState } from "react";
 import { useQuery } from "react-query";
 
-const CurrentWalletValue = ({ items }: { items: WalletItemT[] }) => {
+export const useGetCurrentWalletValue = (items: WalletItemT[]) => {
   const [walletValue, setWalletValue] = useState(0);
   const allSymbols = items.map((item) => item.symbol);
   const symbols = [...new Set(allSymbols)].join(",");
@@ -26,7 +26,5 @@ const CurrentWalletValue = ({ items }: { items: WalletItemT[] }) => {
     }
   }, [data, items]);
 
-  return <>{parsePriceToLocaleString(walletValue)}</>;
+  return parsePriceToLocaleString(walletValue);
 };
-
-export default CurrentWalletValue;
