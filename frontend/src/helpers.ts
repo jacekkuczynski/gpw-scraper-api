@@ -18,3 +18,10 @@ export const formatCompanyName = (str: string) => {
 
   return trimmedStr;
 };
+
+export const parsePriceToLocaleString = (price: number): string => {
+  return price.toLocaleString("pl-PL", {
+    style: "currency",
+    currency: "PLN",
+  });
+};

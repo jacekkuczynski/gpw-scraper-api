@@ -4,7 +4,6 @@ import styles from "./page.module.css";
 import { getCompanyProfile } from "@/fetchers/getCompanyProfile";
 import { PriceChart } from "@/components/PriceChart/PriceChart";
 import ProfileControlButtons from "@/components/ProfileControlButtons/ProfileControlButtons";
-import { Suspense } from "react";
 
 export const dynamicParams = false;
 

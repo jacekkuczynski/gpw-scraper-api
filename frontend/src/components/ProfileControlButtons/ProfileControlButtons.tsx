@@ -31,7 +31,6 @@ const ProfileControlButtons = ({
         <button
           onClick={() => {
             changeAddToWalletDialogVisibility(true);
-            console.log("clicked");
           }}
           type="button"
           className="button"

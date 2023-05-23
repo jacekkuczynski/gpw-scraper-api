@@ -13,7 +13,9 @@ const ProfileView = ({ profile }: { profile: CompanyProfileI }) => {
         <div className={styles.name}>
           {profile.name} ({profile.symbol})
         </div>
-        <CurrentCompanyPrice symbol={profile.symbol} />
+        <span className={styles.price}>
+          <CurrentCompanyPrice symbol={profile.symbol} />
+        </span>
         <div className={styles.description}>{profile.description}</div>
         <Link
           href={`//${profile.website}`}

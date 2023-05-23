@@ -1,28 +1,22 @@
 "use client";
 
 import { getCurrentCompanyPrice } from "@/fetchers/getCurrentCompanyPrice";
+import { parsePriceToLocaleString } from "@/helpers";
 import { useQuery } from "react-query";
-import styles from "./CurrentCompanyPrice.module.css";
 
 const CurrentCompanyPrice = ({ symbol }: { symbol: string }) => {
   const { data } = useQuery(["companyPrice", symbol], getCurrentCompanyPrice);
 
   return (
-    <div className={styles.currentCompanyPriceContainer}>
+    <>
       {data ? (
-        <div className={styles.priceContainer}>
-          <span>
-            {data.toLocaleString("pl-PL", {
-              style: "currency",
-              currency: "PLN",
-            })}
-          </span>{" "}
-          - aktualna cena za akcje
-        </div>
+        <>
+          <span>{parsePriceToLocaleString(data)}</span>
+        </>
       ) : (
-        <div>wczytywanie ceny</div>
+        <>wczytywanie ceny</>
       )}
-    </div>
+    </>
   );
 };
 
