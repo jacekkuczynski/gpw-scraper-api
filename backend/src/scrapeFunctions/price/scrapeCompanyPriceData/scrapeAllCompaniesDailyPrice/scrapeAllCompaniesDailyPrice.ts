@@ -17,7 +17,6 @@ export const scrapeAllCompaniesDailyPrice = async () => {
     .use(StealthPlugin())
     .launch({
       args: ["--incognito", "--no-sandbox", "--disable-setuid-sandbox"],
-      headless: false,
     })
     .then(async (browser) => {
       const url = "https://www.gpw.pl/spolki";
