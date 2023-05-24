@@ -8,15 +8,16 @@ import {
 import { prisma } from "../../../../index";
 import { writeDailyPricesToDb } from "../../../../prisma";
 import { clickOnLoadMoreButton } from "../../../company/scrapeAllCompaniesData/clickOnLoadMoreButton";
-// import { isLoadMoreButtonVisible } from "../../../company/scrapeAllCompaniesData/isLoadMoreButtonVisible";
 import { loadDataIntoTable } from "../../../company/scrapeAllCompaniesData/loadDataIntoTable";
 import { scrapeDailyPricesFromTable } from "./scrapeDailyPricesFromTable";
+import { isLoadMoreButtonVisible } from "../../../company/scrapeAllCompaniesData/isLoadMoreButtonVisible";
 
 export const scrapeAllCompaniesDailyPrice = async () => {
   const allCompaniesDailyPrices = await puppeteer
     .use(StealthPlugin())
     .launch({
-      args: ["--no-sandbox", "--disable-setuid-sandbox"],
+      args: ["--incognito", "--no-sandbox", "--disable-setuid-sandbox"],
+      headless: false,
     })
     .then(async (browser) => {
       const url = "https://www.gpw.pl/spolki";
@@ -34,17 +35,8 @@ export const scrapeAllCompaniesDailyPrice = async () => {
 
       let scrapedData = [];
       const scrapeDailyPrices = async () => {
-        // let isLoadMoreButton = await isLoadMoreButtonVisible(page);
-        // bug on gpw.pl website - if you click "load more btn" last time table disaapear 22/05/23
-        // workaround
-        let loadedTREelements = 0;
-        loadedTREelements = await page.$$eval(
-          "#search-result tr",
-          (tds) => tds.length
-        );
-        const fullyLoadedTDElements = 430;
-
-        if (loadedTREelements !== fullyLoadedTDElements) {
+        let isLoadMoreButton = await isLoadMoreButtonVisible(page);
+        if (isLoadMoreButton) {
           await clickOnLoadMoreButton(page);
           await loadDataIntoTable(page);
           await scrapeDailyPrices();
@@ -63,3 +55,14 @@ export const scrapeAllCompaniesDailyPrice = async () => {
 
   writeDailyPricesToDb(allCompaniesDailyPrices, prisma);
 };
+
+// bug on gpw.pl website - if you click "load more btn" last time table disaapear 22/05/23
+// workaround
+
+// let loadedTREelements = 0;
+// loadedTREelements = await page.$$eval(
+//   "#search-result tr",
+//   (tds) => tds.length
+// );
+// const fullyLoadedTDElements = 430;
+// if (loadedTREelements !== fullyLoadedTDElements) {}
