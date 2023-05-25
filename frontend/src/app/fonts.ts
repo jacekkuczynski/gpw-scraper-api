@@ -1,4 +1,4 @@
-import { Inter, Monofett, Monoton } from "next/font/google";
+import { Inter, Monofett, Space_Mono } from "next/font/google";
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -7,4 +7,4 @@ export const inter = Inter({
 
 export const monofett = Monofett({ weight: "400", subsets: ["latin"] });
 
-export const monoton = Monoton({ weight: "400", subsets: ["latin"] });
+export const spaceMono = Space_Mono({ weight: "400", subsets: ["latin"] });

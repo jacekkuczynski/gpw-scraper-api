@@ -323,6 +323,22 @@
     "@radix-ui/react-primitive" "1.0.2"
     "@radix-ui/react-use-callback-ref" "1.0.0"
 
+"@radix-ui/react-hover-card@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-hover-card/-/react-hover-card-1.0.5.tgz#780e442101e8f662fb75bfd4a1499212d38745e9"
+  integrity sha512-jXRuZEkxSWdHZbVyL0J46cm7pQjmOMpwJEFKY+VqAJnV+FxS+zIZExI1OCeIiDwCBzUy6If1FfouOsfqBxr86g==
+  dependencies:
+    "@babel/runtime" "^7.13.10"
+    "@radix-ui/primitive" "1.0.0"
+    "@radix-ui/react-compose-refs" "1.0.0"
+    "@radix-ui/react-context" "1.0.0"
+    "@radix-ui/react-dismissable-layer" "1.0.3"
+    "@radix-ui/react-popper" "1.1.1"
+    "@radix-ui/react-portal" "1.0.2"
+    "@radix-ui/react-presence" "1.0.0"
+    "@radix-ui/react-primitive" "1.0.2"
+    "@radix-ui/react-use-controllable-state" "1.0.0"
+
 "@radix-ui/react-icons@^1.3.0":
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/@radix-ui/react-icons/-/react-icons-1.3.0.tgz#c61af8f323d87682c5ca76b856d60c2312dbcb69"
@@ -644,10 +660,19 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@18.2.6":
+"@types/react@*":
   version "18.2.6"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.6.tgz#5cd53ee0d30ffc193b159d3516c8c8ad2f19d571"
   integrity sha512-wRZClXn//zxCFW+ye/D2qY65UsYP1Fpex2YXorHc8awoNamkMZSvBxwxdYVInsHOZZd2Ppq8isnSzJL5Mpf8OA==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/react@18.2.7":
+  version "18.2.7"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.7.tgz#dfb4518042a3117a045b8c222316f83414a783b3"
+  integrity sha512-ojrXpSH2XFCmHm7Jy3q44nXDyN54+EYKP2lBhJ2bqfyPj6cIUW/FZW/Csdia34NQgq7KYcAlHi5184m4X88+yw==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"

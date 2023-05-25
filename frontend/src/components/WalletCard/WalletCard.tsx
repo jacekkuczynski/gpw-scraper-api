@@ -26,10 +26,15 @@ const WalletCard = ({
   return (
     <div className={styles.walletCard}>
       <div>nazwa: {name}</div>
-      <div>data utworzenia: {new Date(createdAt).toDateString()}</div>
+      <div>
+        data utworzenia: {new Date(createdAt).toLocaleDateString("pl-PL")}
+      </div>
       <div>zainwestowano : {parsePriceToLocaleString(investedSum)}</div>
       <div>obecna wartość : {parsePriceToLocaleString(currentWalletValue)}</div>
-      <div>zysk/strata: {isNaN(profitPercents) ? "n/d" : profitPercents} %</div>
+      <div>
+        zysk/strata: {isNaN(profitPercents) ? "n/d" : profitPercents.toFixed(2)}{" "}
+        %
+      </div>
       <div>zysk: {parsePriceToLocaleString(profitValue)}</div>
       <div>
         Portfel składa się z:

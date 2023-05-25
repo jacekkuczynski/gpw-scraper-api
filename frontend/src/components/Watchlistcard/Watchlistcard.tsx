@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { monofett, monoton } from "@/app/fonts";
+import { monofett, spaceMono } from "@/app/fonts";
 import styles from "./Watchlistcard.module.css";
 import { useAppStore } from "@/store/store";
 import { getCurrentCompanyPrice } from "@/fetchers/getCurrentCompanyPrice";
@@ -23,9 +23,9 @@ const Watchlistcard = ({ name, symbol }: { name: string; symbol: string }) => {
 
       <div className={styles.name}>{name}</div>
       <div className={styles.priceCss}>
-        <div className={monoton.className}>
+        <div className={spaceMono.className}>
           {data?.toFixed(2).padStart(8, "0")}
-          {!data && "0000.00"}
+          {!data && "00000.00"}
         </div>
       </div>
 
