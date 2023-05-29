@@ -5,7 +5,7 @@ import { prisma } from "../../../index";
 import {
   readAllCompaniesData,
   readCompaniesInitialData,
-} from "../../../prisma";
+} from "../../../database/prisma";
 import { scrapeAllCompaniesData } from "../scrapeAllCompaniesData/scrapeAllCompaniesData";
 import { scrapeCompanyInitialData } from "../scrapeCompanyInitialData/scrapeCompanyInitialData";
 

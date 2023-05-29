@@ -1,5 +1,5 @@
 import { prisma } from "..";
-import { readCurrentPrice } from "../prisma";
+import { readCurrentPrice } from "../database/prisma";
 
 export const getCurrentPrice = async (req, res) => {
   try {

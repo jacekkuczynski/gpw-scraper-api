@@ -1,5 +1,5 @@
 import { prisma } from "..";
-import { readMultipleCurrentPrice } from "../prisma";
+import { readMultipleCurrentPrice } from "../database/prisma";
 
 export const getMultiplePrice = async (req, res) => {
   const symbols = req.query.symbols.toUpperCase().split(",");

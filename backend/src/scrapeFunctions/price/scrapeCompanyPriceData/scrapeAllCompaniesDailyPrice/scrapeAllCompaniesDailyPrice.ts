@@ -6,7 +6,7 @@ import {
   removeDuplicates,
 } from "../../../../helpers/helpers";
 import { prisma } from "../../../../index";
-import { writeDailyPricesToDb } from "../../../../prisma";
+import { writeDailyPricesToDb } from "../../../../database/prisma";
 import { clickOnLoadMoreButton } from "../../../company/scrapeAllCompaniesData/clickOnLoadMoreButton";
 import { loadDataIntoTable } from "../../../company/scrapeAllCompaniesData/loadDataIntoTable";
 import { scrapeDailyPricesFromTable } from "./scrapeDailyPricesFromTable";

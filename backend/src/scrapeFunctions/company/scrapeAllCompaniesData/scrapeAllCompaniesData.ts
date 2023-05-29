@@ -6,7 +6,7 @@ import {
   removeDuplicates,
 } from "../../../helpers/helpers";
 import { prisma } from "../../../index";
-import { saveAllCompaniesDataToDatabase } from "../../../prisma";
+import { saveAllCompaniesDataToDatabase } from "../../../database/prisma";
 import { clickOnLoadMoreButton } from "./clickOnLoadMoreButton";
 import { getCompaniesDataFromTable } from "./getCompaniesDataFromTable";
 import { isLoadMoreButtonVisible } from "./isLoadMoreButtonVisible";

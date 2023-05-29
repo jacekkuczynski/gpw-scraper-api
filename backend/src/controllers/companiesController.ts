@@ -1,5 +1,5 @@
 import { prisma } from "..";
-import { readAllCompaniesData } from "../prisma";
+import { readAllCompaniesData } from "../database/prisma";
 
 export const getAllCompaniesData = async (req, res) => {
   try {
