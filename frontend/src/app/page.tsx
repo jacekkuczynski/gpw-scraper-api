@@ -2,6 +2,14 @@ import { robotoMono } from "./fonts";
 import styles from "./page.module.css";
 
 const version = "1.0 beta";
+const description = (
+  <>
+    <p>Full-stack application written in TypeScript.</p>
+    <p>All of the data visible on the page is automatically scraped.</p>
+    <p>For price updates scraper runs on weekdays after the market closes.</p>
+    <p>User data is stored in the browser.</p>
+  </>
+);
 
 export default function Home() {
   return (
@@ -10,34 +18,26 @@ export default function Home() {
         <h1>Virtual Wallet 3</h1>
         <span>{version}</span>
       </div>
-      <div className={styles.appDescription}>
-        <p>Full-stack application written in TypeScript.</p>
-        <p>All of the data visible on the page is automatically scraped.</p>
-        <p>
-          For price updates scraper runs on weekdays after the market closes.
-        </p>
-        <p>User data is stored in the browser.</p>
-      </div>
-      <div className={styles.techList}>
-        <b>Server:</b>
-        <ul>
-          <li>Node.js</li>
-          <li>Express.js</li>
-          <li>Puppeteer.js</li>
-        </ul>
-        <b>Database:</b>
-        <ul>
-          <li>MySQL</li>
-          <li>Prisma</li>
-        </ul>
-        <b>Frontend:</b>
-        <ul>
-          <li>React with Next.js</li>
-          <li>Radix-ui with css.modules</li>
-          <li>Axios with React Query</li>
-          <li>Zustand</li>
-          <li>Lightweight Charts</li>
-        </ul>
+      <div>{description}</div>
+      <div>
+        <div className={styles.techList}>
+          <div>
+            <b>Server:</b>
+            <br />
+            Node.js | Express.js | Puppetteer.
+          </div>
+          <div>
+            <b>Database:</b>
+            <br />
+            Prisma | MySQL
+          </div>
+          <div>
+            <b>Frontend:</b>
+            <br />
+            React with Next.js | Radix-Ui with CSS.modules | Axios with React
+            Query | Zustand
+          </div>
+        </div>
       </div>
     </div>
   );
