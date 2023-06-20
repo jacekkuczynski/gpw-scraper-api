@@ -1,16 +1,14 @@
 "use client";
 
 import WalletCard from "@/components/WalletCard/WalletCard";
-import { useAppStore } from "@/store/store";
 import styles from "./page.module.css";
+import { useAppStore } from "@/store/store";
 
 export default function Home() {
   const wallets = useAppStore((state) => state.wallets);
   const changeCreateWalletDialogVisibility = useAppStore(
     (state) => state.changeCreateWalletDialogVisibility
   );
-
-  console.log({ wallets, length: wallets.length });
 
   return (
     <div className={styles.walletCss}>

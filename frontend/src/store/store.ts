@@ -1,42 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
-type WatchlistItemT = {
-  name: string;
-  symbol: string;
-};
-
-type WalletT = {
-  name: string;
-  items: WalletItemT[];
-  createdAt: Date;
-};
-
-export type WalletItemT = {
-  walletName: string;
-  stockName: string;
-  symbol: string;
-  openPrice: number;
-  stockCount: number;
-  openDate: Date;
-};
-
-interface StateI {
-  isCreateWalletDialogOpen: boolean;
-  changeCreateWalletDialogVisibility: (isDialogOpen: boolean) => void;
-  isAddToWalletDialogOpen: boolean;
-  changeAddToWalletDialogVisibility: (isDialogOpen: boolean) => void;
-  wallets: WalletT[];
-  createWallet: (wallet: WalletT) => void;
-  modifyWallet: () => void;
-  addWalletItem: (walletItem: WalletItemT) => void;
-  modifyWalletItem: () => void;
-
-  watchlist: WatchlistItemT[];
-  addToWatchlist: (company: WatchlistItemT) => void;
-  removeFromWatchlist: (symbol: string) => void;
-}
-
 export const useAppStore = create<StateI>()(
   persist(
     (set) => ({
@@ -88,3 +52,39 @@ export const useAppStore = create<StateI>()(
     }
   )
 );
+
+type WatchlistItemT = {
+  name: string;
+  symbol: string;
+};
+
+type WalletT = {
+  name: string;
+  items: WalletItemT[];
+  createdAt: Date;
+};
+
+export type WalletItemT = {
+  walletName: string;
+  stockName: string;
+  symbol: string;
+  openPrice: number;
+  stockCount: number;
+  openDate: Date;
+};
+
+interface StateI {
+  isCreateWalletDialogOpen: boolean;
+  changeCreateWalletDialogVisibility: (isDialogOpen: boolean) => void;
+  isAddToWalletDialogOpen: boolean;
+  changeAddToWalletDialogVisibility: (isDialogOpen: boolean) => void;
+  wallets: WalletT[];
+  createWallet: (wallet: WalletT) => void;
+  modifyWallet: () => void;
+  addWalletItem: (walletItem: WalletItemT) => void;
+  modifyWalletItem: () => void;
+
+  watchlist: WatchlistItemT[];
+  addToWatchlist: (company: WatchlistItemT) => void;
+  removeFromWatchlist: (symbol: string) => void;
+}
