@@ -5,11 +5,9 @@ import { prisma } from "../../../index";
 import {
   readAllCompaniesData,
   readCompaniesInitialData,
-} from "../../../prisma";
+} from "../../../database/prisma";
 import { scrapeAllCompaniesData } from "../scrapeAllCompaniesData/scrapeAllCompaniesData";
 import { scrapeCompanyInitialData } from "../scrapeCompanyInitialData/scrapeCompanyInitialData";
-
-const allCompaniesCount = 410;
 
 export const scrapeAllCompaniesInitialData = async () => {
   let allCompaniesData: {
@@ -23,11 +21,14 @@ export const scrapeAllCompaniesInitialData = async () => {
     await scrapeAllCompaniesData();
     allCompaniesData = await readAllCompaniesData(prisma);
   }
+
   if ((await readCompaniesInitialData(prisma)).length > 1) return;
 
   await puppeteer
     .use(StealthPlugin())
-    .launch()
+    .launch({
+      args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    })
     .then(async (browser) => {
       const page = await browser.newPage();
       await page.setViewport({

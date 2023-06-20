@@ -1,0 +1,7 @@
+.walletCard {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 0.5rem;
+  border: solid 3px red;
+}

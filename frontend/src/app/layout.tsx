@@ -1,7 +1,11 @@
 import "./globals.css";
 import { inter } from "./fonts";
 import ReactQueryProvider from "@/components/ReactQueryProvider/ReactQueryProvider";
-import WalletApp from "@/components/WalletApp/WalletApp";
+import CompaniesScrollArea from "@/components/CompaniesScrollArea/CompaniesScrollArea";
+import NavMenu from "@/components/NavMenu/NavMenu";
+import { getAllCompaniesData } from "@/fetchers/getAllCompaniesData";
+import DialogCreateWallet from "@/components/DialogCreateWallet/DialogCreateWallet";
+import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   title: "Wirtualny portfel",
@@ -9,16 +13,28 @@ export const metadata = {
     "Wirtualny portfel spółek akcyjnych notowanych na GPW (Giełda Papierów Wartościowych)",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const allCompaniesStartingData = await getAllCompaniesData();
+
   return (
     <html lang="pl" className={inter.className}>
       <body>
         <ReactQueryProvider>
-          <WalletApp>{children}</WalletApp>
+          <Toaster position="bottom-right" reverseOrder={false} />
+          <div className="app">
+            <DialogCreateWallet />
+            <NavMenu />
+            <div className="container">
+              <CompaniesScrollArea
+                allCompaniesStartingData={allCompaniesStartingData}
+              />
+              {children}
+            </div>
+          </div>
         </ReactQueryProvider>
       </body>
     </html>

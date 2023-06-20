@@ -1,7 +1,7 @@
 import { Page } from "puppeteer";
 import { clickOnCookiesConsent } from "../../../helpers/clickOnCookiesConsent";
 import { prisma } from "../../../index";
-import { saveCompanyInitialDataToDB } from "../../../prisma";
+import { saveCompanyInitialDataToDB } from "../../../database/prisma";
 import { scrapeCompanyProfile } from "./scrapeCompanyProfile/scrapeCompanyProfile";
 import { scrapeCompanyShareholders } from "./scrapeCompanyShareholders/scrapeCompanyShareholders";
 

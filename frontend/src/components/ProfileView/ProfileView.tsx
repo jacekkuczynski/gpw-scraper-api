@@ -1,15 +1,22 @@
-import { ShareholderI } from "@/types/types";
+import { CompanyProfileI } from "@/types/types";
 import Link from "next/link";
 import styles from "./ProfileView.module.css";
+import CurrentCompanyPrice from "../CurrentCompanyPrice/CurrentCompanyPrice";
+import MarketValue from "../MarketValue/MarketValue";
+import ShareholdersAccordion from "../ShareholdersAccordion/ShareholdersAccordion";
+import { capitalizeFirstLetter } from "@/helpers";
 
-const ProfileView = ({ profile }: { profile: any }) => {
+const ProfileView = ({ profile }: { profile: CompanyProfileI }) => {
   return (
-    <>
+    <div className={styles.profileView}>
       <div className={styles.titleContainer}>
-        <div className={styles.name}>{profile.name}</div>
+        <div className={styles.name}>
+          {profile.name} ({profile.symbol})
+        </div>
+        <span className={styles.price}>
+          <CurrentCompanyPrice symbol={profile.symbol} />
+        </span>
         <div className={styles.description}>{profile.description}</div>
-
-        {/* component 1 */}
         <Link
           href={`//${profile.website}`}
           target="_blank"
@@ -19,38 +26,26 @@ const ProfileView = ({ profile }: { profile: any }) => {
           {profile.website}
         </Link>
       </div>
-      {/* <Separator.Root className={styles.separator} /> */}
+      <hr className={styles.separator} />
       <div className={styles.data}>
-        <div>listed since: {profile.listedSince}</div>
-        <div>number of stocks {profile.numberOfStocks}</div>
-        <div>market value {profile.marketValue} mln PLN</div>
+        <div>na giełdzie od: {profile.listedSince}</div>
+        <div>liczba akcji (tys): {parseInt(profile.numberOfStocks) / 1000}</div>
+        <MarketValue
+          numberOfStocks={profile.numberOfStocks}
+          symbol={profile.symbol}
+        />
       </div>
-      {/* <Separator.Root className={styles.separator} /> */}
-      {/* component 2 */}
-      <p>Nawięksi akcjonariusze:</p>
+      <br />
+      <div>prezes: {profile.ceoName}</div>
+      <div>województwo: {profile.district}</div>
+      <div>adres: {capitalizeFirstLetter(profile.adress)}</div>
+      <hr className={styles.separator} />
       <div className={styles.shareholdersContainer}>
-        {JSON.parse(profile.shareholders).map((shareholder: ShareholderI) => {
-          return (
-            <div key={shareholder.name}>
-              <div className={styles.shareholderTitle}>{shareholder.name}</div>
-              <div>liczba akcji: {shareholder.stockAmount}</div>
-              <div>
-                procent wszystkich akcji: {shareholder.stockPercentage}%
-              </div>
-            </div>
-          );
-        })}
+        <p>Nawięksi akcjonariusze:</p>
+        <ShareholdersAccordion shareholders={profile.shareholders} />
       </div>
-      {/* <Separator.Root className={styles.separator} /> */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          width: "100%",
-        }}
-      ></div>
-    </>
+      <hr className={styles.separator} />
+    </div>
   );
 };
 

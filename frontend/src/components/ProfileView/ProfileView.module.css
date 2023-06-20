@@ -1,11 +1,10 @@
 .profileView {
-  height: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-  padding: 4rem;
-  overflow-y: auto;
+  width: 100%;
+}
+
+.price {
+  font-size: 1.125rem;
+  font-weight: 500;
 }
 
 .titleContainer,
@@ -19,7 +18,12 @@
 }
 
 .description {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 1rem;
   color: var(--gray10);
+  height: 8rem;
+  font-size: medium;
 }
 
 .name {
@@ -34,12 +38,14 @@
   align-items: flex-start;
   display: flex;
   width: 100%;
+  font-size: larger;
 }
 
 .link {
   color: var(--blue11);
   cursor: pointer;
   margin-top: 0.5rem;
+  font-size: larger;
 }
 
 .link:hover {
@@ -47,11 +53,9 @@
 }
 
 .shareholdersContainer {
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 2rem;
-  grid-row-gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .separator {
@@ -63,37 +67,4 @@
 
 .shareholderTitle {
   font-weight: 600;
-}
-
-.controlButtons {
-  display: flex;
-  gap: 1rem;
-}
-
-.btn {
-  background-color: var(--blue10);
-  border-radius: 8px;
-  border-style: none;
-  box-sizing: border-box;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-block;
-
-  font-size: 14px;
-  font-weight: 500;
-  height: 40px;
-  line-height: 20px;
-
-  margin: 0;
-  outline: none;
-  padding: 10px 16px;
-
-  text-align: center;
-  text-decoration: none;
-  transition: color 100ms;
-}
-
-.btn:hover,
-.btn:focus {
-  background-color: var(--blue11);
 }

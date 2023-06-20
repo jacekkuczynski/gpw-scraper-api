@@ -36,6 +36,6 @@ model CompanyProfile {
 model Price {
   id     Int    @id @default(autoincrement())
   symbol String
-  price  Float
-  date   String
+  value  Float
+  time   String
 }

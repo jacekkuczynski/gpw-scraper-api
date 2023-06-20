@@ -1,39 +1,30 @@
 "use client";
 
-import { useAppStore } from "@/store/store";
-import Link from "next/link";
-import { useState } from "react";
-import styles from "./WatchlistView.module.css";
 import React from "react";
+import Watchlistcard from "../Watchlistcard/Watchlistcard";
+import styles from "./WatchlistView.module.css";
+import { useAppStore } from "@/store/store";
 
 const WatchlistView = () => {
-  const [symbolToRemove, setSymbolToRemove] = useState("");
   const watchlist = useAppStore((state) => state.watchlist);
-  const removeFromWatchlist = useAppStore((state) => state.removeFromWatchlist);
-
-  const handleRemoveFromWatchlist = (symbol: string) => {
-    console.log("clicked");
-    removeFromWatchlist(symbol);
-  };
 
   return (
-    <div>
+    <div className={styles.watchlist}>
+      {watchlist.length < 1 && (
+        <div>
+          <b>no items on watchlist yet</b>
+          <br />
+          Choose a company on the left, go to the company profile view and add
+          one of them to the watchlist to display
+        </div>
+      )}
       {watchlist.map((company) => {
         return (
-          <div key={company.symbol}>
-            <Link href={`/profile/${company.symbol}`}>
-              <div>
-                {company.name} {company.symbol}
-              </div>
-            </Link>
-            <button
-              onClick={() => {
-                handleRemoveFromWatchlist(company.symbol);
-              }}
-            >
-              Usuń z listy
-            </button>
-          </div>
+          <Watchlistcard
+            key={company.symbol}
+            name={company.name}
+            symbol={company.symbol}
+          />
         );
       })}
     </div>

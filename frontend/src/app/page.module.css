@@ -1,0 +1,35 @@
+.landing {
+  height: 100%;
+  display: flex;
+  width: 100%;
+  gap: 3rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.version {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.techList {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-around;
+  padding-left: 3rem;
+  width: 100%;
+}
+
+.techItem {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}

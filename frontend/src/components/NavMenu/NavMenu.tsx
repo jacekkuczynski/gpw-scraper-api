@@ -4,11 +4,16 @@ import React, { useState } from "react";
 import * as Menubar from "@radix-ui/react-menubar";
 import Link from "next/link";
 import styles from "./NavMenu.module.css";
+import { useHydrateLocalStorage } from "@/hooks/useHydrateLocalStorage";
+import { useAppStore } from "@/store/store";
 
 const NavMenu = () => {
   const [value, setValue] = useState("");
-
+  useHydrateLocalStorage();
   const closeNavMenu = () => setValue("");
+  const changeCreateWalletDialogVisibility = useAppStore(
+    (state) => state.changeCreateWalletDialogVisibility
+  );
 
   const mainLinks = [
     {
@@ -20,14 +25,7 @@ const NavMenu = () => {
     },
     {
       name: "Portfel",
-      sublinks: [
-        { name: "Lista portfeli", href: "/" },
-        { name: "Nowy portfel", href: "/" },
-      ],
-    },
-    {
-      name: "Obserwowane",
-      sublinks: [{ name: "Lista obserwowanych", href: "/watchlist" }],
+      sublinks: [{ name: "Lista portfeli", href: "/wallet" }],
     },
   ];
 
@@ -57,42 +55,41 @@ const NavMenu = () => {
                       className={styles.menubarItem}
                     >
                       <Link href={link.href} onClick={closeNavMenu}>
-                        {link.name}{" "}
+                        {link.name}
                       </Link>
                       <Menubar.Separator className={styles.menubarSeparator} />
                     </Menubar.Item>
                   );
                 })}
+                <Menubar.Item className={styles.menubarItem}>
+                  <span
+                    onClick={() => {
+                      closeNavMenu;
+                      changeCreateWalletDialogVisibility(true);
+                    }}
+                  >
+                    Nowy Portfel
+                  </span>
+                  <Menubar.Separator className={styles.menubarSeparator} />
+                </Menubar.Item>
               </Menubar.Content>
             </Menubar.Portal>
           </Menubar.Menu>
         );
       })}
-      {/* <Menubar.Menu>
-        <Menubar.Trigger className={styles.menubarTrigger}>
-          Plik
-        </Menubar.Trigger>
+      <Menubar.Menu>
+        <Link href={"/watchlist"} className={styles.menubarTrigger}>
+          Lista obserwowanych
+        </Link>
         <Menubar.Portal>
           <Menubar.Content
             className={styles.menubarContent}
             align="start"
             sideOffset={5}
             alignOffset={-3}
-          >
-            {fileLinks.map((link) => {
-              return (
-                <Menubar.Item key={link.name} className={styles.menubarItem}>
-                  <Link href={link.href} onClick={closeNavMenu}>
-                    {link.name}{" "}
-                  </Link>
-                </Menubar.Item>
-              );
-            })}
-            <Menubar.Separator className={styles.menubarSeparator} />
-            <Menubar.Item className={styles.menubarItem}>About</Menubar.Item>
-          </Menubar.Content>
+          ></Menubar.Content>
         </Menubar.Portal>
-      </Menubar.Menu> */}
+      </Menubar.Menu>
     </Menubar.Root>
   );
 };
